@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Mail Inbox"})
+	@@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+     <!-- Begin Header -->
+     @@include('partials/topbar.html')
+     <!-- Header End -->
+     <!-- Begin Left Navigation -->
+     @@include('partials/left-sidebar.html')
+     <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">
+                <i class="mdi mdi-menu me-1 d-lg-none" data-toggle="sidebar"></i>
+                Inbox
+              </h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Inbox</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3">
+                <div data-sidebar="mobile" class="inbox-leftbar card">
+                  <div class="card-body">
+                    <a class="btn btn-danger d-block btn-primary mb-4" data-effect="wave" href="email-compose.html">Compose</a>
+                    <div class="mail-control">
+                      <a href="javascript:void(0)" class="text-danger fw-bold">
+                        <i class="bx bxs-inbox me-1"></i>
+                        Inbox
+                        <span class="badge bg-danger float-end"> 8</span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-star me-1"></i>
+                        Starred
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-time me-1"></i>
+                        Snoozed
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-message-alt-edit me-1"></i>
+                        Draft
+                        <span class="badge bg-light float-end"> 32</span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-mail-send me-1"></i>
+                        Send Mail
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-trash me-1"></i>
+                        Trash
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-bookmark me-1"></i>
+                        Important
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-error me-1"></i>
+                        Spam
+                      </a>
+                    </div>
+                    <h6 class="mt-4 fw-bold text-uppercase">Labels</h6>
+                    <div class="mail-control">
+                      <a href="javascript:void(0)">
+                        Personal
+                        <span class="bx bxs-circle fs-14 text-primary"></span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        Company
+                        <span class="bx bxs-circle fs-14 text-danger"></span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        Important
+                        <span class="bx bxs-circle fs-14 text-success"></span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        Warning
+                        <span class="bx bxs-circle fs-14 text-warning"></span>
+                      </a>
+                    </div>
+                    <h6 class="mt-4 mb-3 fw-bold text-uppercase">Chat</h6>
+                    <div class="chat-list">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary position-relative">
+                                LL
+                                <span class="contact-status online"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h6 class="text-truncate fs-14 mb-1">Louis Litt</h6>
+                                <p class="text-truncate fs-13">You just got LITT up, Mike.</p>
+                              </div>
+                              <div class="fs-11 text-dark">10 min</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="active">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-8.jpg" class="avatar avatar-sm" alt="user-thumb"/>
+                                <span class="contact-status online"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h6 class="text-truncate fs-14 mb-1">Rockey</h6>
+                                <p class="text-truncate fs-13">I was thinking that we could have chicken tonight, sounds good?
+                                </p>
+                              </div>
+                              <div class="fs-11 text-dark">24 min</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-2.jpg" class="avatar avatar-sm" alt="user-thumb" />
+                                <span class="contact-status away"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h6 class="text-truncate fs-14 mb-1">Harvey Specter</h6>
+                                <p class="text-truncate fs-13">Wrong. You take the gun, or you pull out a bigger one. Or, you
+                                  call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                              </div>
+                              <div class="fs-11 text-dark">30 min</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-3.jpg" class="avatar avatar-sm" alt="user-thumb" />
+                                <span class="contact-status offline"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h6 class="text-truncate fs-14 mb-1">Donna Paulsen</h6>
+                                <p class="text-truncate fs-13">Mike, I know everything! I'm Donna...</p>
+                              </div>
+                              <div class="fs-11 text-dark">1 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="inbox-rightbar card">
+                  <div class="toolbar d-flex px-3 pt-3 border-bottom flex-wrap">
+                    <div class="form-check custom-checkbox checkbox-wrapper-mail me-3 mb-3 align-self-center">
+                      <input type="checkbox" class="form-check-input" id="chk-all">
+                      <label class="form-check-label" for="chk-all"></label>
+                    </div>
+                    <div class="btn-group mb-3">
+                      <button type="button" class="btn btn-outline-primary" data-effect="wave">
+                        <i class="bx bxs-archive"></i>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary" data-effect="wave">
+                        <i class="bx bxs-error-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary" data-effect="wave">
+                        <i class="bx bxs-trash-alt"></i></button>
+                    </div>
+                    <div class="btn-group ms-1 dropdown mb-3">
+                      <button type="button" data-bs-toggle="dropdown" class="btn btn-outline-primary dropdown-toggle" data-effect="wave">
+                        <i class="bx bxs-folder"></i>
+                        <i class="bx bx-chevron-down"></i>
+                      </button>
+                      <div class="dropdown-menu">
+                        <span class="dropdown-header">Move to</span>
+                        <a class="dropdown-item" href="javascript: void(0);">Social</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Promotions</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Forums</a>
+                      </div>
+                    </div>
+                    <div class="btn-group ms-1 dropdown mb-3">
+                      <button type="button" data-bs-toggle="dropdown" class="btn btn-outline-primary dropdown-toggle" data-effect="wave">
+                        <i class="bx bxs-label"></i>
+                        <i class="bx bx-chevron-down"></i>
+                      </button>
+                      <div class="dropdown-menu">
+                        <span class="dropdown-header">Label as:</span>
+                        <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Social</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Promotions</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Forums</a>
+                      </div>
+                    </div>
+                    <div class="btn-group ms-1 dropdown mb-3">
+                      <button type="button" data-bs-toggle="dropdown" class="btn btn-outline-primary dropdown-toggle" data-effect="wave">
+                        More
+                        <i class="bx bx-dots-vertical-rounded fs-13"></i>
+                      </button>
+                      <div class="dropdown-menu">
+                        <span class="dropdown-header">More Option :</span>
+                        <a class="dropdown-item" href="javascript: void(0);">Mark as Unread</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Add to Tasks</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Add Star</a>
+                        <a class="dropdown-item" href="javascript: void(0);">Mute</a>
+                      </div>
+                    </div>
+                    <div class="ms-auto d-flex flex-wrap mb-3">
+                      <div class="search-box me-0 me-sm-3 mb-3 mb-sm-0">
+                        <div class="position-relative">
+                          <input type="text" placeholder="Search..." class="form-control">
+                          <i class="bx bx-search icon"></i>
+                        </div>
+                      </div>
+                      <ul class="list-unstyled d-flex mb-0 align-items-center">
+                        <li class="me-3 fs-13 fw-semibold">
+                          1 - 50 of 505
+                        </li>
+                        <li class="me-2">
+                          <button type="button" class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-chevron-left align-middle fs-sm"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-chevron-right align-middle fs-sm"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <ul class="email-message-list">
+                    <li class="unread">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-0">
+                          <label class="form-check-label" for="chk-0"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Waters, Jacobs and Ortiz
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="unread">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-1">
+                          <label class="form-check-label" for="chk-1"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Microsoft Account Password Change
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="marked">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-2">
+                          <label class="form-check-label" for="chk-2"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          David Moore
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-3">
+                          <label class="form-check-label" for="chk-3"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Linked In message
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-4">
+                          <label class="form-check-label" for="chk-4"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Microsoft Support
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="marked">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-5">
+                          <label class="form-check-label" for="chk-5"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Stack overflow
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-6">
+                          <label class="form-check-label" for="chk-6"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Google Updates
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-7">
+                          <label class="form-check-label" for="chk-7"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Rockey
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="unread">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-8">
+                          <label class="form-check-label" for="chk-8"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Louis L
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">09-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-9">
+                          <label class="form-check-label" for="chk-9"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Donna Paulsen
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="marked">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-10">
+                          <label class="form-check-label" for="chk-10"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Harvey Specter
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">07-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-11">
+                          <label class="form-check-label" for="chk-11"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Waters, Jacobs and Ortiz
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-12">
+                          <label class="form-check-label" for="chk-12"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Microsoft Account Password Change
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="unread">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-13">
+                          <label class="form-check-label" for="chk-13"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          David Moore
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-14">
+                          <label class="form-check-label" for="chk-14"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Linked In message
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="marked">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-15">
+                          <label class="form-check-label" for="chk-15"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Microsoft Support
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-16">
+                          <label class="form-check-label" for="chk-16"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Stack overflow
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="unread">
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-17">
+                          <label class="form-check-label" for="chk-17"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Google Updates
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-18">
+                          <label class="form-check-label" for="chk-18"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Rockey
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-19">
+                          <label class="form-check-label" for="chk-19"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Louis L
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-20">
+                          <label class="form-check-label" for="chk-20"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Donna Paulsen
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="col-mail col-mail-1">
+                        <div class="form-check custom-checkbox checkbox-wrapper-mail">
+                          <input type="checkbox" class="form-check-input" id="chk-21">
+                          <label class="form-check-label" for="chk-21"></label>
+                        </div>
+                        <span class="star-toggle bx bx-star fs-xs"></span>
+                        <a href="email-read.html" class="title text-truncate">
+                          Harvey Specter
+                        </a>
+                      </div>
+                      <div class="col-mail col-mail-2">
+                        <a href="email-read.html" class="subject">
+                          Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel
+                          nulla elementum pellentesque.
+                        </a>
+                        <div class="date">08-Dec</div>
+                      </div>
+                      <ul class="action-list">
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bx-trash-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-error-alt"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary me-2" data-effect="wave">
+                            <i class="bx bxs-archive"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn btn-primary" data-effect="wave">
+                            <i class="bx bx-time"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- chat box -->
+    <div class="chatbox-wrapper overflow-hidden minimize">
+      <div class="chat-profile p-2 bg-primary d-flex align-items-center">
+        <div class="dropdown me-2">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
+            <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar" class="online avatar avatar-sm me-0">
+          </a>
+          <div class="dropdown-menu">
+            <a href="javascript:void(0)" class="dropdown-item" data-status="online"><span
+                class="status-circle online me-2"></span> Online</a>
+            <a href="javascript:void(0)" class="dropdown-item" data-status="away"><span
+                class="status-circle away me-2"></span> Away</a>
+            <a href="javascript:void(0)" class="dropdown-item" data-status="busy"><span
+                class="status-circle busy me-2"></span> Busy</a>
+            <a href="javascript:void(0)" class="dropdown-item" data-status="offline"><span
+                class="status-circle offline me-2"></span> Offline</a>
+          </div>
+        </div>
+        <div class="clearfix">
+          <h5 class="mb-0 fw-semibold fs-14 text-white">Mike Rose</h5>
+        </div>
+        <div class="actions ms-auto">
+          <a class="text-white me-2" href="javascript: void(0);" id="minimize-chat">
+            <i class="bx bx-minus fs-sm"></i>
+          </a>
+          <a class="text-white" href="javascript: void(0);" id="close-chat">
+            <i class="bx bx-x fs-sm"></i>
+          </a>
+        </div>
+      </div>
+      <div class="chat-conversation p-2">
+        <ul class="chat-conversation-list" id="chat-conversation-scrollbar" tabindex="-1">
+          <li class="text-center">
+            <span class="badge bg-light text-dark fs-13">Today</span>
+          </li>
+          <li class="clearfix even">
+            <div class="chat-avatar">
+              <img alt="male" src="assets/images/users/avatar-2.jpg">
+              <small>10:00</small>
+            </div>
+            <div class="conversation-text">
+              <div class="ctext-wrap">
+                <div class="fw-semibold">Johnny</div>
+                <p> Hello! </p>
+              </div>
+            </div>
+          </li>
+          <li class="clearfix odd">
+            <div class="chat-avatar"><img alt="male" src="assets/images/users/avatar-6.jpg"><small>10:01</small>
+            </div>
+            <div class="conversation-text">
+              <div class="ctext-wrap">
+                <div class="fw-semibold">Dennis</div>
+                <p> Hi, How are you? What about our next meeting? </p>
+              </div>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="chat-avatar"><img alt="male" src="assets/images/users/avatar-6.jpg"><small>10:01</small>
+            </div>
+            <div class="conversation-text">
+              <div class="ctext-wrap">
+                <div class="fw-semibold">Johnny</div>
+                <p> Yeah everything is fine </p>
+              </div>
+            </div>
+          </li>
+          <li class="clearfix odd">
+            <div class="chat-avatar"><img alt="male" src="assets/images/users/avatar-6.jpg"><small>10:01</small>
+            </div>
+            <div class="conversation-text">
+              <div class="ctext-wrap">
+                <div class="fw-semibold">Dennis</div>
+                <p> Wow that's great... </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="position-relative chat-input">
+          <input type="text" class="form-control" placeholder="Type your message...">
+          <div class="chat-link">
+            <a href="javascript: void(0);" class="px-1"><i class="bx bxs-file fs-sm"></i></a>
+            <a href="javascript: void(0);" class="px-1"><i class="bx bxs-send fs-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </div><!-- chat box End -->
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/inbox.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

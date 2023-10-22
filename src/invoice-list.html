@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include("partials/title.html", {"title": "Invoice List"})
+   <!-- ================== Plugins CSS  ================== -->
+   <link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+   <link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+   <link href="assets/libs/datatables/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+   <link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" />
+   <!-- ================== Plugins CSS ================== -->
+   @@include("partials/head.html")
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      @@include('partials/topbar.html')
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      @@include('partials/left-sidebar.html')
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                     <h3 class="mb-1 fw-bold">Invoices</h3>
+                     <button class="btn btn-outline-light waves-effect waves-float">
+                        <i class="bx bx-plus bx-flashing"></i>
+                        Create New Invoice
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <div class="card">
+                     <div class="card-body">
+                        <div class="table-responsive">
+                           <table class="table nowrap table-hover table-centered" id="view_invoice_list">
+                              <thead class="table-light">
+                                 <tr>
+                                    <th>Sent</th>
+                                    <th>Invoice Number</th>
+                                    <th>Invoice To</th>
+                                    <th>Total</th>
+                                    <th>Period</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122014414</b></td>
+                                    <td>Admin</td>
+                                    <td>$1,000</td>
+                                    <td>Monthly</td>
+                                    <td>27 Apr, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122014414</b></td>
+                                    <td>IT</td>
+                                    <td>$1,100</td>
+                                    <td>Monthly</td>
+                                    <td>28 Apr, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122014458</b></td>
+                                    <td>Hero</td>
+                                    <td>$800</td>
+                                    <td>Monthly</td>
+                                    <td>29 Apr, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122015478</b></td>
+                                    <td>Google</td>
+                                    <td>$500</td>
+                                    <td>Monthly</td>
+                                    <td>30 Apr, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122014465</b></td>
+                                    <td>Xyz</td>
+                                    <td>$1,500</td>
+                                    <td>Monthly</td>
+                                    <td>1 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122014475</b></td>
+                                    <td>Abc</td>
+                                    <td>$1,510</td>
+                                    <td>Monthly</td>
+                                    <td>2 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122025465</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,800</td>
+                                    <td>Monthly</td>
+                                    <td>3 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20124774874</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,900</td>
+                                    <td>Monthly</td>
+                                    <td>4 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122015587</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,670</td>
+                                    <td>Monthly</td>
+                                    <td>5 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122087747</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,530</td>
+                                    <td>Monthly</td>
+                                    <td>6 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122088774</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,800</td>
+                                    <td>Monthly</td>
+                                    <td>10 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20124774874</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,900</td>
+                                    <td>Monthly</td>
+                                    <td>4 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122015587</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,670</td>
+                                    <td>Monthly</td>
+                                    <td>5 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122087747</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,530</td>
+                                    <td>Monthly</td>
+                                    <td>6 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><i class="bx bxs-check-circle fs-sm text-success"></i></td>
+                                    <td><b>20122088774</b></td>
+                                    <td>XYZ1</td>
+                                    <td>$1,800</td>
+                                    <td>Monthly</td>
+                                    <td>10 May, 2019</td>
+                                    <td>
+                                       <a href="invoice-details.html"
+                                          class="avatar avatar-xs bg-soft-primary text-primary me-2">
+                                          <i class="bx bxs-show fs-xs"></i>
+                                       </a>
+                                       <a href="assets/pdf/dummy.pdf" download=""
+                                          class="avatar avatar-xs bg-soft-info text-info me-0">
+                                          <i class="bx bxs-download fs-xs"></i>
+                                       </a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      @@include('partials/footer.html')
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.responsive.min.js"></script>
+   <script src="assets/libs/datatables/js/responsive.bootstrap4.min.js"></script>
+
+   <script src="assets/libs/datatables/js/dataTables.buttons.min.js"></script>
+   <script src="assets/libs/datatables/js/buttons.bootstrap4.min.js"></script>
+   <script src="assets/libs/datatables/js/buttons.html5.min.js"></script>
+   <script src="assets/libs/datatables/js/buttons.flash.min.js"></script>
+   <script src="assets/libs/datatables/js/buttons.print.min.js"></script>
+   <script src="assets/libs/datatables/js/pdfmake.min.js"></script>
+   <script src="assets/libs/datatables/js/jszip.min.js"></script>
+   <script src="assets/libs/datatables/js/vfs_fonts.js"></script>
+
+   <script src="assets/libs/datatables/js/dataTables.keyTable.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.select.min.js"></script>
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/pages/invoicelist.init.js"></script>
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

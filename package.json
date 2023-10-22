@@ -1,0 +1,32 @@
+{
+  "name": "Marvel",
+  "version": "1.0.0",
+  "description": "Letstart CV is a HTML5 template for creating CV or Portfolio websites built with Bootstrap 4 Framework, HTML5, CSS and JQuery.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp default",
+    "documentation": "gulp preview_documentation",
+    "documentation-angular": "gulp preview_documentation_angular",
+    "preview": "gulp preview_watch"
+  },
+  "author": "LettStartDesign",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "lodash": "^4.17.21",
+    "sass": "^1.58.0"
+  }
+}

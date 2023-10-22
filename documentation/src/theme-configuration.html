@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("../partials/head.html", {"title": "Theme Configuration"})
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Sidebar Structure
+                </h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Configuration Options</h5>
+                    <p class="mb-0">File: <code>src/layouts/layout.component.ts</code></p>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4" style="height: 190px;">
+// default settings
+layoutType = "vertical || horizontal";
+layoutWidth = "fluid || boxed";
+
+leftSidebarTheme = "default || dark";
+leftSidebarWidth = "compact || mini";
+                    </code>
+                  </pre>
+                    <h5 class="mt-0 header-title mb-3">Description of Fields</h5>
+                    <table class="table table-light mt-4">
+                      <thead class="bg-primary text-white text-uppercase">
+                        <tr>
+                          <th scope="col">Class</th>
+                          <th scope="col">Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>left-side-menu-condensed</strong></td>
+                          <td>Add class on body to reflect. This class used for mini sidebar</td>
+                        </tr>
+                        <tr>
+                          <td><strong>compact-side-menu</strong></td>
+                          <td>Add class on body to reflect. This class used for compact sidebar</td>
+                        </tr>
+                        <tr>
+                          <td><strong>boxed-layout</strong></td>
+                          <td>Add class on body to reflect. This class used for box layout</td>
+                        </tr>
+                        <tr>
+                          <td><strong>dark-sidebar-menu</strong></td>
+                          <td>Add class on body to reflect. This class used for dark sidebar</td>
+                        </tr>
+                        <tr>
+                          <td><strong>horizontal-navbar</strong></td>
+                          <td>Add class on body to reflect. Used for horizontal layout</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="alert alert-warning">
+                      <p class="mb-0">src -> assets is our public folder for public content like images, css, fonts etc.
+                      </p>
+                    </div>
+                    <h5 class="mt-5 header-title mb-3">How to Change Logo For Vertical Layout</h5>
+                    <p>File: <code>src/partials/topbar.html</code></p>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4" style="height: 190px;">
+&lt;div class="navbar-brand-box"&gt;
+  &lt;a href="index.html" class="(logo || logo-dark)"&gt;
+  &lt;span class="logo-lg"&gt;
+    &lt;img src="assets/images/(logo || logo-light).png" alt="" height="30" /&gt;
+  &lt;/span&gt;
+  &lt;span class="logo-sm"&gt;
+    &lt;img src="assets/images/(logo || logo-light).png" alt="" height="30"&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+                    </code>
+                  </pre>
+                  <h5 class="mt-5 header-title mb-3">How to Change Logo For Horizontal Layout</h5>
+                    <p>File: <code>src/partials/topbar-horizontal.html</code></p>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4" style="height: 190px;">
+&lt;div class="navbar-brand-box"&gt;
+  &lt;a href="index.html" class="(logo || logo-dark)"&gt;
+  &lt;span class="logo-lg"&gt;
+    &lt;img src="assets/images/(logo || logo-light).png" alt="" height="30" /&gt;
+  &lt;/span&gt;
+  &lt;span class="logo-sm"&gt;
+    &lt;img src="assets/images/(logo || logo-light).png" alt="" height="30"&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+                    </code>
+                  </pre>
+                    <div class="alert alert-info">
+                      <p class="mb-0">(logo || logo-dark) use class either logo or logo-dark as well as others.</p>
+                    </div>
+                    <h5 class="mt-5 header-title mb-3">How to Change Global Fonts</h5>
+                    <p>we have used google fonts in our template. so, when you change the fonts of the theme go tho the
+                      assets -> scss -> custom -> fonts folder and open _fonts.scss file. In that file use your own
+                      font. After this change fonts in assets -> scss -> variable.scss file</p>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4">
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap');
+                    </code>
+                  </pre>
+                    <pre class="highlight typescript mb-0">
+                    <code class="shadow-sm px-4">
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+                    </code>
+                  </pre>
+                    <p>Use can also insert font in index.html</p>
+                    <pre class="highlight typescript mb-0">
+                    <code class="shadow-sm px-4">
+
+&lt;link
+href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap"
+rel="stylesheet"
+/&gt;
+                    </code>
+                  </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+    </div>
+    
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+</body>
+
+</html>

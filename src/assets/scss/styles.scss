@@ -1,0 +1,115 @@
+/*
+Template Name: Marvel - Multipurpose Admin Template
+Author: LettstartDesign
+Version: 1.0.0
+Website: https://lettstartdesign.com/
+File: Main Css File
+*/
+
+/* TABLES OF CSS
+
+1. Fonts
+2. Bootstrap functions
+3. Bootstrap variables
+4. App variables
+5. Bootstrap mixins
+6. App mixins
+7. App functions
+8. Utilities
+9. Preloader
+10. Print
+11. Layout (header, footer, sidebar, topbar)
+12. Plugins
+13. Pages
+14. Responsive
+*/
+
+@import 'styles/fonts/fonts';
+
+//Core Components
+@import '../vendors/bootstrap/scss/functions';
+@import '../vendors/bootstrap/scss/variables';
+@import 'variables';
+@import '../vendors/bootstrap/scss/mixins';
+
+@import 'mixins';
+@import 'functions';
+@import 'styles/utilities/sizing';
+@import "styles/components/preloader";
+@import "styles/components/print";
+@import 'styles/structure/footer';
+@import 'styles/structure/setting-sidebar';
+@import 'styles/structure/topbar';
+@import 'styles/structure/horizontal-topnav';
+@import 'styles/structure/layout';
+@import 'styles/structure/vertical';
+@import 'styles/structure/common';
+
+
+// Plugins
+
+@import 'styles/plugins/slimscroll';
+@import 'styles/plugins/apex';
+@import 'styles/plugins/flatpickr';
+@import 'styles/plugins/fccalender';
+@import 'styles/plugins/jvectopmap';
+@import 'styles/plugins/photoswipe';
+@import 'styles/plugins/ckeditor';
+@import 'styles/plugins/datatable';
+@import 'styles/plugins/form-wizard';
+@import 'styles/plugins/dropzone';
+@import 'styles/plugins/select2';
+@import 'styles/plugins/bootstrap-tagsinput';
+@import 'styles/plugins/ion-slider';
+@import 'styles/plugins/treeview';
+@import 'styles/plugins/mfp-effect';
+@import 'styles/plugins/light-slider';
+@import 'styles/plugins/toaster';
+@import 'styles/plugins/tippy';
+@import 'styles/plugins/nestable';
+@import 'styles/plugins/dragula';
+@import 'styles/plugins/sweet-alert';
+@import 'styles/plugins/confirmation-box';
+@import 'styles/plugins/tour';
+@import 'styles/plugins/hopscotch';
+@import 'styles/plugins/alertify';
+@import 'styles/plugins/rating';
+@import 'styles/plugins/tablesaw';
+@import 'styles/plugins/bootstrap-table';
+@import 'styles/plugins/footables';
+@import 'styles/plugins/responsive-table';
+@import 'styles/plugins/flot';
+@import 'styles/plugins/morris';
+@import 'styles/plugins/c3';
+@import 'styles/plugins/chartist';
+@import 'styles/plugins/vectormap';
+@import 'styles/plugins/gmaps';
+@import 'styles/plugins/selectize';
+@import 'styles/plugins/multi-select';
+@import 'styles/plugins/bootstrap-select';
+@import 'styles/plugins/bootstrap-touchpin';
+@import 'styles/plugins/autocomplete';
+@import 'styles/plugins/parsley';
+@import 'styles/plugins/clockpicker';
+@import 'styles/plugins/bootstrap-datepicker';
+@import 'styles/plugins/summernote';
+@import 'styles/plugins/quills';
+@import 'styles/plugins/x-editable';
+@import 'styles/plugins/cropper';
+
+@import 'styles/pages/component-demos';
+@import 'styles/pages/authentication';
+@import 'styles/pages/dashboards';
+@import 'styles/pages/message-chat';
+@import 'styles/pages/chat';
+@import 'styles/pages/contacts';
+@import 'styles/pages/mail';
+@import 'styles/pages/projects';
+@import 'styles/pages/tasks';
+@import 'styles/pages/timeline';
+@import 'styles/pages/product';
+@import 'styles/pages/coming-soon';
+@import 'styles/pages/search-result';
+@import 'styles/pages/pricing';
+@import 'styles/pages/gallery';
+@import './responsive'

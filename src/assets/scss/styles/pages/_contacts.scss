@@ -1,0 +1,19 @@
+.member-desc {
+  p {
+    display: none;
+    &:first-child{
+      display: inline;
+    }
+  }
+  &.show {
+    .dots {
+      display: none;
+    }
+    p {
+      display: block;
+      &:nth-last-child(2) {
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Product List"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="assets/libs/ion-rangeslider/css/ion.rangeSlider.skinFlat.min.css" />
+  <!-- ================== Plugins CSS ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">
+                <i class="mdi mdi-menu me-1 d-lg-none" data-toggle="sidebar"></i>
+                Products
+              </h3>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="calender.html">
+                    Apps
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Products</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="card" data-sidebar="mobile">
+                  <div class="card-header">
+                    <h5 class="card-title">Filter</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="clearfix">
+                      <h5 class="fs-14 mb-3 fw-semibold text-uppercase">Categories</h5>
+                      <div class="accordion" id="accordionExample">
+                        <div class="product-filter-list mb-1">
+                          <a href="javascript:void(0)" class="text-dark fs-15 active" data-bs-toggle="collapse"
+                            data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+                            <i class="mdi mdi-chevron-right"></i> Clothing
+                          </a>
+                          <ul id="c1" class="collapse mt-2 list-unstyled ps-4 show" aria-labelledby="c1"
+                            data-bs-parent="#accordionExample">
+                            <li>
+                              <a href="javascript:void(0)" class="text-default active">T-shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Jeans</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="product-filter-list mb-1">
+                          <a href="javascript:void(0)" class="text-dark fs-15" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="mdi mdi-chevron-right"></i> Men's Clothing
+                          </a>
+                          <ul id="collapseTwo" class="collapse mt-2 list-unstyled ps-4" aria-labelledby="collapseTwo"
+                            data-bs-parent="#accordionExample">
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">T-shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Jeans</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="product-filter-list mb-1">
+                          <a href="javascript:void(0)" class="text-dark fs-15" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <i class="mdi mdi-chevron-right"></i> Women's Clothing
+                          </a>
+                          <ul id="collapseThree" class="collapse mt-2 list-unstyled ps-4" aria-labelledby="collapseThree"
+                            data-bs-parent="#accordionExample">
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">T-shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Jeans</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="product-filter-list mb-1">
+                          <a href="javascript:void(0)" class="text-dark fs-15" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <i class="mdi mdi-chevron-right"></i> Accessories
+                          </a>
+                          <ul id="collapseFour" class="collapse mt-2 list-unstyled ps-4" aria-labelledby="collapseFour"
+                            data-bs-parent="#accordionExample">
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">T-shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Shirts</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-default">Jeans</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="clearfix">
+                      <h5 class="fs-14 mb-3 fw-semibold text-uppercase">Price</h5>
+                      <input type="text" id="pricerange">
+                    </div>
+                    <hr class="my-4" />
+                    <div class="clearfix">
+                      <h5 class="fs-14 mb-3 fw-semibold text-uppercase">Discount</h5>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck1">
+                        <label class="custom-control-label" for="productdiscountCheck1">10% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck2">
+                        <label class="custom-control-label" for="productdiscountCheck2">20% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck3">
+                        <label class="custom-control-label" for="productdiscountCheck3">30% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck4">
+                        <label class="custom-control-label" for="productdiscountCheck4">40% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck5">
+                        <label class="custom-control-label" for="productdiscountCheck5">50% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck6">
+                        <label class="custom-control-label" for="productdiscountCheck6">60% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck7">
+                        <label class="custom-control-label" for="productdiscountCheck7">70% or Above</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mt-2">
+                        <input type="checkbox" class="custom-control-input" id="productdiscountCheck8">
+                        <label class="custom-control-label" for="productdiscountCheck8">80% or Above</label>
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="clearfix">
+                      <h5 class="fs-14 mb-3 fw-semibold text-uppercase">Customer Rating</h5>
+                      <div>
+                        <div class="custom-control custom-checkbox mt-2">
+                          <input type="checkbox" class="custom-control-input" id="productratingCheck1">
+                          <label class="custom-control-label" for="productratingCheck1">4 <i
+                              class="bx bx-star text-warning"></i> & Above</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-2">
+                          <input type="checkbox" class="custom-control-input" id="productratingCheck2">
+                          <label class="custom-control-label" for="productratingCheck2">3 <i
+                              class="bx bx-star text-warning"></i> & Above</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-2">
+                          <input type="checkbox" class="custom-control-input" id="productratingCheck3">
+                          <label class="custom-control-label" for="productratingCheck3">2 <i
+                              class="bx bx-star text-warning"></i> & Above</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-2">
+                          <input type="checkbox" class="custom-control-input" id="productratingCheck4">
+                          <label class="custom-control-label" for="productratingCheck4">1 <i
+                              class="bx bx-star text-warning"></i></label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-9">
+                <div class="card card-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <a href="ecommerce-add-product.html" class="btn btn-primary" data-effect="wave">
+                         <i class="bx bx-plus bx-flashing"></i>
+                         Add Product
+                      </a>
+                    </div><!-- end col-->
+                    <div class="col-md-9">
+                      <form class="mt-4 mt-md-0 float-md-end form-inline">
+                        <div class="form-group mx-sm-3">
+                          <label for="status-select" class="me-2">Sort By</label>
+                          <select class="form-select w-auto" id="status-select">
+                            <option selected="">All</option>
+                            <option value="1">Popular</option>
+                            <option value="2">Price Low</option>
+                            <option value="3">Price High</option>
+                            <option value="4">Sold Out</option>
+                          </select>
+                        </div>
+                        <div class="search-box me-2">
+                          <div class="position-relative">
+                            <input type="text" placeholder="Search..." class="form-control">
+                            <i class="bx bx-search icon"></i>
+                          </div>
+                        </div>
+                        <ul class="nav nav-pills product-view-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active btn-icon btn-icon-sm rounded-circle" href="#"><i class="bx bx-grid-alt"></i></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link btn-icon btn-icon-sm rounded-circle" href="#"><i class="bx bx-list-ul"></i></a>
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div> <!-- end row -->
+                </div> <!-- end card-box -->
+                <div class="card card-body">
+                  <div class="row">
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs wishlist-icon me-0 waves-effect waves-light bg-danger text-white"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Zara</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Color Block Men Round Neck Half sleeve T-Shirt
+                              </p>
+                              <h5 class="my-0 fw-bold">$450</h5>
+                            </div>
+                            <button class="btn avatar text-white me-0 bg-success" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx fs-sm bx-check"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair2.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Polo</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Color Block Men Round Neck Full Sleeve T-Shirt
+                              </p>
+                              <h5 class="my-0 fw-bold">$600</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair3.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Nike</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Nike ripped jeans
+                              </p>
+                              <h5 class="my-0 fw-bold"><del class="me-1">$900</del> $700</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">UCB</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Color Block Men Round Neck T-Shirt
+                              </p>
+                              <h5 class="my-0 fw-bold">$200</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Zara</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Color Block Men Round Neck Half sleeve T-Shirt
+                              </p>
+                              <h5 class="my-0 fw-bold">$450</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair2.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Polo</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Color Block Men Round Neck Full Sleeve T-Shirt
+                              </p>
+                              <h5 class="my-0 fw-bold">$600</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair3.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Nike</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Nike ripped jeans
+                              </p>
+                              <h5 class="my-0 fw-bold"><del class="me-1">$900</del> $700</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">UCB</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Color Block Men Round Neck T-Shirt
+                              </p>
+                              <h5 class="my-0 fw-bold">$200</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                      <div class="card product-item">
+                        <div class="card-body position-relative">
+                          <a href="#" class="d-block"><img src="assets/images/product/chair3.jpg" alt="Lettstart Admin"
+                              class="img-fluid mx-auto d-block"></a>
+                          <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                            data-bs-toggle="tooltip" title="Add to wishlist">
+                            <i class="bx bx-heart fs-xs"></i>
+                          </button>
+                          <div class="item-description mt-3">
+                            <div class="desc">
+                              <h6 class="fs-16 mb-1 text-truncate">
+                                <a href="#" class="text-dark">Nike</a>
+                              </h6>
+                              <p class="text-muted mb-2 text-truncate">
+                                Nike ripped jeans
+                              </p>
+                              <h5 class="my-0 fw-bold"><del class="me-1">$900</del> $700</h5>
+                            </div>
+                            <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart"
+                              data-bs-toggle="tooltip" title="Add to cart">
+                              <i class="bx bx-cart fs-sm"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="pagination flat-rounded-pagination justify-content-center mt-4 mb-5">
+                      <li class="page-item disabled">
+                        <a href="#" class="page-link" data-effect="wave"><i class="mdi mdi-chevron-left"></i></a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#" class="page-link" data-effect="wave">1</a>
+                      </li>
+                      <li class="page-item active">
+                        <a href="#" class="page-link" data-effect="wave">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#" class="page-link" data-effect="wave">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#" class="page-link" data-effect="wave">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#" class="page-link" data-effect="wave">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a href="#" class="page-link" data-effect="wave"><i class="mdi mdi-chevron-right"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/pages/ecommerce-product.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

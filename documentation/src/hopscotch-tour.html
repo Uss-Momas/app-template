@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="assets/vendors/bootstrap-tour/css/bootstrap-tour-standalone.min.css" />
+  <link href="assets/vendors/hopscotch/css/hopscotch.min.css" rel="stylesheet" />
+  @@include("../partials/head.html", {"title": "Hopscotch Tour"})
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Hopscotch Tour
+                </h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Demo</h5>
+                    <div class="chart-container">
+                      <div class="text-center mb-4">
+                        <img src="assets/images/logo.png" alt="Lettstart Admin" height="30" id="hopscotch-logo-tour">
+                      </div>
+                      <h1 id="hopscotch-display-title-tour">This is a Heading 1</h1>
+                      <p class="text-muted">Suspendisse vel quam malesuada, aliquet sem sit
+                        amet, fringilla elit. Morbi
+                        tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
+                        nec,
+                        varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
+                        hendrerit
+                        est consequat posuere et at velit.</p>
+  
+                      <div class="clearfix"></div>
+  
+                      <h2 id="hopscotch-display-title-tour-2">This is a Heading 2</h2>
+                      <p class="text-muted">In nec rhoncus eros. Vestibulum eu mattis nisl.
+                        Quisque viverra viverra magna
+                        nec pulvinar. Maecenas pellentesque porta augue, consectetur
+                        facilisis diam
+                        porttitor sed. Suspendisse tempor est sodales augue rutrum
+                        tincidunt.
+                        Quisque a malesuada purus.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Code</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;h1 id="hopscotch-display-title-tour"&gt;This is a Heading 1&lt;/h1&gt;
+&lt;p class="text-muted"&gt;Suspendisse vel quam malesuada, aliquet sem sit
+amet, fringilla elit. Morbi
+tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
+nec,
+varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
+hendrerit
+est consequat posuere et at velit.&lt;/p&gt;
+
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+
+&lt;h2 id="hopscotch-display-title-tour-2"&gt;This is a Heading 2&lt;/h2&gt;
+&lt;p class="text-muted"&gt;In nec rhoncus eros. Vestibulum eu mattis nisl.
+Quisque viverra viverra magna
+nec pulvinar. Maecenas pellentesque porta augue, consectetur
+facilisis diam
+porttitor sed. Suspendisse tempor est sodales augue rutrum
+tincidunt.
+Quisque a malesuada purus.&lt;/p&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Required Files</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;link rel="stylesheet" href="assets/libs/bootstrap-tour/css/bootstrap-tour-standalone.min.css" /&gt;
+&lt;link href="assets/libs/hopscotch/css/hopscotch.min.css" rel="stylesheet" /&gt;
+<br/>
+&lt;script src="assets/libs/bootstrap-tour/js/bootstrap-tour-standalone.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/hopscotch/js/hopscotch.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/pages/tour.init.js"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+
+    </div>
+
+
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+  <script src="assets/vendors/bootstrap-tour/js/bootstrap-tour-standalone.min.js"></script>
+  <script src="assets/vendors/hopscotch/js/hopscotch.min.js"></script>
+  <script src="assets/js/pages/tour.init.js"></script>
+</body>
+
+</html>

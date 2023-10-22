@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Mail Read"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/PhotoSwipe-master/dist/default-skin/default-skin.min.css">
+  <link rel="stylesheet" href="assets/libs/PhotoSwipe-master/dist/photoswipe.min.css">
+  <!-- ================== Plugins CSS ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">
+                <i class="mdi mdi-menu me-1 d-lg-none" data-toggle="sidebar"></i>
+                Email Read
+              </h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="calender.html">
+                    Apps
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Read</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3">
+                <div data-sidebar="mobile" class="inbox-leftbar card">
+                  <div class="card-body">
+                    <a class="btn btn-danger d-block btn-primary mb-4" data-effect="wave" href="email-compose.html">Compose</a>
+                    <div class="mail-control">
+                      <a href="javascript:void(0)" class="text-danger fw-bold">
+                        <i class="bx bxs-inbox me-1"></i>
+                        Inbox
+                        <span class="badge bg-danger float-end"> 8</span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-star me-1"></i>
+                        Starred
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-time me-1"></i>
+                        Snoozed
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-message-alt-edit me-1"></i>
+                        Draft
+                        <span class="badge bg-light float-end text-dark"> 32</span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-mail-send me-1"></i>
+                        Send Mail
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-trash me-1"></i>
+                        Trash
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-bookmark me-1"></i>
+                        Important
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="bx bx-error me-1"></i>
+                        Spam
+                      </a>
+                    </div>
+                    <h6 class="mt-4 fw-bold text-uppercase">Labels</h6>
+                    <div class="mail-control">
+                      <a href="javascript:void(0)">
+                        Personal
+                        <span class="bx bxs-circle fs-14 text-primary"></span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        Company
+                        <span class="bx bxs-circle fs-14 text-danger"></span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        Important
+                        <span class="bx bxs-circle fs-14 text-success"></span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        Warning
+                        <span class="bx bxs-circle fs-14 text-warning"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="inbox-rightbar card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap">
+                      <div class="btn-group mb-3">
+                        <button type="button" class="btn btn-primary" data-effect="wave">
+                          <i class="bx bxs-archive"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary" data-effect="wave">
+                          <i class="bx bxs-error-alt"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary" data-effect="wave">
+                          <i class="bx bxs-trash-alt"></i></button>
+                      </div>
+                      <div class="btn-group ms-1 dropdown mb-3">
+                        <button type="button" data-bs-toggle="dropdown"
+                          class="btn btn-primary dropdown-toggle" data-effect="wave">
+                          <i class="bx bxs-folder"></i>
+                          <i class="bx bx-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                          <span class="dropdown-header">Move to</span>
+                          <a class="dropdown-item" href="javascript: void(0);">Social</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Promotions</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Forums</a>
+                        </div>
+                      </div>
+                      <div class="btn-group ms-1 dropdown mb-3">
+                        <button type="button" data-bs-toggle="dropdown"
+                          class="btn btn-primary dropdown-toggle" data-effect="wave">
+                          <i class="bx bxs-label"></i>
+                          <i class="bx bx-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                          <span class="dropdown-header">Label as:</span>
+                          <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Social</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Promotions</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Forums</a>
+                        </div>
+                      </div>
+                      <div class="btn-group ms-1 dropdown mb-3">
+                        <button type="button" data-bs-toggle="dropdown"
+                          class="btn btn-primary dropdown-toggle" data-effect="wave">
+                          More
+                          <i class="bx bx-dots-vertical-rounded fs-13"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                          <span class="dropdown-header">More Option :</span>
+                          <a class="dropdown-item" href="javascript: void(0);">Mark as Unread</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Add to Tasks</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Add Star</a>
+                          <a class="dropdown-item" href="javascript: void(0);">Mute</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-2">
+                      <h5 class="fw-bold">Need an admin template</h5>
+                      <hr />
+                      <div class="media mb-4 mt-1">
+                        <img class="d-flex me-2 rounded-circle avatar-sm" src="assets/images/users/avatar-1.jpg"
+                          alt="Generic placeholder image">
+                        <div class="media-body">
+                          <span class="float-end fs-13">08:23 AM</span>
+                          <h6 class="m-0 fw-bold">Mike Smith</h6>
+                          <small class="text-muted">From: example@domain.com</small>
+                        </div>
+                      </div>
+                      <div id="msg-content">
+                        <p><b>Hi Jonathan</b></p>
+                        <div class="text-muted">
+                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus
+                            mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                            quis, sem.</p>
+                          <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+                            elementum semper nisi.</p>
+                          <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor
+                            eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                            dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+                            nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+                            condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+                            sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+                            pulvinar,</p>
+                        </div>
+                      </div>
+                      <hr />
+                      <h6> <i class="fa fa-paperclip mb-2"></i> Attachments <span>(3)</span>
+                      </h6>
+                      <div class="row">
+                        <div class="col-4 col-md-3 col-xl-2 col-sm-4">
+                          <div class="attachment" data-index="1">
+                            <img src="assets/images/attachments/attachment1.jpg" alt="attachment" class="img-fluid rounded-1">
+                            <div class="actions">
+                              <div class="d-flex w-100 mb-2">
+                                <span><i class="bx bxs-file-image fs-xs me-1"></i></span>
+                                <h6 class="fs-12 text-truncate"><span class="title">Design.jpg</span> <span
+                                    class="size">123KB</span></h6>
+                              </div>
+                              <a download href="assets/images/attachments/attachment1.jpg"
+                                class="download-btn me-0 mt-auto"><i class="bx bxs-download"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-3 col-xl-2 mt-3 mt-sm-0">
+                          <div class="attachment" data-index="2">
+                            <img src="assets/images/attachments/attachment2.jpg" alt="attachment" class="img-fluid rounded-1">
+                            <div class="actions">
+                              <div class="d-flex w-100 mb-2">
+                                <span><i class="bx bxs-file-image fs-xs me-1"></i></span>
+                                <h6 class="fs-12 text-truncate"><span class="title">Design2.jpg</span> <span
+                                    class="size">123KB</span></h6>
+                              </div>
+                              <a download href="assets/images/attachments/attachment2.jpg"
+                                class="download-btn me-0 mt-auto"><i class="bx bxs-download"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-3 col-xl-2 mt-3 mt-sm-0">
+                          <div class="attachment" data-index="3">
+                            <img src="assets/images/attachments/attachment3.jpg" alt="attachment" class="img-fluid rounded-1">
+                            <div class="actions">
+                              <div class="d-flex w-100 mb-2">
+                                <span><i class="bx bxs-file-image fs-xs me-1"></i></span>
+                                <h6 class="fs-12 text-truncate"><span class="title">Design3.jpg</span> <span
+                                    class="size">123KB</span></h6>
+                              </div>
+                              <a download href="assets/images/attachments/attachment3.jpg"
+                                class="download-btn me-0 mt-auto"><i class="bx bxs-download"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix mt-4">
+                        <button class="btn btn-light me-2 mb-2" data-effect="wave" id="reply-btn">
+                          <i class="bx bx-reply"></i>
+                          Reply
+                        </button>
+                        <button class="btn btn-light me-2 mb-2" data-effect="wave" id="reply-all">
+                          <i class="bx bx-reply-all"></i>
+                          Reply All
+                        </button>
+                        <button class="btn btn-info mb-2" data-effect="wave" id="fwd-btn">
+                          <i class='bx bx-right-arrow-alt'></i>
+                          Forward
+                        </button>
+                      </div>
+                    </div> <!-- card-box -->
+                    <!-- editor-box -->
+                    <div id="editor-box" class="d-none">
+                      <div class="media mb-0 mt-5">
+                        <img class="d-flex me-3 rounded-circle avatar-sm" src="assets/images/users/avatar-7.jpg"
+                          alt="Generic placeholder image">
+                        <div class="media-body">
+                          <div class="mb-2">
+                            <div id="editor">Type something here</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <button class="btn btn-success btn-mw110 me-2" data-effect="wave" id="draft-btn">
+                          <i class="bx bxs-edit-alt fs-sm align-middle"></i>
+                          <span class="d-none d-sm-inline-block me-2 align-middle">Draft</span>
+                        </button>
+                        <button class="btn btn-primary btn-mw110 chat-send-btn" data-effect="wave" id="send-btn">
+                          <span class="d-none d-sm-inline-block me-2 align-middle">Send</span>
+                          <i class="bx bxs-send fs-sm align-middle"></i>
+                        </button>
+                      </div>
+                    </div> <!-- end editor-box -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <div class="pswp__ui pswp__ui--hidden">
+        <!-- **************************************-->
+        <!-- **************Toolbar**************-->
+        <!-- **************************************-->
+        <div class="pswp__top-bar">
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip">
+          </div>
+        </div>
+        <!-- **************************************-->
+        <!-- **************Left right buttons**************-->
+        <!-- **************************************-->
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <!-- **************************************-->
+        <!-- **************caption holder**************-->
+        <!-- **************************************-->
+        <div class="pswp__caption">
+          <div class="pswp__caption__center">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <script src="assets/libs/PhotoSwipe-master/dist/photoswipe-ui-default.min.js"></script>
+  <script src="assets/libs/PhotoSwipe-master/dist/photoswipe.min.js"></script>
+
+  <script src="assets/libs/ckeditor/js/ckeditor.min.js"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/readmail.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

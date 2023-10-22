@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Utility Helper Classes"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/bootstrap-treeview/css/bootstrap-treeview.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Helper Classes</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="utility-animation.html">
+                    Utility
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Helper Classes</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="card-body">
+                <!-- .row -->
+                <div class="row">
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Float Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.float-left</code> </td>
+                          <td>Element to the left (float:left).</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.float-end</code> </td>
+                          <td><span class="float-end">Element to the right(float:right).</span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.float-none</code> </td>
+                          <td><span class="float-none">Clear float.(float-none)</span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.float-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">float-*: * -- xl, lg, md, sm, xs</code> <code
+                              class="d-block">float-*-*: * -- none, left, right</code> <span class="d-block">e.g.
+                              <code>float-lg-right</code></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.clearfix</code> </td>
+                          <td>To clear floated content within a container by adding a clearfix utility</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Text Color Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.text-muted</code> </td>
+                          <td class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-primary</code> </td>
+                          <td class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-success</code> </td>
+                          <td class="text-success">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-info</code> </td>
+                          <td class="text-info">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-warning</code> </td>
+                          <td class="text-warning">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-danger</code> </td>
+                          <td class="text-danger">Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">General Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.text-break</code> </td>
+                          <td>
+                            <div class="text-break">
+                              Tobreaktextusethisclass(text:break).howtobreakthetext..howtobreakthetext.</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-truncate</code> </td>
+                          <td>
+                            <div class="text-truncate" style="width: 300px">To add ellipsis use this class
+                              (text:truncate). To show</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-decoration-none</code> </td>
+                          <td>
+                            <div class="text-decoration-none">Non-underlined link (text:decoration-none).</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Text Alignment</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.text-left</code> </td>
+                          <td>Element to the left (text:left).</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-end</code> </td>
+                          <td>
+                            <div class="text-end">Element to the right(text:right).</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-center</code> </td>
+                          <td>
+                            <div class="text-center">Center Element (text:center).</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">text-*: * -- xl, lg, md, sm, xs</code> <code
+                              class="d-block">text-*-*: * -- none, left, right</code> <span class="d-block">e.g.
+                              <code>text-lg-right</code></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Text Transformation</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.text-lowercase</code> </td>
+                          <td>
+                            <div class="text-lowercase">To lowercase text (text:lowercase).</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-uppercase</code> </td>
+                          <td>
+                            <div class="text-uppercase">To uppercase text (text:uppercase).</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-capitalize</code> </td>
+                          <td>
+                            <div class="text-capitalize">To capitalize text (text:capitalize).</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.text-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">text-*: * -- xl, lg, md, sm, xs</code> <code
+                              class="d-block">text-*-*: * -- none, left, right</code> <span class="d-block">e.g.
+                              <code>text-lg-right</code></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Font Weight</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.font-weight-light</code> </td>
+                          <td class="font-weight-light">Font weight will be light (300).</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.font-weight-lighter</code> </td>
+                          <td class="font-weight-lighter">Font weight will be lighter (100).</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.font-weight-normal</code> </td>
+                          <td class="font-weight-normal">Font weight will be normal</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.fw-bold </code> </td>
+                          <td class="fw-bold">Font weight will be bold (700)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.fw-bolder </code> </td>
+                          <td class="fw-bolder">Font weight will be bolder (900)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.font-italic </code> </td>
+                          <td class="font-italic">To italic text</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Display Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.d-none</code> </td>
+                          <td>
+                            <div class="d-none">To hide element (d:none)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-inline</code> </td>
+                          <td>To inline element (d:inline)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-inline-block</code> </td>
+                          <td>To inline element (d:inline-block)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-block</code> </td>
+                          <td>
+                            <div class="d-block">To show element (d:block)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-flex</code> </td>
+                          <td>
+                            <div class="d-flex">To flex element (d:flex)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-inline-flex</code> </td>
+                          <td>
+                            <div class="d-inline-flex">To flex element (d:inline-flex)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-table</code> </td>
+                          <td>To create block as table (d:table)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-table-cell</code> </td>
+                          <td>To display element as cell (d:table-cell)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-table-row</code> </td>
+                          <td>To display element as row (d:table-row)</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.d-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">d-*: * -- xl, lg, md, sm, xs</code> <code
+                              class="d-block">d-*-*: * -- none, block, flex, inline-flex, inline-block, inline, table, table-row, table-cell</code>
+                            <span class="d-block">e.g. <code>d-lg-none</code></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Justify and align items Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.justify-content-start</code> </td>
+                          <td>
+                            <div class="d-flex justify-content-start">To left element (justify:content-start)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.justify-content-end</code> </td>
+                          <td>
+                            <div class="d-flex justify-content-end">To right element (justify:content-end)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.justify-content-center</code> </td>
+                          <td>
+                            <div class="d-flex justify-content-center">To center element (justify:content-center)</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.justify-content-between</code> </td>
+                          <td>
+                            <div class="d-flex justify-content-between"><span>To equally divide spacing</span>
+                              <span>(justify:content-between)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.justify-content-around</code> </td>
+                          <td>
+                            <div class="d-flex justify-content-around"><span>To give some spacing around element</span>
+                              <span>(justify:content-around)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-items-start</code> </td>
+                          <td>
+                            <div class="d-flex align-items-start ah-50"><span class="bg-light">To Top element
+                                (align:items-start)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-items-end</code> </td>
+                          <td>
+                            <div class="d-flex align-items-end ah-50"><span class="bg-light">To Bottom element
+                                (align:items-end)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-items-center</code> </td>
+                          <td>
+                            <div class="d-flex align-items-center ah-50"><span class="bg-light">To center element
+                                (align:items-center)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-items-between</code> </td>
+                          <td>
+                            <div class="d-flex align-items-baseline ah-50"><span class="bg-light">To equally divide
+                                spacing (align:items-baseline)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-items-around</code> </td>
+                          <td>
+                            <div class="d-flex align-items-stretch ah-50"><span class="bg-light">To give some spacing
+                                around element (align:items-stretch)</span></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.justify-content-*-*</code> <code>.align-items-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">justify-content-*: * -- xl, lg, md, sm, xs</code>
+                            <code class="d-block">justify-content-*-*: * -- start, end, center, between, around</code>
+                            <span class="d-block mb-2">e.g. <code>justify-content-lg-end</code></span>
+                            <code class="d-block">align-items-*-*: * -- start, end, center, baseline, stretch</code>
+                            <span class="d-block">e.g. <code>align-items-lg-end</code></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Padding Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>1rem</code> </td>
+                          <td>1rem = 14px.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-0</code> </td>
+                          <td>Padding will be 0px from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-1</code> </td>
+                          <td>Padding will be 0.25rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-2</code> </td>
+                          <td>Padding will be 0.5rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-3</code> </td>
+                          <td>Padding will be 1rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-4</code> </td>
+                          <td>Padding will be 1.5rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-5</code> </td>
+                          <td>Padding will be 3rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.p-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">p-*: * -- xl, lg, md, sm, xs</code> <code
+                              class="d-block">p-*-*: * -- 0, 1, 2, 3, 4, 5</code> <span class="d-block">e.g.
+                              <code>p-lg-4</code></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Margin Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>1rem</code> </td>
+                          <td>1rem = 14px.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-0</code> </td>
+                          <td>margin will be 0px from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-1</code> </td>
+                          <td>margin will be 0.25rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-2</code> </td>
+                          <td>margin will be 0.5rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-3</code> </td>
+                          <td>margin will be 1rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-4</code> </td>
+                          <td>margin will be 1.5rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-5</code> </td>
+                          <td>margin will be 3rem from all side.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.m-*-*</code> </td>
+                          <td>Responsive Classes <code class="d-block">m-*: * -- xl, lg, md, sm, xs</code> <code
+                              class="d-block">m-*-*: * -- 0, 1, 2, 3, 4, 5</code> <span class="d-block">e.g.
+                              <code>m-lg-4</code></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Vertical Align</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.align-baseline</code> </td>
+                          <td>Element - vertical align text at baseline.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-top</code> </td>
+                          <td>Element - vertical align text at top.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-middle </code> </td>
+                          <td>Element - vertical align text at middle.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-bottom </code> </td>
+                          <td>Element - vertical align text at bottom.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-text-top </code> </td>
+                          <td>Element - vvertical align text at text top.</td>
+                        </tr>
+                        <tr>
+                          <td> <code>.align-text-bottom </code> </td>
+                          <td>Element - vertical align text at text bottom.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Border Classes</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.border</code> </td>
+                          <td>
+                            <div class="border">All side border</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.border-*</code> </td>
+                          <td>
+                            <div class="border-top">Border at top</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.border-right</code> </td>
+                          <td>
+                            <div class="border-right">Border at right</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.border-bottom</code> </td>
+                          <td>
+                            <div class="border-bottom">Border at bottom</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.border-left</code> </td>
+                          <td>
+                            <div class="border-left">Border at left</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.border .border-primary</code> </td>
+                          <td>
+                            <code>border-*</code> Primary, Secondary, info, warning, danger, success, light, dark
+                            <span class="d-block border border-primary">Border Primary</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Background Colors</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.bg-primary</code> </td>
+                          <td><span class="py-2 px-5 bg-primary"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-secondary</code> </td>
+                          <td><span class="py-2 px-5 bg-secondary"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-warning</code> </td>
+                          <td><span class="py-2 px-5 bg-warning"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-info</code> </td>
+                          <td><span class="py-2 px-5 bg-info"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-danger</code> </td>
+                          <td><span class="py-2 px-5 bg-danger"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-success</code> </td>
+                          <td><span class="py-2 px-5 bg-success"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-light</code> </td>
+                          <td><span class="py-2 px-5 bg-light"></span></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.bg-dark</code> </td>
+                          <td><span class="py-2 px-5 bg-dark"></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-6">
+                    <h5 class="fw-semibold mb-3">Image Radius</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.rounded</code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded" height="50" alt="user thumb"/></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.rounded-top </code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded-top" height="50"  alt="user thumb"/></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.rounded-right</code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded-right" height="50" alt="user thumb" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.rounded-bottom</code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded-bottom" height="50" alt="user thumb" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.rounded-left </code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded-left" height="50" alt="user thumb" /></td>
+                        </tr>
+                        <tr>
+                          <td> <code>.rounded-circle</code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded-circle" height="50" alt="user thumb" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.rounded-0</code> </td>
+                          <td><img src="assets/images/users-thumbs/user-14.jpg" class="rounded-0" height="50" alt="user thumb" /></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12">
+                    <h5 class="fw-semibold mb-3">Avatars</h5>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width:30%;">Class</th>
+                          <th style="width:70%;">Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> <code>.avatar</code> </td>
+                          <td>
+                            <img src="assets/images/users-thumbs/user-17.jpg" class="avatar me-0"  alt="user thumb"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <code>.avatar .avatar-xs</code>, <code>.avatar .avatar-sm</code>,
+                            <code>.avatar .avatar-md</code>, <code>.avatar .avatar-lg</code>,
+                            <code>.avatar .avatar-xl</code></td>
+                          <td>
+                            <img src="assets/images/users-thumbs/user-17.jpg" class="avatar avatar-xs me-2"  alt="user thumb"/>
+                            <img src="assets/images/users-thumbs/user-17.jpg" class="avatar avatar-sm me-2"  alt="user thumb"/>
+                            <img src="assets/images/users-thumbs/user-17.jpg" class="avatar avatar-md me-2"  alt="user thumb"/>
+                            <img src="assets/images/users-thumbs/user-17.jpg" class="avatar avatar-lg me-2"  alt="user thumb"/>
+                            <img src="assets/images/users-thumbs/user-17.jpg" class="avatar avatar-xl"  alt="user thumb"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <span class="d-block">Name</span> <code>.avatar</code> </td>
+                          <td>
+                            <div class="avatar bg-soft-danger text-danger">
+                              AG
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> <span class="d-block">Name</span> <code>.avatar .avatar-xs</code>,
+                            <code>.avatar .avatar-sm</code>, <code>.avatar .avatar-md</code>,
+                            <code>.avatar .avatar-lg</code>, <code>.avatar .avatar-xl</code></td>
+                          <td>
+                            <div class="avatar avatar-xs bg-soft-danger text-danger me-2">
+                              AG
+                            </div>
+                            <div class="avatar avatar-sm bg-soft-danger text-danger me-2">
+                              AG
+                            </div>
+                            <div class="avatar avatar-md bg-soft-danger text-danger me-2">
+                              AG
+                            </div>
+                            <div class="avatar avatar-lg bg-soft-danger text-danger me-2">
+                              AG
+                            </div>
+                            <div class="avatar avatar-xl bg-soft-danger text-danger">
+                              AG
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-12 mb-3">
+                    <hr>
+                  </div>
+                  <!-- /.col -->
+                  <!-- .col -->
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped responsive-utilities">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>
+                              Extra small devices
+                              <small>Portrait phones (&lt;576px)</small>
+                            </th>
+                            <th>
+                              Small devices
+                              <small>Landscape phones (≥576px - &lt;768px)</small>
+                            </th>
+                            <th>
+                              Medium devices
+                              <small>Tablets (≥768px - &lt;992px)</small>
+                            </th>
+                            <th>
+                              Large devices
+                              <small>Desktops (≥992px - &lt;1200px)</small>
+                            </th>
+                            <th>
+                              Extra large devices
+                              <small>Desktops (≥1200px)</small>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><code>.d-xs-block .d-none</code></th>
+                            <td>visible</td>
+                            <td>hidden</td>
+                            <td>hidden</td>
+                            <td>hidden</td>
+                            <td>hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.d-sm-block .d-none</code></th>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>hidden</td>
+                            <td>hidden</td>
+                            <td>hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.d-md-block .d-none</code></th>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>hidden</td>
+                            <td>hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.d-lg-block .d-none</code></th>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.d-block</code></th>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>visible</td>
+                            <td>visible</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/treeview.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

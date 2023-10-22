@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Cart"})
+	<!-- ================== Plugins CSS  ================== -->
+	<link href="assets/libs/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+	<!-- ================== Plugins CSS ================== -->
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Cart</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Cart</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-8 col-xl-9">
+								<div class="card">
+									<div class="card-header py-3 bg-info rounded-top">
+										<h5 class="text-white mb-0">Your cart (4 items)</h5>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-centered mb-0 table-nowrap">
+												<thead class="table-light">
+													<tr>
+														<th>Product</th>
+														<th>Product Desc</th>
+														<th>Price</th>
+														<th style="min-width:140px;width:140px">Quantity</th>
+														<th>Total</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<img src="assets/images/product/chair.jpg" alt="product-img" title="product-img"
+																class="avatar-lg">
+														</td>
+														<td>
+															<h6 class="fs-16 mb-1 text-truncate">
+																<a href="ecommerce-product-details.html" class="text-dark">Zara</a>
+															</h6>
+															<p class="text-muted mb-2 text-truncate">
+																Color Block Men Round Neck Half sleeve T-Shirt
+															</p>
+															<div class="d-flex">
+																<p class="mb-2 mb-lg-0 me-2">Size: <b>M</b></p>
+																<p class="mb-0">Color: <b>Maroon</b></p>
+															</div>
+														</td>
+														<td class="base-price" data-price="450">
+															<b>$450</b>
+														</td>
+														<td>
+															<div class="input-group">
+																<input type="text" value="02" name="qty" class="touchspin-qty">
+															</div>
+														</td>
+														<td class="total-price">
+															<b>$900</b>
+														</td>
+														<td data-id="1">
+															<a href="javascript:void(0);"
+																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
+																<i class="mdi mdi-close fs-sm"></i></a>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<img src="assets/images/product/chair2.jpg" alt="product-img" title="product-img"
+																class="avatar-lg">
+														</td>
+														<td>
+															<h6 class="fs-16 mb-1 text-truncate">
+																<a href="ecommerce-product-details.html" class="text-dark">Nike</a>
+															</h6>
+															<p class="text-muted mb-2 text-truncate">
+																Color Block Men Round Neck Half sleeve T-Shirt
+															</p>
+															<div class="d-flex">
+																<p class="mb-2 mb-lg-0 me-2">Size: <b>L</b></p>
+																<p class="mb-0">Color: <b>Blue</b></p>
+															</div>
+														</td>
+														<td class="base-price" data-price="200">
+															<b>$200</b>
+														</td>
+														<td>
+															<div class="input-group">
+																<input type="text" value="01" name="qty" class="touchspin-qty">
+															</div>
+														</td>
+														<td class="total-price">
+															<b>$200</b>
+														</td>
+														<td data-id="2">
+															<a href="javascript:void(0);"
+																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
+																<i class="mdi mdi-close fs-sm"></i></a>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<img src="assets/images/product/chair3.jpg" alt="product-img" title="product-img"
+																class="avatar-lg">
+														</td>
+														<td>
+															<h6 class="fs-16 mb-1 text-truncate">
+																<a href="ecommerce-product-details.html" class="text-dark">Polo</a>
+															</h6>
+															<p class="text-muted mb-2 text-truncate">
+																Color Block Men Round Neck Half sleeve T-Shirt
+															</p>
+															<div class="d-flex">
+																<p class="mb-2 mb-lg-0 me-2">Size: <b>XL</b></p>
+																<p class="mb-0">Color: <b>Purple</b></p>
+															</div>
+														</td>
+														<td class="base-price" data-price="500">
+															<b>$500</b>
+														</td>
+														<td>
+															<div class="input-group">
+																<input type="text" value="02" name="qty" class="touchspin-qty">
+															</div>
+														</td>
+														<td class="total-price">
+															<b>$1000</b>
+														</td>
+														<td data-id="3">
+															<a href="javascript:void(0);"
+																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
+																<i class="mdi mdi-close fs-sm"></i></a>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<img src="assets/images/product/chair2.jpg" alt="product-img" title="product-img"
+																class="avatar-lg">
+														</td>
+														<td>
+															<h6 class="fs-16 mb-1 text-truncate">
+																<a href="ecommerce-product-details.html" class="text-dark">UCB</a>
+															</h6>
+															<p class="text-muted mb-2 text-truncate">
+																Color Block Men Round Neck Half sleeve T-Shirt
+															</p>
+															<div class="d-flex">
+																<p class="mb-2 mb-lg-0 me-2">Size: <b>XL</b></p>
+																<p class="mb-0">Color: <b>Navy</b></p>
+															</div>
+														</td>
+														<td class="base-price" data-price="600">
+															<b>$600</b>
+														</td>
+														<td>
+															<div class="input-group">
+																<input type="text" value="01" name="qty" class="touchspin-qty">
+															</div>
+														</td>
+														<td class="total-price">
+															<b>$600</b>
+														</td>
+														<td data-id="4">
+															<a href="javascript:void(0);"
+																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
+																<i class="mdi mdi-close fs-sm"></i></a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="row mt-4">
+											<div class="col-sm-6">
+												<a href="ecommerce-product.html" class="btn btn-secondary" data-effect="wave">
+													<i class="mdi mdi-arrow-left me-1"></i> Continue Shopping </a>
+											</div> <!-- end col -->
+											<div class="col-sm-6">
+												<div class="text-sm-end mt-2 mt-sm-0">
+													<a href="ecommerce-checkout.html" class="btn btn-success" data-effect="wave">
+														<i class="mdi mdi-cart me-1"></i> Proceed to Checkout </a>
+												</div>
+											</div> <!-- end col -->
+										</div> <!-- end row-->
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Order Summary</h5>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table mb-0 table-borderless table-no-head">
+												<tbody>
+													<tr>
+														<td>Grand Total :</td>
+														<td>$1,857</td>
+													</tr>
+													<tr>
+														<td>Discount : </td>
+														<td class="text-danger">- $157</td>
+													</tr>
+													<tr>
+														<td>Shipping Charge :</td>
+														<td>$25</td>
+													</tr>
+													<tr>
+														<td>Estimated Tax : </td>
+														<td>$19.22</td>
+													</tr>
+													<tr>
+														<td class="fw-bold">Total :</td>
+														<td class="fw-bold">$1744.22</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="alert alert-warning mt-3 fs-13" role="alert" id="dis-coupon">
+											Use coupon code <strong>UBTF25</strong> and get 25% discount !
+										</div>
+										<div class="alert alert-info mt-3" role="alert" id="coupon-applied" style="display: none;">
+											Coupon Applied
+										</div>
+										<div class="input-group mt-3">
+											<input type="text" class="form-control form-control-light"
+												placeholder="Coupon code" aria-label="Recipient's username">
+											<div class="input-group-append">
+												<button class="btn btn-light btn-sm" type="button" id="apply-coupon">Apply</button>
+											</div>
+										</div>
+										<!-- end table-responsive -->
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Need Assistance</h5>
+									</div>
+									<div class="card-body">
+										<h6 class="fs-16 fw-bold mb-3">
+											<i class="bx bx-mobile-alt align-middle fs-sm text-primary"></i>
+											<span class="align-middle">111-22-5555 (Toll Free)</span>
+										</h6>
+										<p class="mb-0">Please contact with us if you have any questions. We are avalible 24/7.</p>
+									</div>
+								</div>
+								<!-- end card -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+	<!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/pages/ecommerce-cart.init.js"></script>
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Flot Chart"})
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Flot</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="charts-apex.html">
+                    Charts
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Flot</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Multiple Statistics</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="website-stats" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Multiple Statistics</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="website-stats1" class="chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Multiple Statistics</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="donut-chart" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div><!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Realtime Statistics</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="flotRealTime" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="line-chart-alt" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Combine Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="combine-chart" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Stacked Bar chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="ordered-bars-chart" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Pie Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <div id="pie-chart" class="chart"></div>
+                    </div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/flot-charts/js/jquery.flot.js"></script>
+  <script src="assets/libs/flot-charts/js/jquery.flot.time.js"></script>
+  <script src="assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+  <script src="assets/libs/flot-charts/js/jquery.flot.resize.js"></script>
+  <script src="assets/libs/flot-charts/js/jquery.flot.pie.js"></script>
+  <script src="assets/libs/flot-charts/js/jquery.flot.selection.js"></script>
+  <script src="assets/libs/flot-charts/js/jquery.flot.stack.js"></script>
+  <script src="assets/libs/flot-orderbars/js/jquery.flot.orderBars.js"></script>
+  <script src="assets/libs/flot-charts/js/jquery.flot.crosshair.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/flot.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

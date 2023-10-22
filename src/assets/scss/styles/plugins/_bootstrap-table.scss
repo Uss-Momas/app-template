@@ -1,0 +1,108 @@
+// 
+// bootstrap-tables.scss
+//
+
+.bootstrap-table {
+  .table:not(.table-sm) {
+      >tbody>tr>td,
+      >tbody>tr>th,
+      >tfoot>tr>td,
+      >tfoot>tr>th,
+      >thead>tr>td {
+          padding: $table-cell-padding-y;
+      }
+  }
+  .table {
+      border-bottom: none;
+  }
+  .table>thead>tr>th {
+      border-bottom: 2px solid transparent;
+  }
+  .fixed-table-toolbar {
+    .columns {
+      label{
+        padding: .5rem 1.5rem;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        span{
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+  .fixed-table-body{
+    
+  }
+}
+
+.table-borderless.table-bordered {
+  border: none !important;
+}
+
+table[data-toggle="table"] {
+  display: none;
+}
+
+.fixed-table-pagination {
+  margin-top: 1rem;
+  .pagination-detail,
+  div.pagination {
+      margin-top: 20px;
+      margin-bottom: 0;
+  }
+  .float-right {
+    float: right;
+  }
+  .float-left {
+    float: left;
+  }
+  .pagination {
+      .page-link {
+          border-radius: 30px !important;
+          margin: 0 3px;
+          border: none;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+  }
+}
+
+.fixed-table-container {
+  border: none;
+  thead {
+      th {
+          .th-inner {
+              padding: $table-cell-padding-y;
+          }
+      }
+  }
+}
+
+.fixed-table-toolbar {
+  .fa {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+
+      &.fa-sync {
+          font-weight: 900;
+      }
+  }
+  .fa-toggle-down:before {
+      content: "\f150";
+  }
+  .fa-toggle-up:before {
+      content: "\f151";
+  }
+  .fa-refresh:before {
+      content: "\f01e";
+      font-weight: 900;
+  }
+  .fa-th-list:before {
+      content: "\f0ca";
+      font-weight: 900;
+  }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Aletify"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/alertifyjs/css/alertify.min.css" />
+  <link href="assets/libs/alertifyjs/css/themes/default.min.css" rel="stylesheet" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Aletify</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="advanced-bootstrap-tour.html">
+                    Advance UI
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Aletify</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Default Dialogs</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="row text-center">
+                      <div class="col-sm-4">
+                        <div class="my-4">
+                          <h6 class="fs-15 mb-3">Alert</h6>
+                          <a href="javascript: void(0);" id="alert" class="btn btn-primary" data-effect="wave">Click
+                            me</a>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="my-4">
+                          <h6 class="fs-15 mb-3">Confirm</h6>
+                          <a href="javascript: void(0);" id="alert-confirm" class="btn btn-primary"
+                            data-effect="wave">Click me</a>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="my-4">
+                          <h6 class="fs-15 mb-3">Prompt</h6>
+                          <a href="javascript: void(0);" id="alert-prompt" class="btn btn-primary"
+                            data-effect="wave">Click me</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end end -->
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Default Notifications</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table mb-0">
+                        <tbody>
+                          <tr>
+                            <td>Default alert</td>
+                            <td><a href="javascript: void(0);" id="alert-message" class="btn btn-primary btn-sm"
+                                data-effect="wave">Click me</a></td>
+                          </tr>
+                          <tr>
+                            <td>Success alert</td>
+                            <td><a href="javascript: void(0);" id="alert-success" class="btn btn-primary btn-sm"
+                                data-effect="wave">Click me</a></td>
+                          </tr>
+                          <tr>
+                            <td>Error alert</td>
+                            <td><a href="javascript: void(0);" id="alert-error" class="btn btn-primary btn-sm"
+                                data-effect="wave">Click me</a></td>
+                          </tr>
+                          <tr>
+                            <td>Warning alert</td>
+                            <td><a href="javascript: void(0);" id="alert-warning" class="btn btn-primary btn-sm"
+                                data-effect="wave">Click me</a></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div><!-- end box -->
+              </div>
+            </div><!-- end row -->
+          </div>
+          <!-- end  -->
+        </div>
+      </div>
+    </div>
+    <!-- main content End -->
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/alertifyjs/js/alertify.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/alertifyjs.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

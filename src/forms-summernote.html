@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Summernote Editor"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link href="assets/libs/summernote/summernote-lite.min.css" rel="stylesheet" />
+  <!-- ================== Plugins CSS  end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Summernote</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="forms-elements.html">
+                    Forms
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Summernote</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Default Editor</h5>
+                    <h6 class="card-subtitle">Super simple wysiwyg editor on Bootstrap</h6>
+                  </div>
+                  <div class="card-body">
+                    <!-- basic summernote-->
+                    <div id="summernote-basic"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Inline Editor</h5>
+                    <h6 class="card-subtitle">Air-mode give an interface without the Toolbar. To reveal popover Toolbar,
+                      select a text where you want to modify. Simply turn on <code>airMode</code> and just focus on
+                      text.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="summernote-airmode">
+                      <p>This is an Air-mode editable area.</p>
+                      <ul>
+                        <li>Select a text to reveal the toolbar.</li>
+                        <li>Edit rich document on-the-fly, so elastic!</li>
+                      </ul>
+                      <p>End of air-mode area</p>
+                    </div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Click to edit</h5>
+                    <h6 class="card-subtitle">You can edit content on the fly.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="summernote-editmode">
+                      <h6 class="fw-semibold">Hello User, </h6>
+                      <p>We create simple, flat & responsive admin dashboard template.</p>
+                      <p>Please, write text here!</p>
+                      <p class="lead">Super simple WYSIWYG editor on bootstrap.</p>
+                    </div>
+                    <button id="summernote-edit" class="btn btn-primary btn-sm"><i class="mdi mdi-pencil me-1"></i>
+                      Edit</button>
+                    <button id="summernote-save" class="btn btn-success btn-sm mt-2" style="display: none;"><i
+                        class="mdi mdi-content-save-outline me-1"></i> Save Changes</button>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Hint for words</h5>
+                    <h6 class="card-subtitle">Summernote supports autocomplete features, hint to help typing. You can
+                      define custom hints with options. Hint options can be an object or array for multiple hints.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="summernote-hint"></div>
+
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Hint for emoji</h5>
+                    <h6 class="card-subtitle">For Emoji’s you can use <code>https://api.github.com/emojis</code></h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="summernote-emoji"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Hint for mentions</h5>
+                    <h6 class="card-subtitle">For Mentions: [jayden, sam, alvin, david]</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="summernote-hint-mentions"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/summernote/summernote-lite.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/form-summernote.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

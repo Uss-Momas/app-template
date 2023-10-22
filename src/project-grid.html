@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include("partials/title.html", {"title": "Project Grid"})
+   @@include("partials/head.html")
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      @@include('partials/topbar.html')
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      @@include('partials/left-sidebar.html')
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                    <h3 class="mb-1 fw-bold">Projects</h3>
+                    <ol class="breadcrumb mb-0 mt-1">
+                       <li class="breadcrumb-item">
+                          <a href="../index.html">
+                             <i class="bx bx-home fs-xs"></i>
+                          </a>
+                       </li>
+                       <li class="breadcrumb-item">
+                          <a href="calender.html">
+                             Apps
+                          </a>
+                       </li>
+                       <li class="breadcrumb-item active">Projects</li>
+                    </ol>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <div class="card">
+                     <div class="card-body">
+                        <!-- cta -->
+                        <div class="row">
+                           <div class="col-sm-8">
+                              <a href="project-create.html" class="btn btn-outline-primary">
+                                 <i class="bx bx-plus bx-flashing me-1"></i>Add Project
+                              </a>
+                              <div class="btn-group mt-2 mt-sm-0 ms-sm-1 mx-sm-2">
+                                 <button type="button" class="btn btn-info waves-effect waves-float">All</button>
+                                 <button type="button"
+                                    class="btn btn-outline-info waves-effect waves-float">Ongoing</button>
+                                 <button type="button"
+                                    class="btn btn-outline-info waves-effect waves-float">Finished</button>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <form class="float-sm-end mt-3 mt-sm-0">
+                                 <div class="search-box">
+                                    <div class="position-relative">
+                                       <input type="text" placeholder="Search Project..."
+                                          class="form-control">
+                                       <i class="bx bx-search icon"></i>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar bg-soft-success text-success">
+                                    AG
+                                 </div>
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate"><a href="#" class="text-dark"
+                                          title="Landing page Design">Landing page Design</a></h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div class="circle-condense-profiles">
+                                       <a href="javascript: void(0);" class="condense-profile" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="condense-profile" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-3.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="condense-profile" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-4.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="condense-profile" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <div
+                                             class="avatar bg-white text-secondary op-6 fw-bold avatar-sm me-0">
+                                             +3</div>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">76</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">240</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col pl-2">
+                                    <span class="badge bg-success float-end">Completed</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project1.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate">
+                                       <a href="#" class="text-dark"
+                                          title="Option 2 App Design, Development and Maintenance">Option 2 App Design,
+                                          Development and Maintenance</a>
+                                    </h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-3.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">80</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">200</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col pl-2">
+                                    <span class="badge bg-warning text-white float-end">In Progress</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project2.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate">
+                                       <a href="#" class="text-dark" title="Landing page Design">Option 3 Admin page
+                                          design</a>
+                                    </h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);"
+                                          class="avatar avatar-sm bg-soft-info text-info me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          JD
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">85</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">150</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col">
+                                    <span class="badge bg-danger float-end">Delay</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project3.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate"><a href="#" class="text-dark"
+                                          title="Landing page Design">Option 4 Blog Template Design</a></h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div class="circle-condense-profiles">
+                                       <a href="javascript: void(0);" class="condense-profile" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <span class="avatar avatar-sm bg-soft-info text-info me-0">DS</span>
+                                       </a>
+                                       <a href="javascript: void(0);" class="condense-profile" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <span class="avatar avatar-sm bg-soft-info text-info me-0">JM</span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">60</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">120</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col pl-2">
+                                    <span class="badge bg-success float-end">Completed</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project4.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate">
+                                       <a href="#" class="text-dark" title="App Design and Development">Homepage
+                                          Redesign</a>
+                                    </h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-3.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">100</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">400</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col pl-2">
+                                    <span class="badge bg-success text-white float-end">Completed</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project2.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate"><a href="#" class="text-dark"
+                                          title="Landing page Design">Mobile Development</a></h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);"
+                                          class="avatar avatar-sm bg-soft-info text-info me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          JD
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">10</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">40</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col">
+                                    <span class="badge bg-warning text-white float-end">In Progress</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project1.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate">
+                                       <a href="#" class="text-dark" title="App Design and Development">App Screen
+                                          Design</a>
+                                    </h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-3.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">50</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">100</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col pl-2">
+                                    <span class="badge bg-success text-white float-end">Completed</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar bg-soft-success text-success">
+                                    AS
+                                 </div>
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate"><a href="#" class="text-dark"
+                                          title="Landing page Design">Brochure Design</a></h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-3.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">40</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">200</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col pl-2">
+                                    <span class="badge bg-warning text-white float-end">In Progress</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                     <div class="col-xl-4 col-md-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <img src="assets/images/projects-logo/project2.jpg" class="avatar rounded-circle"
+                                    width="30" alt="Lettstart Admin" />
+                                 <div class="media-body overflow-hidden">
+                                    <h5 class="card-title mb-2 pr-4 text-truncate"><a href="#" class="text-dark"
+                                          title="Landing page Design">Admin Chat UI</a></h5>
+                                    <p class="text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting.</p>
+                                    <div>
+                                       <a href="javascript: void(0);" class="me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          <img src="assets/images/users/avatar-2.jpg" alt="Lettstart Admin"
+                                             class="avatar-sm rounded-circle">
+                                       </a>
+                                       <a href="javascript: void(0);"
+                                          class="avatar avatar-sm bg-soft-info text-info me-1" data-bs-toggle="tooltip"
+                                          data-bs-placement="top" title="" data-bs-title="ProfileUser">
+                                          JD
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body border-top">
+                              <div class="row align-items-center justify-content-between">
+                                 <div class="col-auto">
+                                    <ul class="list-inline mb-0">
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Task">
+                                             <i class="bx bx-list-ul fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">120</span>
+                                          </h5>
+                                       </li>
+                                       <li class="list-inline-item">
+                                          <h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top"
+                                             title="" data-bs-title="Comments">
+                                             <i class="bx bx-comment-detail fs-sm text-secondary op-5 align-middle"></i>
+                                             <span class="align-middle">240</span>
+                                          </h5>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col">
+                                    <span class="badge bg-danger text-white float-end">Delay</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="dropdown edit-field-half-left">
+                              <div
+                                 class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle me-0 edit-field-icon"
+                                 data-bs-toggle="dropdown">
+                                 <i class="mdi mdi-dots-vertical fs-sm"></i>
+                              </div>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-pencil align-middle me-1 text-primary"></i>
+                                    <span>Edit</span>
+                                 </a>
+                                 <a href="#" class="dropdown-item">
+                                    <i class="mdi mdi-delete align-middle me-1 text-danger"></i>
+                                    <span>Delete</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end card -->
+                     </div><!-- end col-4 -->
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <ul class="pagination flat-rounded-pagination justify-content-center mb-4">
+                           <li class="page-item disabled">
+                              <a href="javascript: void(0);" class="page-link" data-effect="wave"><i
+                                    class="bx bx-chevron-left"></i></a>
+                           </li>
+                           <li class="page-item active">
+                              <a href="javascript: void(0);" class="page-link" data-effect="wave">1</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="javascript: void(0);" class="page-link" data-effect="wave">2</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="javascript: void(0);" class="page-link" data-effect="wave">3</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="javascript: void(0);" class="page-link" data-effect="wave">4</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="javascript: void(0);" class="page-link" data-effect="wave"><i
+                                    class="bx bx-chevron-right"></i></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      @@include('partials/footer.html')
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

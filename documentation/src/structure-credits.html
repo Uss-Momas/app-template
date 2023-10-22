@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("../partials/head.html", {"title": "Structure & Credits"})
+
+</head>
+
+<body>
+	<!-- Begin page -->
+	<div id="wrapper">
+		<!-- Topbar Start -->
+		@@include("../partials/header.html")
+		<!-- end Topbar -->
+		<!-- ========== Left Sidebar Start ========== -->
+		<div class="left-side-menu">
+			@@include("../partials/sidebar.html")
+			<!-- Sidebar -left -->
+		</div>
+		<!-- Left Sidebar End -->
+
+		<!-- ============================================================== -->
+		<!-- Start Page Content here -->
+		<!-- ============================================================== -->
+
+		<div class="content-page">
+			<div class="content">
+				<div class="main-content">
+					<!-- Start Content-->
+					<div class="container-fluid">
+						<div class="row page-title-box">
+							<div class="col-md-12">
+								<h4 class="my-0">Structure & Credits</h4>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="mt-0 header-title mb-3">Structure</h5>
+										<p>After purchasing our template extract the zip file and you will see this structure.</p>
+										<div class="bg-light p-3 border border-muted rounded">
+											<ul class="list-unstyled">
+												<li class="py-2">
+													<i class="bx bx-folder text-success font-weight-bold me-2"></i> Marvel/
+													<ul class="list-unstyled pl-4">
+														<li class="py-2">
+															<i class="bx bx-folder text-info font-weight-bold me-2"></i> documentation/
+														</li>
+														<li class="py-2">
+															<i class="bx bx-folder text-info font-weight-bold me-2"></i> dist/
+															<ul class="list-unstyled pl-4 mb-3">
+																<li class="pt-3 pb-2">
+																	<i class="bx bx-folder text-info font-weight-bold me-2"></i> assets
+																	<ul class="list-unstyled pt-2 pl-4">
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> css/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> fonts/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> images/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> js/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> libs/
+																		</li>
+																	</ul>
+																</li>
+																<li>HTML Files</li>
+															</ul>
+														</li>
+														<li class="py-2">
+															<i class="bx bx-folder text-info font-weight-bold me-2"></i> src/
+															<ul class="list-unstyled pl-4">
+																<li class="pt-3 pb-2">
+																	<i class="bx bx-folder text-info font-weight-bold me-2"></i> assets
+																	<ul class="list-unstyled pt-2 pl-4 mb-3">
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> css/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> fonts/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> images/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> js/
+																		</li>
+																		<li class="py-2">
+																			<i class="bx bx-folder text-warning font-weight-bold me-2"></i> libs/
+																		</li>
+																	</ul>
+																</li>
+																<li><i class="bx bx-folder text-info font-weight-bold me-2"></i> Partials</li>
+																<li class="pt-3 pb-2">HTML Files</li>
+																<li class="pt-3 pb-2">Gulp.js</li>
+																<li class="pt-3 pb-2">package.json</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="mt-0 header-title mb-3">Credits</h5>
+										<select class="form-control w-25" id="pluginslist" onchange="showPluginDetails();">
+											<option value="alertifyjs">alertifyjs</option>
+											<option value="apexcharts">apexcharts</option>
+											<option value="bootstrap">bootstrap</option>
+											<option value="bootstrap-colorpicker">bootstrap colorpicker</option>
+											<option value="bootstrap-datepicker">bootstrap datepicker</option>
+											<option value="bootstrap-maxlength">bootstrap maxlength</option>
+											<option value="bootstrap-rating">bootstrap rating</option>
+											<option value="bootstrap-select">bootstrap select</option>
+											<option value="bootstrap-table">bootstrap table</option>
+											<option value="bootstrap-tagsinput">bootstrap tagsinput</option>
+											<option value="bootstrap-touchspin">bootstrap touchspin</option>
+											<option value="bootstrap-tour">bootstrap tour</option>
+											<option value="bootstrap-treeview">bootstrap treeview</option>
+											<option value="boxicons">boxicons</option>
+
+											<option value="c3">c3</option>
+											<option value="chartist">chartist</option>
+											<option value="chartjs">chartjs</option>
+											<option value="ckeditor">ckeditor</option>
+											<option value="clockpicker">clockpicker</option>
+											<option value="countdown">countdown</option>
+											<option value="counterup">counterup</option>
+											<option value="cropper">cropper</option>
+											<option value="datatables">datatables</option>
+											<option value="dragula">dragula</option>
+											<option value="dropify">dropify</option>
+											<option value="dropzone">dropzone</option>
+											<option value="d3">d3</option>
+											<option value="d3-shape">d3 shape</option>
+											<option value="flot-charts">flot charts</option>
+											<option value="footable">footable</option>
+											<option value="form-mask">form mask</option>
+											<option value="fullcalendar">fullcalendar</option>
+											<option value="feather-icons">feather icons</option>
+											<option value="flatpickr">flatpickr</option>
+
+											<option value="hopscotch">hopscotch</option>
+											<option value="input-mask ">input mask </option>
+											<option value="ion-rangeslider">ion rangeslider</option>
+											<option value="jquery">jquery</option>
+											<option value="jquery-confirmbox">jquery confirmbox</option>
+											<option value="jquery-knob">jquery knob</option>
+											<option value="jquery-sparkline">jquery sparkline</option>
+											<option value="jquery-validation">jquery validation</option>
+											<option value="light-slider">light slider</option>
+											<option value="Magnific-Popup">Magnific Popup</option>
+
+
+											
+											<option value="mdi-icon">mdi icon</option>
+											<option value="metismenujs">metismenujs</option>
+											<option value="moment">moment</option>
+											<option value="morris">morris</option>
+											<option value="multiselect">multiselect</option>
+											<option value="nestable2">nestable2</option>
+											<option value="owl-carousel">owl-carousel</option>
+											<option value="parsleyjs">parsleyjs</option>
+											<option value="peity">peity</option>
+											<option value="photoswipe">photoswipe</option>
+											<option value="quill">quill</option>
+											<option value="rxjs">rxjs</option>
+											<option value="rwd-table">rwd table</option>
+
+											<option value="scrollit">scrollit</option>
+											<option value="select2">select2</option>
+											<option value="selectize">selectize</option>
+											<option value="shuffle-js">shuffle js</option>
+											<option value="smartwizard">smartwizard</option>
+											<option value="smooth-scrollbar">smooth scrollbar</option>
+											<option value="sortablejs">sortablejs</option>
+											<option value="sticky-kit">sticky kit</option>
+											<option value="summernote">summernote</option>
+											<option value="sweetalert2">sweetalert2</option>
+
+											<option value="tablesaw">tablesaw</option>
+											<option value="tippy">tippy</option>
+											<option value="twitter-bootstrap-wizard">twitter bootstrap wizard</option>
+											<option value="vectormaps">vectormaps</option>
+											<option value="wave-effect">wave effect</option>
+											<option value="x-editable">x editable</option>
+
+											
+											
+											
+											
+
+											
+										</select>
+										<div class="plugin-details">
+											<div id="bootstrap" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap</h5>
+												<a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
+											</div>
+											<div id="bootstrap-colorpicker" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap colorpicker</h5>
+												<a href="https://www.npmjs.com/package/bootstrap-colorpicker" target="_blank">https://www.npmjs.com/package/bootstrap-colorpicker</a>
+											</div>
+											<div id="bootstrap-datepicker" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap datepicker</h5>
+												<a href="https://bootstrap-datepicker.readthedocs.io/en/latest/" target="_blank">https://bootstrap-datepicker.readthedocs.io/en/latest/</a>
+											</div>
+											<div id="bootstrap-maxlength" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap maxlength</h5>
+												<a href="https://www.npmjs.com/package/bootstrap-maxlength" target="_blank">https://www.npmjs.com/package/bootstrap-maxlength</a>
+											</div>
+											<div id="bootstrap-rating" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap rating</h5>
+												<a href="https://github.com/dreyescat/bootstrap-rating" target="_blank">https://github.com/dreyescat/bootstrap-rating</a>
+											</div>
+											<div id="bootstrap-select" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap select</h5>
+												<a href="https://www.npmjs.com/package/bootstrap-select" target="_blank">https://www.npmjs.com/package/bootstrap-select</a>
+											</div>
+											<div id="bootstrap-table" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap table</h5>
+												<a href="https://bootstrap-table.com/" target="_blank">https://bootstrap-table.com/</a>
+											</div>
+											<div id="bootstrap-tagsinput" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap tagsinput</h5>
+												<a href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/" target="_blank">https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/</a>
+											</div>
+											<div id="bootstrap-touchspin" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap touchspin</h5>
+												<a href="https://www.npmjs.com/package/bootstrap-touchspin" target="_blank">https://www.npmjs.com/package/bootstrap-touchspin</a>
+											</div>
+											<div id="bootstrap-tour" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap tour</h5>
+												<a href="https://bootstraptour.com/" target="_blank">https://bootstraptour.com/</a>
+											</div>
+											<div id="bootstrap-treeview" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">bootstrap treeview</h5>
+												<a href="https://www.npmjs.com/package/bootstrap-treeview" target="_blank">https://www.npmjs.com/package/bootstrap-treeview</a>
+											</div>
+											<div id="boxicons" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">boxicons</h5>
+												<a href="https://boxicons.com/" target="_blank">https://boxicons.com/</a>
+											</div>
+											<div id="c3" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">c3</h5>
+												<a href="https://c3js.org/" target="_blank">https://c3js.org/</a>
+											</div>
+											<div id="chartist" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">chartist</h5>
+												<a href="https://gionkunz.github.io/chartist-js/" target="_blank">https://gionkunz.github.io/chartist-js/</a>
+											</div>
+											<div id="chartjs" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">chartjs</h5>
+												<a href="https://www.chartjs.org/" target="_blank">https://www.chartjs.org/</a>
+											</div>
+											<div id="clockpicker" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">clockpicker</h5>
+												<a href="https://www.npmjs.com/package/clockpicker" target="_blank">https://www.npmjs.com/package/clockpicker</a>
+											</div>
+											<div id="countdown" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">countdown</h5>
+												<a href="http://countdownjs.org/" target="_blank">http://countdownjs.org/</a>
+											</div>
+											<div id="counterup" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">counterup</h5>
+												<a href="https://github.com/bfintal/Counter-Up" target="_blank">https://github.com/bfintal/Counter-Up</a>
+											</div>
+											<div id="cropper" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">cropper</h5>
+												<a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">https://fengyuanchen.github.io/cropperjs/</a>
+											</div>
+
+											<div id="datatables" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">datatables</h5>
+												<a href="https://datatables.net/" target="_blank">https://datatables.net/</a>
+											</div>
+											<div id="dragula" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">dragula</h5>
+												<a href="http://bevacqua.github.io/dragula/" target="_blank">http://bevacqua.github.io/dragula/</a>
+											</div>
+											<div id="dropify" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">dropify</h5>
+												<a href="https://jeremyfagis.github.io/dropify/" target="_blank">https://jeremyfagis.github.io/dropify/</a>
+											</div>
+											<div id="dropzone" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">dropzone</h5>
+												<a href="https://www.dropzonejs.com/" target="_blank">https://www.dropzonejs.com/</a>
+											</div>
+											<div id="flot-charts" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">flot charts</h5>
+												<a href="https://www.flotcharts.org/" target="_blank">https://www.flotcharts.org/</a>
+											</div>
+											<div id="footable" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">footable</h5>
+												<a href="https://fooplugins.github.io/FooTable/" target="_blank">https://fooplugins.github.io/FooTable/</a>
+											</div>
+											<div id="form-mask" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">form mask</h5>
+												<a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">https://igorescobar.github.io/jQuery-Mask-Plugin/</a>
+											</div>
+											<div id="hopscotch" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">hopscotch</h5>
+												<a href="http://fenixrepo.fao.org/cdn/faostat/js/hopscotch/0.2.6/demo/" target="_blank">http://fenixrepo.fao.org/cdn/faostat/js/hopscotch/0.2.6/demo/</a>
+											</div>
+											<div id="input-mask" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">input mask</h5>
+												<a href="https://github.com/RobinHerbots/Inputmask" target="_blank">https://github.com/RobinHerbots/Inputmask</a>
+											</div>
+											<div id="ion-rangeslider" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">ion rangeslider</h5>
+												<a href="http://ionden.com/a/plugins/ion.rangeSlider/" target="_blank">http://ionden.com/a/plugins/ion.rangeSlider/</a>
+											</div>
+											<div id="jquery" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">jquery</h5>
+												<a href="https://jquery.com/" target="_blank">https://jquery.com/</a>
+											</div>
+											<div id="jquery-confirmbox" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">jquery confirmbox</h5>
+												<a href="https://craftpip.github.io/jquery-confirm/" target="_blank">https://craftpip.github.io/jquery-confirm/</a>
+											</div>
+											<div id="jquery-knob" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">jquery knob</h5>
+												<a href="http://anthonyterrien.com/demo/knob/" target="_blank">http://anthonyterrien.com/demo/knob/</a>
+											</div>
+											<div id="jquery-sparkline" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">jquery sparkline</h5>
+												<a href="https://omnipotent.net/jquery.sparkline/" target="_blank">https://omnipotent.net/jquery.sparkline/</a>
+											</div>
+											<div id="jquery-validation" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">jquery validation</h5>
+												<a href="https://jqueryvalidation.org/" target="_blank">https://jqueryvalidation.org/</a>
+											</div>
+											<div id="light-slider" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">light slider</h5>
+												<a href="http://sachinchoolur.github.io/lightslider/" target="_blank">http://sachinchoolur.github.io/lightslider/</a>
+											</div>
+											<div id="Magnific-Popup" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">Magnific Popup</h5>
+												<a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/</a>
+											</div>
+											<div id="mdi-icon" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">mdi icon</h5>
+												<a href="https://cdn.materialdesignicons.com/5.4.55/" target="_blank">https://cdn.materialdesignicons.com/5.4.55/</a>
+											</div>
+											<div id="moment" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">moment</h5>
+												<a href="https://momentjs.com/" target="_blank">https://momentjs.com/</a>
+											</div>
+											<div id="morris" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">morris</h5>
+												<a href="https://morrisjs.github.io/morris.js/" target="_blank">https://morrisjs.github.io/morris.js/</a>
+											</div>
+											<div id="multiselect" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">multiselect</h5>
+												<a href="https://www.npmjs.com/package/bootstrap-multiselect" target="_blank">https://www.npmjs.com/package/bootstrap-multiselect</a>
+											</div>
+											<div id="nestable2" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">nestable2</h5>
+												<a href="https://www.npmjs.com/package/nestable2" target="_blank">https://www.npmjs.com/package/nestable2</a>
+											</div>
+											<div id="owl-carousel" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">owl-carousel</h5>
+												<a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank">https://owlcarousel2.github.io/OwlCarousel2/</a>
+											</div>
+											<div id="parsleyjs" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">parsleyjs</h5>
+												<a href="https://parsleyjs.org/" target="_blank">https://parsleyjs.org/</a>
+											</div>
+											<div id="peity" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">peity</h5>
+												<a href="https://benpickles.github.io/peity/" target="_blank">https://benpickles.github.io/peity/</a>
+											</div>
+											<div id="quill" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">quill</h5>
+												<a href="https://quilljs.com/" target="_blank">https://quilljs.com/</a>
+											</div>
+											<div id="rwd-table" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">rwd table</h5>
+												<a href="https://demos.jquerymobile.com/1.3.0-rc.1/docs/tables/index.html" target="_blank">https://demos.jquerymobile.com/1.3.0-rc.1/docs/tables/index.html</a>
+											</div>
+
+											<div id="scrollit" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">scrollit</h5>
+												<a href="http://www.bytemuse.com/scrollIt.js/" target="_blank">http://www.bytemuse.com/scrollIt.js/</a>
+											</div>
+											<div id="select2" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">select2</h5>
+												<a href="https://select2.org/" target="_blank">https://select2.org/</a>
+											</div>
+											<div id="selectize" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">selectize</h5>
+												<a href="https://selectize.github.io/selectize.js/" target="_blank">https://selectize.github.io/selectize.js/</a>
+											</div>
+											<div id="shuffle-js" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">shuffle js</h5>
+												<a href="https://vestride.github.io/Shuffle/basic" target="_blank">https://vestride.github.io/Shuffle/basic</a>
+											</div>
+											<div id="smartwizard" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">smartwizard</h5>
+												<a href="http://techlaboratory.net/jquery-smartwizard" target="_blank">http://techlaboratory.net/jquery-smartwizard</a>
+											</div>
+											<div id="sortablejs" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">sortablejs</h5>
+												<a href="https://www.npmjs.com/package/sortablejs" target="_blank">https://www.npmjs.com/package/sortablejs</a>
+											</div>
+											<div id="sticky-kit" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">sticky kit</h5>
+												<a href="https://leafo.net/sticky-kit/" target="_blank">https://leafo.net/sticky-kit/</a>
+											</div>
+											<div id="summernote" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">summernote</h5>
+												<a href="https://summernote.org/" target="_blank">https://summernote.org/</a>
+											</div>
+											<div id="sweetalert2" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">sweetalert2</h5>
+												<a href="https://sweetalert2.github.io/" target="_blank">https://sweetalert2.github.io/</a>
+											</div>
+
+											<div id="tablesaw" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">tablesaw</h5>
+												<a href="https://github.com/filamentgroup/tablesaw" target="_blank">https://github.com/filamentgroup/tablesaw</a>
+											</div>
+											<div id="tippy" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">tippy</h5>
+												<a href="https://atomiks.github.io/tippyjs/" target="_blank">https://atomiks.github.io/tippyjs/</a>
+											</div>
+											<div id="twitter-bootstrap-wizard" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">twitter bootstrap wizard</h5>
+												<a href="https://vinceg.github.io/twitter-bootstrap-wizard/" target="_blank">https://vinceg.github.io/twitter-bootstrap-wizard/</a>
+											</div>
+											<div id="vectormaps" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">vectormaps</h5>
+												<a href="https://freevectormaps.com/" target="_blank">https://freevectormaps.com/</a>
+											</div>
+											<div id="wave-effect" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">wave effect</h5>
+												<a href="http://fian.my.id/Waves" target="_blank">http://fian.my.id/Waves</a>
+											</div>
+											<div id="x-editable" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">x editable</h5>
+												<a href="https://vitalets.github.io/x-editable/" target="_blank">https://vitalets.github.io/x-editable/</a>
+											</div>
+
+											
+											<div id="ckeditor" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">ckeditor</h5>
+												<a href="https://ckeditor.com/ckeditor-5/" target="_blank">https://ckeditor.com/ckeditor-5/</a>
+											</div>
+											<div id="fullcalendar" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">fullcalendar</h5>
+												<a href="https://fullcalendar.io/docs/angular"
+													target="_blank">https://fullcalendar.io/docs/angular</a>
+											</div>
+											<div id="alertifyjs" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">alertifyjs</h5>
+												<a href="https://www.npmjs.com/package/alertifyjs"
+													target="_blank">https://www.npmjs.com/package/alertifyjs</a>
+											</div>
+											<div id="apexcharts" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">apexcharts</h5>
+												<a href="https://apexcharts.com/" target="_blank">https://apexcharts.com/</a>
+											</div>
+											<div id="d3" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">d3</h5>
+												<a href="https://d3js.org/" target="_blank">https://d3js.org/</a>
+											</div>
+											<div id="d3-shape" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">d3 shape</h5>
+												<a href="https://www.npmjs.com/package/d3-shape"
+													target="_blank">https://www.npmjs.com/package/d3-shape</a>
+											</div>
+											<div id="feather-icons" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">feather icons</h5>
+												<a href="https://feathericons.com/" target="_blank">https://feathericons.com/</a>
+											</div>
+											<div id="flatpickr" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">flatpickr</h5>
+												<a href="https://flatpickr.js.org/" target="_blank">https://flatpickr.js.org/</a>
+											</div>
+											<div id="metismenujs" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">metismenujs</h5>
+												<a href="https://www.npmjs.com/package/metismenujs"
+													target="_blank">https://www.npmjs.com/package/metismenujs</a>
+											</div>
+											<div id="photoswipe" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">photoswipe</h5>
+												<a href="https://www.npmjs.com/package/photoswipe"
+													target="_blank">https://www.npmjs.com/package/photoswipe</a>
+											</div>
+											<div id="rxjs" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">rxjs</h5>
+												<a href="https://www.npmjs.com/package/rxjs"
+													target="_blank">https://www.npmjs.com/package/rxjs</a>
+											</div>
+											<div id="smooth-scrollbar" class="p-4 border mt-3">
+												<h5 class="card-title pb-3 border-bottom">smooth scrollbar</h5>
+												<a href="https://www.npmjs.com/package/smooth-scrollbar"
+													target="_blank">https://www.npmjs.com/package/smooth-scrollbar</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div> <!-- container-fluid -->
+
+				</div> <!-- content -->
+
+			</div>
+		</div>
+
+    @@include("../partials/footer.html")
+		<!-- ============================================================== -->
+		<!-- End Page content -->
+		<!-- ============================================================== -->
+	</div>
+
+	<!-- Vendor js -->
+	<script src="assets/js/vendor.min.js"></script>
+
+	<!-- App js -->
+	<script src="assets/js/app.min.js"></script>
+	<script>
+		function showPluginDetails() {
+			var id = $('#pluginslist').val();
+			$('.plugin-details > *').hide();
+			$('#' + id).show();
+			return;
+		}
+	</script>
+</body>
+
+</html>

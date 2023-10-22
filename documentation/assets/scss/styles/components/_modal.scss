@@ -1,0 +1,116 @@
+.modal {
+  .modal-dialog{
+    // -webkit-animation-name: DropDownSlide;
+    // animation-name: DropDownSlide;
+    // -webkit-animation-duration: .3s;
+    // animation-duration: .3s;
+    // -webkit-animation-fill-mode: both;
+    // animation-fill-mode: both;
+  }
+  .modal-header{
+    border-bottom: none;
+  }
+  .modal-footer{
+    border-top: none;
+  }
+  // .modal-right{
+  //   animation: none;
+  //   animation-name: none; 
+  //   -webkit-animation-name: none;
+  // }
+  button.close{
+    font-size: 1.5rem;
+    opacity: 0.6;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.modal-full-width {
+  width: 95%;
+  max-width: none;
+}
+
+
+// Modal Positions
+.modal-top {
+  margin-top: 0;
+}
+
+// Right Modal
+.modal-right {
+  @include position(absolute, 0, 0, 0, null);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: $modal-content-bg;
+  @include transform(translate(25%,0) !important);
+  .modal-content{
+    border: none;
+  }
+  button.close {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+  }
+}
+
+.modal {
+  &.show {
+      .modal-right {
+        @include transform(translate(0) !important);
+      }
+  }
+}
+
+// Bottom modal
+.modal-bottom {
+  display: flex;
+  flex-flow: column nowrap;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
+  margin: 0 auto;
+  align-content: center;
+}
+
+// Colored modal header
+.modal-colored-header {
+  color: $white;
+  border-radius: 0;
+
+  .close {
+      color: $white !important;
+  }
+}
+
+@-webkit-keyframes DropDownSlide {
+  to {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  0% {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 0;
+  }
+}
+
+@keyframes DropDownSlide {
+  to {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  0% {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 0;
+  }
+}

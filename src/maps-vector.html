@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Vector Map"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/vectorMaps/css/jquery-jvectormap-2.0.3.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Vector Map</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="maps-google.html">
+                    Maps
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Vector Map</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">World Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="world-map-markers" style="height: 420px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">USA Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="usa-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">India Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="india-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Australia Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="australia-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Chicago Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="chicago-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">UK Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="uk-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Canada Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="canada-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Europe Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="europe-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">France Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="france-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Spain Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="spain-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Spain Vector Map</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="spain2-vectormap" style="height: 350px"></div>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-us-merc-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-in-mill-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-au-mill-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-us-il-chicago-mill-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-uk-mill-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-ca-lcc-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-europe-mill-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-fr-merc-en.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-es-merc.js"></script>
+  <script src="assets/libs/vectorMaps/js/jquery-jvectormap-es-mill.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/vector-maps.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

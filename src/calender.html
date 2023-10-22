@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Calender"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link href="assets/libs/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+  <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+  <!-- ================== Plugins CSS ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Calender</h3>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="calender.html">
+                    Apps
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Calendar</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-xl-2 col-lg-3 col-6">
+                        <img src="assets/images/calender.svg" class="me-4 align-self-center img-fluid " alt="cal" />
+                      </div>
+                      <div class="col-xl-10 col-lg-9">
+                        <div class="mt-4 mt-lg-0">
+                          <h5 class="mt-0 mb-1 fw-bold">Welcome to Your Calendar</h5>
+                          <p class="text-muted mb-2">The calendar shows the events synced from all
+                            your linked calendars.
+                            Click on event to see or edit the details. You can create new event by
+                            clicking on "Create New event" button or any cell available
+                            in calendar below.</p>
+                          <button class="btn btn-primary mt-2" data-effect="wave" id="btn-new-event"
+                            data-bs-toggle="modal" data-bs-target="#addeventmodal"><i class="uil-plus-circle"></i>
+                            Create New Event</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- end card body-->
+                </div> <!-- end card -->
+              </div>
+              <!-- end col-12 -->
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-xl-2 col-lg-3 col-md-4">
+                        <h4 class="fs-14">Created Events</h4>
+                        <form method="post" id="add_event_form" class="mb-4">
+                          <input type="text" class="form-control" placeholder="Add new event..." />
+                        </form>
+                        <div id='external-events'>
+                          <h4 class="fs-14">Draggable Events</h4>
+                          <div class='fc-event'>My Event 1</div>
+                          <div class='fc-event bg-secondary'>My Event 2</div>
+                          <div class='fc-event bg-warning'>My Event 3</div>
+                          <div class='fc-event bg-danger'>My Event 4</div>
+                          <div class='fc-event bg-success'>My Event 5</div>
+                        </div>
+                        <!-- checkbox -->
+                        <div class="custom-control custom-checkbox mt-3">
+                          <input type="checkbox" class="custom-control-input" id="drop-remove"
+                            data-parsley-multiple="groups" data-parsley-mincheck="2">
+                          <label class="custom-control-label" for="drop-remove">Remove after drop</label>
+                        </div>
+
+                      </div>
+
+                      <div id='fc_calendar' class="col-xl-10 col-lg-9 col-md-8 mt-4 mt-md-0"></div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+    <div class="modal" id="addeventmodal">
+      <div class="modal-dialog modal-sm center-text" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add New Event</h5>
+            <button aria-hidden="true" class="close" type="button" data-bs-dismiss="modal"
+              aria-label="Close">&times;</button>
+          </div>
+          <div class="modal-body p-3">
+            <form novalidate id="createEventForm">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group floating-label">
+                    <input class="form-control" id="ename" name="name" data-key="title" type="text">
+                    <label class="control-label" for="ename">Event Name</label>
+                    <div class="invalid-feedback">
+                      <span>Event name can not be blank.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    
+											<select class="form-control" id="event-category" name="category" data-key="className">
+												<option value="bg-danger"> Danger </option>
+                        <option value="bg-success"> Success </option>
+                        <option value="bg-primary"> Primary </option>
+                        <option value="bg-info"> Info </option>
+                        <option value="bg-dark"> Dark </option>
+                        <option value="bg-warning"> Warning </option>
+											</select>
+                    <!---->
+                    <div class="invalid-feedback">
+                      <div>This value is required</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-end pt-4">
+                <button class="btn btn-light" data-effect="wave" type="button" data-bs-dismiss="modal"
+                  aria-label="Close">Close</button>
+                <button class="btn btn-success save-event ms-1" data-effect="wave" type="submit"
+                  id="createEvent">Create</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/libs/jquery-ui-dist/js/jquery-ui.min.js"></script>
+  <script src="assets/libs/moment/min/moment.min.js"></script>
+  <script src="assets/libs/fullcalendar/fullcalendar.min.js"></script>
+	<script src="assets/libs/select2/js/select2.min.js"></script>
+  <script src="assets/js/pages/calender.init.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

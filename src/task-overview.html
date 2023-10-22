@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Task Overview"})
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Task Overview</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Task Overview</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<!-- tasks panel -->
+						<div class="row">
+
+							<!-- task details -->
+							<div class="col-lg-8">
+								<div class="card">
+									<div class="card-body">
+										<div class="row">
+											<div class="col">
+												<div class="inner-header-title">
+													<h4 class="fw-semibold"><a href="#" data-bs-toggle="modal" data-bs-target="#task-detail-modal" class="text-dark">Draft the
+														new contract document for sales team</a></h4>
+													<div class="dropdown">
+														<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle edit-field-icon text-center" data-bs-toggle="dropdown" aria-expanded="false">
+															<i class="mdi mdi-dots-horizontal fs-sm"></i>
+														</a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item"><i
+																	class="bx bx-edit-alt me-2"></i>Edit</a>
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item"><i
+																	class="bx bx-user-plus me-2"></i>Add
+																People</a>
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item text-warning"><i
+																	class="bx bxs-exit me-2"></i>Leave</a>
+															<div class="dropdown-divider"></div>
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item text-danger"><i
+																	class="bx bx-trash-alt me-2"></i>Delete</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-6">
+														<!-- assignee -->
+														<p class="mt-2 mb-1 text-muted">Assigned To</p>
+														<div class="media">
+															<img src="assets/images/users/avatar-9.jpg" alt="Arya S" class="rounded-circle me-2"
+																height="24" />
+															<div class="media-body">
+																<h5 class="mt-1 fs-14">
+																	Arya Stark
+																</h5>
+															</div>
+														</div>
+														<!-- end assignee -->
+													</div> <!-- end col -->
+
+													<div class="col-6">
+														<!-- start due date -->
+														<p class="mt-2 mb-1 text-muted">Due Date</p>
+														<div class="media align-items-center">
+															<i class='bx bx-calendar fs-sm text-success me-1'></i>
+															<div class="media-body">
+																<h5 class="fs-14 mb-0">
+																	Today 10am
+																</h5>
+															</div>
+														</div>
+														<!-- end due date -->
+													</div> <!-- end col -->
+												</div> <!-- end row -->
+
+												<!-- task description -->
+												<div class="row mt-3">
+													<div class="col">
+														<div id="taskDesk">
+															<p>This is a task description with markup support</p>
+															<ul>
+																<li>Select a text to reveal the toolbar.</li>
+																<li>Edit rich document on-the-fly, so elastic!</li>
+															</ul>
+															<p>End of air-mode area</p>
+														</div>
+													</div> <!-- end col -->
+												</div>
+												<!-- end task description -->
+
+												<!-- start sub tasks/checklists -->
+												<h5 class="mt-4 mb-2 fs-16">Checklists/Sub-tasks</h5>
+												<div class="custom-control custom-checkbox mt-1">
+													<input type="checkbox" class="custom-control-input" id="checklist1">
+													<label class="custom-control-label strikethrough" for="checklist1">
+														Find out the old contract documents
+													</label>
+												</div>
+
+												<div class="custom-control custom-checkbox mt-1">
+													<input type="checkbox" class="custom-control-input" id="checklist2">
+													<label class="custom-control-label strikethrough" for="checklist2">
+														Organize meeting sales associates to understand need in detail
+													</label>
+												</div>
+
+												<div class="custom-control custom-checkbox mt-1">
+													<input type="checkbox" class="custom-control-input" id="checklist3">
+													<label class="custom-control-label strikethrough" for="checklist3">
+														Make sure to cover every small details
+													</label>
+												</div>
+												<!-- end sub tasks/checklists -->
+
+												<!-- start attachments -->
+												<h5 class="mt-4 mb-2 fs-16">
+													Attachments
+													<a href="javascript:void(0)" class="d-inline-flex text-underline fs-12 ms-1">
+														 <i class="bx bx-plus"></i> Add
+													</a>
+												</h5>
+												<div class="row">
+													<div class="col-lg-6">
+														<div class="card mb-2 shadow-none border">
+															<div class="p-1 px-2">
+																<div class="row align-items-center">
+																	<div class="col-auto">
+																		<i class="bx bx-archive fs-sm"></i>
+																	</div>
+																	<div class="col pl-0">
+																		<a href="javascript:void(0);"
+																			class="text-muted fw-bold">sales-assets.zip</a>
+																		<p class="mb-0">2.3 MB</p>
+																	</div>
+																	<div class="col-auto">
+																		<!-- Button -->
+																		<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																			title="Download" class="d-inline-flex btn btn-link text-primary btn-lg p-0">
+																			<i class='bx bxs-download fs-xs'></i>
+																		</a>
+																		<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																			title="Delete" class="d-inline-flex btn btn-link text-danger btn-lg p-0">
+																			<i class='bx bx-x fs-sm'></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-6">
+														<div class="card mb-2 shadow-none border">
+															<div class="p-1 px-2">
+																<div class="row align-items-center">
+																	<div class="col-auto">
+																		<i class="bx bxs-file-doc fs-sm"></i>
+																	</div>
+																	<div class="col pl-0">
+																		<a href="javascript:void(0);"
+																			class="text-muted fw-bold">new-contarcts.docx</a>
+																		<p class="mb-0">1.25 MB</p>
+																	</div>
+																	<div class="col-auto">
+																		<!-- Button -->
+																		<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																			title="Download" class="d-inline-flex btn btn-link text-primary btn-lg p-0">
+																			<i class='bx bxs-download fs-xs'></i>
+																		</a>
+																		<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																			title="Delete" class="d-inline-flex btn btn-link text-danger btn-lg p-0">
+																			<i class='bx bx-x fs-sm'></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- end attachments -->
+
+												<!-- comments -->
+												<div class="row mt-4 mb-2">
+													<div class="col">
+														<h5 class="mb-2 fs-16">Comments</h5>
+
+														<div class="media mt-3 p-1">
+															<img src="assets/images/users/avatar-9.jpg" class="me-2 rounded-circle" height="36"
+																alt="Arya Stark" />
+															<div class="media-body">
+																<h5 class="mt-0 mb-0 fs-14">
+																	<span class="float-end text-muted fs-12">4:30am</span>
+																	Arya Stark
+																</h5>
+																<p class="mt-1 mb-0 text-muted">
+																	Should I review the last 3 years legal documents as
+																	well?
+																</p>
+															</div>
+														</div> <!-- end comment -->
+
+														<hr />
+
+														<div class="media mt-2 p-1">
+															<img src="assets/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="36"
+																alt="Dominc B" />
+															<div class="media-body">
+																<h5 class="mt-0 mb-0 fs-14">
+																	<span class="float-end text-muted fs-12">3:30am</span>
+																	Gary Somya
+																</h5>
+																<p class="mt-1 mb-0 text-muted">
+																	@Arya FYI..I have created some general guidelines last
+																	year.
+																</p>
+															</div>
+														</div> <!-- end comment-->
+
+														<hr />
+														<div class="clearfix">
+															<button class="btn btn-primary" id="comment-btn">
+																Comment
+															</button>
+														</div>
+													</div> <!-- end col -->
+												</div> <!-- end row -->
+
+												<div class="d-none" id="comment-form">
+													<textarea id="compose-comment" placeholder="Your comment..."></textarea>
+													<div class="mt-3 dflex-between-center">
+														<button type="button" class="btn btn-sm btn-success" id="comment-submit-btn">
+															Submit
+														</button>
+														<button type="button" class="btn btn-sm btn-secondary" id="discard-btn">
+															Discard
+														</button>
+													</div>
+												</div> <!-- end row-->
+												<!-- end comments -->
+											</div> <!-- end col -->
+										</div> <!-- end row-->
+									</div> <!-- end card-body -->
+								</div> <!-- end card-->
+							</div> <!-- end col -->
+							<div class="col-md-6 col-xl-4">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Task Activities</h5>
+									</div>
+									<div class="card-body">
+										<ul class="list-unstyled activity-widget mb-0">
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-primary text-primary">09</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Bryan</a>
+														</h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Neque
+															porro quisquam est</p>
+													</div>
+												</div>
+
+											</li>
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-success text-success">
+																08
+															</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Everett</a>
+														</h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Ut enim ad
+															minima veniam quis velit</p>
+													</div>
+												</div>
+											</li>
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-warning text-warning">
+																08
+															</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Richard</a>
+														</h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Quis autem
+															vel eum iure</p>
+													</div>
+												</div>
+											</li>
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-info text-info">
+																08
+															</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Jery</a></h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Quis autem
+															vel eum iure</p>
+													</div>
+												</div>
+											</li>
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-primary text-primary">07</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Bryan</a>
+														</h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Neque
+															porro quisquam est</p>
+													</div>
+												</div>
+											</li>
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-success text-success">
+																06
+															</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Everett</a>
+														</h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Ut enim ad
+															minima veniam quis velit</p>
+													</div>
+												</div>
+											</li>
+											<li class="activity-list">
+												<div class="media">
+													<div class="text-center me-3 bg-white">
+														<div class="avatar-sm">
+															<span class="avatar-title rounded-circle bg-soft-warning text-warning">
+																05
+															</span>
+														</div>
+														<p class="text-muted fs-13 mb-0">Jan</p>
+													</div>
+													<div class="media-body overflow-hidden">
+														<h5 class="fs-15 mt-2 mb-1"><a href="#" class="text-dark">Richard</a>
+														</h5>
+														<p class="text-muted fs-13 text-truncate mb-0">Quis autem
+															vel eum iure</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="text-center">
+											<a href="javascript:void(0);" class="btn btn-sm btn-light">
+												<i class="bx bx-loader me-1 align-middle bx-spin"></i>
+												<span class="align-middle">Load more</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/ckeditor/js/ckeditor.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- ================== BEGIN PAGE JS ================== -->
+	<script src="assets/js/pages/task-overview.init.js"></script>
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

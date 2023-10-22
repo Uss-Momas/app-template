@@ -1,0 +1,42 @@
+
+.lSSlideOuter {
+  .lSAction {
+    &>a {
+      width: 50px;
+      height: 50px;
+      color: $black;
+      background: none;
+      opacity: 0.8;
+      z-index: 3;
+      &:after,
+      &:before {
+        font-family: $boxIcons;
+        font-size: 48px;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+
+    &>.lSPrev {
+      &:before {
+        @include position(absolute, 0, null, 0, 0, 2);
+        content: "\ecec"; //ea1b
+      }
+    }
+
+    &>.lSNext {
+      &:after {
+        @include position(absolute, 0, 0, 0, null, 2);
+        content: "\ecef"; //ecec
+      }
+    }
+  }
+  .lslide {
+    @include media-breakpoint-down(sm){
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

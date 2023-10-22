@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("../partials/head.html", {"title": "Menu Structure"})
+  <link rel="stylesheet" type="text/css" href="assets/vendors/highlight/highlight.min.css">
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Menu Structure
+                </h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Menu Structure for Vertical layout</h5>
+                    <p class="mb-0">File: <code>src/partials/left-sidebar.html</code></p>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4" style="height: 190px;">
+&lt;aside class="side-navbar"&gt;
+&lt;div class="scroll-content" id="metismenu"&gt;
+  &lt;ul id="side-menu" class="metismenu list-unstyled"&gt;
+    &lt;li class="side-nav-title side-nav-item menu-title"&gt;Menu&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="javascript:void(0);" class="side-nav-link" aria-expanded="false"&gt;
+        &lt;i class="bx bx-home-circle"&gt;&lt;/i&gt;
+        &lt;span&gt; Dashboard&lt;/span&gt;
+        &lt;span class="menu-arrow"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul aria-expanded="false" class="nav-second-level"&gt;
+        &lt;li class="side-nav-item"&gt;
+          &lt;a class="side-nav-link" href="index.html"&gt; Multi Purpose &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="side-nav-item"&gt;
+          &lt;a class="side-nav-link" href="dashboard2.html"&gt; E-commerce &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="side-nav-item"&gt;
+          &lt;a class="side-nav-link" href="dashboard3.html"&gt; Server Statistics &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/aside&gt;
+                    </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Menu Structure for Horizontal layout</h5>
+                    <p class="mb-0">File: <code>src/partials/header-horizontal.html</code></p>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4" style="height: 190px;">
+&lt;div class="horizontal-topnav shadow-sm"&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;nav class="navbar navbar-expand-lg topnav-menu"&gt;
+      &lt;div id="topnav-menu-content" class="collapse navbar-collapse"&gt;
+        &lt;ul id="side-menu" class="navbar-nav"&gt;
+          &lt;li class="nav-item dropdown"&gt;
+            &lt;a class="nav-link dropdown-toggle" href="#" id="topnav-dashboard" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"&gt;
+              &lt;i class="bx bxs-dashboard me-1"&gt;&lt;/i&gt; Dashboards
+              &lt;i class="bx bx-chevron-down"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;div class="dropdown-menu" aria-labelledby="topnav-dashboard"&gt;
+              &lt;a class="dropdown-item" href="index.html"&gt; Multi Purpose &lt;/a&gt;
+              &lt;a class="dropdown-item" href="dashboard2.html"&gt; E-commerce &lt;/a&gt;
+              &lt;a class="dropdown-item" href="dashboard3.html"&gt; Server Statistics &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+
+        </div> <!-- content -->
+      </div>
+    </div>
+    
+    @@include("../partials/footer.html")
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- App js -->
+  <script src="assets/js/app.min.js"></script>
+  <script src="assets/vendors/highlight/prism.js"></script>
+  <script src="assets/vendors/highlight/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

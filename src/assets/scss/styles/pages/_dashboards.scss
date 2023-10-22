@@ -1,0 +1,41 @@
+.export-fnc{
+  display: flex;
+  align-items: center;
+}
+
+.revenue-card{
+  .card-header{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  app-chart-component{
+    height: 150px;
+    display: inline-flex;
+    width: 100%;
+  }
+  canvas{
+    margin-left: auto;
+    margin-right: auto;
+  }
+	.revenue-stats{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		p{
+			margin-bottom: 5px;
+		}
+	}
+}
+
+
+.carousel-left-trigger,  .carousel-right-trigger{
+  cursor: pointer;
+}
+
+.network-stat{
+  p{
+    @include position(absolute, 50%, null, null, 50%);
+    @include transform(translate(-50%, -50%));
+  }
+}

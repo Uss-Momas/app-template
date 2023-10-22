@@ -1,0 +1,61 @@
+
+.pricing-card {
+  border-radius: 5px;
+  background: $white;
+  margin-bottom: 30px;
+  .pricing-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    @media (max-width: 991px) {
+      padding: 2rem 1rem;
+    }
+    .plan-title {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 1rem;
+      @include border(bottom, 2px, solid, $border-color);
+    }
+  }
+  .plan-price {
+    @include border(bottom, 2px, solid, $border-color);
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+    @media (max-width:991px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .price{
+      float: left;
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-right: 1rem;
+      @media (max-width:991px) {
+        display: flex;
+        align-items: flex-end;
+      }
+      h3{
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 500;
+        margin-left: -15px;
+        @media (max-width:991px) {
+          margin-right: 0.5rem;
+        }
+        sup {
+          top: -0.5rem;
+          margin-right: 3px;
+          left: 15px;
+        }
+      }
+      span{
+        text-transform: uppercase;
+      }
+    }
+  }
+  .pricing-body {
+    li{
+      padding: 0.5rem 0;
+    }
+  }
+}

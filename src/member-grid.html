@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include("partials/title.html", {"title": "Member Grid"})
+   @@include("partials/head.html")
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      @@include('partials/topbar.html')
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      @@include('partials/left-sidebar.html')
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                    <h3 class="mb-1 fw-bold">Members</h3>
+                    <a href="member-create.html" class="btn btn-outline-white waves-effect waves-float">
+                       <i class="bx bx-plus bx-flashing"></i>
+                       Add Contact
+                    </a>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-primary text-primary position-relative">
+                                    AB
+                                    <span class="contact-status online"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">David McHenry</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">UI/UX Designer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">UI design</label>
+                                    <label class="badge badge-soft-primary me-2">UX</label>
+                                    <label class="badge badge-soft-primary me-2">Sketch</label>
+                                    <label class="badge badge-soft-primary me-2">2+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="position-relative">
+                                   <img src="assets/images/users-thumbs/user-7.jpg" class="avatar avatar-lg"  alt="user thumb"/>
+                                   <span class="contact-status offline"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Laura</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Front End Developer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div class="d-flex">
+                                    <label class="badge badge-soft-primary me-2">HTML</label>
+                                    <label class="badge badge-soft-primary me-2">CSS</label>
+                                    <label class="badge badge-soft-primary me-2">Angular</label>
+                                    <label class="badge badge-soft-primary me-2">4+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-danger text-danger position-relative">
+                                    JD
+                                    <span class="contact-status online"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">John Doe</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Automation</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">QA</label>
+                                    <label class="badge badge-soft-primary me-2">Automation</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="position-relative">
+                                   <img src="assets/images/users-thumbs/user-8.jpg" class="avatar avatar-lg" alt="user thumb"/>
+                                   <span class="contact-status offline"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Mark David</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Back End Developer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div class="d-flex">
+                                    <label class="badge badge-soft-primary me-2">Java</label>
+                                    <label class="badge badge-soft-primary me-2">Python</label>
+                                    <label class="badge badge-soft-primary me-2">Django</label>
+                                    <label class="badge badge-soft-primary me-2">4+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-warning text-warning position-relative">
+                                    IS
+                                    <span class="contact-status busy"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Ishaaq</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">UI/UX Designer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">UI design</label>
+                                    <label class="badge badge-soft-primary me-2">UX</label>
+                                    <label class="badge badge-soft-primary me-2">Sketch</label>
+                                    <label class="badge badge-soft-primary me-2">2+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-success text-success position-relative">
+                                    SM
+                                    <span class="contact-status online"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Samrat</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Project Owner</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">Management</label>
+                                    <label class="badge badge-soft-primary me-2">Gathering</label>
+                                    <label class="badge badge-soft-primary me-2">Manager</label>
+                                    <label class="badge badge-soft-primary me-2">2+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-info text-info position-relative">
+                                    JH
+                                    <span class="contact-status away"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Johnson</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">UI/UX Designer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">UI design</label>
+                                    <label class="badge badge-soft-primary me-2">UX</label>
+                                    <label class="badge badge-soft-primary me-2">Sketch</label>
+                                    <label class="badge badge-soft-primary me-2">2+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="position-relative">
+                                   <img src="assets/images/users-thumbs/user-15.jpg" class="avatar avatar-lg"  alt="user thumb"/>
+                                   <span class="contact-status busy"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Laura</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Front End Developer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div class="d-flex">
+                                    <label class="badge badge-soft-primary me-2">HTML</label>
+                                    <label class="badge badge-soft-primary me-2">CSS</label>
+                                    <label class="badge badge-soft-primary me-2">Angular</label>
+                                    <label class="badge badge-soft-primary me-2">4+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="position-relative">
+                                   <img src="assets/images/users-thumbs/user-7.jpg" class="avatar avatar-lg"  alt="user thumb"/>
+                                   <span class="contact-status offline"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">Smily</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Front End Developer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div class="d-flex">
+                                    <label class="badge badge-soft-primary me-2">HTML</label>
+                                    <label class="badge badge-soft-primary me-2">CSS</label>
+                                    <label class="badge badge-soft-primary me-2">Angular</label>
+                                    <label class="badge badge-soft-primary me-2">4+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-secondary text-secondary position-relative">
+                                    DM
+                                    <span class="contact-status busy"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">David Moore</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Automation</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">QA</label>
+                                    <label class="badge badge-soft-primary me-2">Automation</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-primary text-primary position-relative">
+                                    AB
+                                    <span class="contact-status online"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">David McHenry</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">UI/UX Designer</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">UI design</label>
+                                    <label class="badge badge-soft-primary me-2">UX</label>
+                                    <label class="badge badge-soft-primary me-2">Sketch</label>
+                                    <label class="badge badge-soft-primary me-2">2+</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media">
+                                 <div class="avatar avatar-lg me-3 bg-soft-danger text-danger position-relative">
+                                    JD
+                                    <span class="contact-status away"></span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h5 class="fw-semibold mb-1">
+                                       <a href="javascript: void(0);" class="text-dark">John Doe</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">Automation</p>
+                                    <div class="mt-2">
+                                       <a href="javascript: void(0);" class="btn btn-info btn-sm me-2">Follow</a>
+                                       <a href="javascript: void(0);" class="btn btn-primary btn-sm">View Profile</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mt-4">
+                                 <p class="mb-4">Lorem ipsum dolor sit amet,consectetuer edipiscing elit <span
+                                       class="text-primary fw-semibold">Lorem</span>, sed diam nonummy nibh euismod
+                                    tinciduntut laoreet</p>
+                              </div>
+                              <div class="my-4 dflex-between-center">
+                                 <h6 class="me-2 fw-bold">Skills: </h6>
+                                 <div>
+                                    <label class="badge badge-soft-primary me-2">QA</label>
+                                    <label class="badge badge-soft-primary me-2">Automation</label>
+                                 </div>
+                              </div>
+                              <div class="dflex-between-center">
+                                  <h6 class="me-2 fw-bold">Connect with us: </h6>
+                                  <div>
+                                    <a href="#" class="me-2"><i class="bx bxl-facebook fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-linkedin fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-instagram fs-sm"></i></a>
+                                    <a href="#" class="me-2"><i class="bx bxl-twitter fs-sm"></i></a>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="card-footer bg-transparent border-top">
+                              <div class="d-flex">
+                                 <div class="flex-fill text-center">
+                                    <a href="javascript: void(0);" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Message">
+                                       <i class="bx bx-message-alt-detail fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="mailto:example@example.com" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Compose Mail">
+                                       <i class="bx bx-mail-send fs-sm"></i>
+                                    </a>
+                                 </div>
+                                 <div class="flex-fill text-center">
+                                    <a href="tel:22(44)454145411" class="text-dark" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Phone">
+                                       <i class="bx bx-phone fs-sm"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      @@include('partials/footer.html')
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("../partials/head.html", {"title": "Apex"})
+
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Apex Charts
+                </h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Demo</h5>
+                    <div id="spark1" class="apex-charts"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Code</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;div id="spark1" class="apex-charts"&gt;&lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Required Files</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;script src="assets/libs/apexcharts/apexcharts.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://apexcharts.com/samples/assets/irregular-data-series.js"&gt;&lt;/script&gt;
+&lt;script src="https://apexcharts.com/samples/assets/ohlc.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/utils/colors.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/pages/apexcharts.init.js"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+    </div> 
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+  <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+  <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
+  <script src="https://apexcharts.com/samples/assets/ohlc.js"></script>
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/apexcharts.init.js"></script>
+</body>
+
+</html>

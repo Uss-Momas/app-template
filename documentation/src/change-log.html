@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("../partials/head.html", {"title": "Change Log"})
+
+</head>
+
+<body>
+	<!-- Begin page -->
+	<div id="wrapper">
+		<!-- Topbar Start -->
+		@@include("../partials/header.html")
+		<!-- end Topbar -->
+		<!-- ========== Left Sidebar Start ========== -->
+		<div class="left-side-menu">
+			@@include("../partials/sidebar.html")
+			<!-- Sidebar -left -->
+		</div>
+		<!-- Left Sidebar End -->
+
+		<!-- ============================================================== -->
+		<!-- Start Page Content here -->
+		<!-- ============================================================== -->
+
+		<div class="content-page">
+			<div class="content">
+				<div class="main-content">
+					<!-- Start Content-->
+					<div class="container-fluid">
+						<div class="row page-title-box">
+							<div class="col-md-12">
+								<h4 class="mb-1 mt-0">Change Log
+								</h4>
+							</div>
+						</div>
+
+						<div class="row" id="intro">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body">
+
+										<h6 class="font-size-16 pt-3">
+											<span class="text-primary">1.1</span>
+											<span class="sub-header font-size-14"> - 5 March, 2023 </span>
+										</h6>
+										<ul class="changlog-list">
+											<li>Bug fix</li>
+											<li>Remove library which doesn't support Bootstrap 5</li>
+											<li>Updated to Bootstrap 5.3</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body">
+
+										<h6 class="font-size-16 pt-3">
+											<span class="text-primary">1.0</span>
+											<span class="sub-header font-size-14"> - 20 October, 2020 </span>
+										</h6>
+										<ul class="changlog-list">
+											<li>Initial release</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- container-fluid -->
+				</div>
+			</div> <!-- content -->
+
+		</div>
+		@@include("../partials/footer.html")
+		<!-- ============================================================== -->
+		<!-- End Page content -->
+		<!-- ============================================================== -->
+	</div>
+
+	<!-- Vendor js -->
+	<script src="assets/js/vendor.min.js"></script>
+
+	<!-- App js -->
+	<script src="assets/js/app.min.js"></script>
+</body>
+
+</html>

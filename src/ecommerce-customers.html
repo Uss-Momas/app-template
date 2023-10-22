@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Customer List"})
+	<!-- ================== Plugins CSS  ================== -->
+	<link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+	<link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+	<link href="assets/libs/datatables/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+	<link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" />
+	<!-- ================== Plugins CSS ================== -->
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Customers</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Customers</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<div class="card card-body">
+							<table class="table table-centered dt-responsive nowrap w-100 fs-14" id="products-table">
+								<thead class="table-light">
+									<tr>
+										<th>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</th>
+										<th>Rating</th>
+										<th>Username</th>
+										<th>Phone & Email</th>
+										<th>Address</th>
+										<th>Join Date</th>
+										<th>Balance</th>
+										<th>Type</th>
+										<th>Verified</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												4.2</span></td>
+										<td>John Doe</td>
+										<td>
+											<span class="d-block">333-55-5574</span>
+											<span class="d-block">john.doe@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											18 Apr, 2020
+										</td>
+										<td>
+											<b>$6,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-success">Premium</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												4.1</span></td>
+										<td>Mark Henry</td>
+										<td>
+											<span class="d-block">444-555-6666</span>
+											<span class="d-block">mark.henry@example.com</span>
+										</td>
+										<td>1421 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											19 Apr, 2020
+										</td>
+										<td>
+											<b>$5,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-success">Premium</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-danger fs-12"><i class="mdi mdi-star"></i>
+												2.0</span></td>
+										<td>Stephen Roe</td>
+										<td>
+											<span class="d-block">444-55-6666</span>
+											<span class="d-block">stephen.roe@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											18 Apr, 2020
+										</td>
+										<td>
+											<b>$200</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-info">Daily</span>
+										</td>
+										<td>
+											False
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												5.0</span></td>
+										<td>Mark Hassy</td>
+										<td>
+											<span class="d-block">444-66-7777</span>
+											<span class="d-block">mark.hassy@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											20 Apr, 2020
+										</td>
+										<td>
+											<b>$10,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-warning">VIP</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												4.2</span></td>
+										<td>Micky Mouse</td>
+										<td>
+											<span class="d-block">111-22-3333</span>
+											<span class="d-block">mm@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											21 Apr, 2020
+										</td>
+										<td>
+											<b>$6,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-success">Premium</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-danger fs-12"><i class="mdi mdi-star"></i>
+												1.2</span></td>
+										<td>Roy</td>
+										<td>
+											<span class="d-block">777-55-8888</span>
+											<span class="d-block">roy@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											10 Apr, 2020
+										</td>
+										<td>
+											<b>$100</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-info">Daily</span>
+										</td>
+										<td>
+											False
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												4.8</span></td>
+										<td>Kree</td>
+										<td>
+											<span class="d-block">666-55-7877</span>
+											<span class="d-block">kree@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											12 Apr, 2020
+										</td>
+										<td>
+											<b>$10,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-warning">VIP</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-danger fs-12"><i class="mdi mdi-star"></i>
+												1.6</span></td>
+										<td>Mickey Hitch</td>
+										<td>
+											<span class="d-block">787-66-7888</span>
+											<span class="d-block">mickey.hitch@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											1 May, 2020
+										</td>
+										<td>
+											<b>$2,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-success">Premium</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												3.9</span></td>
+										<td>John Smith </td>
+										<td>
+											<span class="d-block">121-11-0000</span>
+											<span class="d-block">john.smith@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											1 May, 2020
+										</td>
+										<td>
+											<b>$10,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-warning">VIP</span>
+										</td>
+										<td>
+											True
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><span class="badge bg-success fs-12"><i class="mdi mdi-star"></i>
+												4.0</span></td>
+										<td>Rhea</td>
+										<td>
+											<span class="d-block">222-11-3333</span>
+											<span class="d-block">rhea@example.com</span>
+										</td>
+										<td>1420 lane Street budapest, <br />Hungary 11714</td>
+										<td>
+											3 May, 2020
+										</td>
+										<td>
+											<b>$5,000</b>
+										</td>
+										<td>
+											<span class="badge badge-soft-success">Premium</span>
+										</td>
+										<td>
+											False
+										</td>
+										<td>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-primary text-primary me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="Edit Profile">
+												<i class="mdi mdi-pencil"></i>
+											</a>
+											<a href="javascript: void(0);" class="avatar avatar-xs bg-soft-info text-info me-2"
+												data-effect="wave" data-bs-toggle="tooltip" data-placement="bottom" title=""
+												data-bs-title="View Profile">
+												<i class="mdi mdi-eye-off"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="assets/libs/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="assets/libs/datatables/js/responsive.bootstrap4.min.js"></script>
+
+	<script src="assets/libs/datatables/js/dataTables.buttons.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.bootstrap4.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.html5.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.flash.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.print.min.js"></script>
+	<script src="assets/libs/datatables/js/pdfmake.min.js"></script>
+	<script src="assets/libs/datatables/js/jszip.min.js"></script>
+	<script src="assets/libs/datatables/js/vfs_fonts.js"></script>
+
+	<script src="assets/libs/datatables/js/dataTables.keyTable.min.js"></script>
+	<script src="assets/libs/datatables/js/dataTables.select.min.js"></script>
+	<script src="assets/libs/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- ================== BEGIN PAGE JS ================== -->
+	<script src="assets/js/pages/ecommerce-customer.init.js"></script>
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Confirmation Box"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link href="assets/libs/jquery-confirmbox/css/jquery-confirm.min.css" rel="stylesheet" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Confirmation Box</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="advanced-bootstrap-tour.html">
+                    Advance UI
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Confirmation Box</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Confirmation Box</h5>
+                    <h6 class="card-subtitle">A beautiful, responsive, customizable JavaScript's confirmation boxes.
+                      Box's are draggable. To experience draggable, Drag from title. To use this you have to call the
+                      construction function: <code>$.alert(Obj);</code>.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-1">Alerts</button>
+                          <p>Elegant Alerts.</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-2">Confirmation</button>
+                          <p>Stacked Confirmations</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-70-type">Alert types</button>
+                          <p>Success, error, warning</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-7-1">Prompt</button>
+                          <p>Need input?</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-4">Dialogs</button>
+                          <p>Its also a Dialog.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-3">Background dismiss</button>
+                          <p>Not so important modal</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-5">Asynchronous content</button>
+                          <p>Loading from remote places</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-6">Auto-close</button>
+                          <p>Some actions maybe critical</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-7">Keystrokes</button>
+                          <p>Responds to keystrokes</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-pc-1">Alignment</button>
+                          <p>Automatically centered</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-pc-2">Images</button>
+                          <p>Loading images</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-pc-3">Animations</button>
+                          <p>Clean animations</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="p-3 text-center">
+                          <button class="btn btn-primary btn-block mb-2 example-p-7-2">Draggable</button>
+                          <p>Drag me around</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- end card-->
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/jquery-confirmbox/js/jquery-confirm.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/confirmation-box.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

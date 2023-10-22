@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Project Create"})
+	<!-- ================== Plugins CSS  ================== -->
+	<link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css" type="text/css">
+	<link href="assets/libs/dropzone/css/dropzone.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/libs/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
+	<link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<!-- ================== Plugins CSS end ================== -->
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Create Project</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Create Project</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<div class="vertical-app-tabs" id="rootwizard">
+							<div class="row">
+								<div class="col-md-3 col-lg-2">
+									<ul class="nav nav-pills flex-column" id="project-tabs">
+										<li class="nav-item" data-target-form="#project-detail">
+											<a href="#first" data-bs-toggle="tab" data-bs-target="#first" class="nav-link active">
+												<i class="bx bx-detail d-block fs-lg mt-4 mb-2"></i>
+												<p class="mb-4">Project Details</p>
+											</a>
+										</li>
+										<li class="nav-item" data-target-form="#client-detail">
+											<a href="#second" data-bs-toggle="tab" data-bs-target="#second" class="nav-link">
+												<i class="bx bxs-user d-block fs-lg mt-4 mb-2"></i>
+												<p class="mb-4">Client Details</p>
+											</a>
+										</li>
+										<li class="nav-item" data-target-form="#projectfiles">
+											<a href="#third" data-bs-toggle="tab" data-bs-target="#third" class="nav-link">
+												<i class="bx bxs-file d-block fs-lg mt-4 mb-2"></i>
+												<p class="mb-4">Upload Documents</p>
+											</a>
+										</li>
+										<li class="nav-item" data-target-form="#review-data">
+											<a href="#fourth" data-bs-toggle="tab" data-bs-target="#fourth" class="nav-link">
+												<i class="bx bxs-show d-block fs-lg mt-4 mb-2"></i>
+												<p class="mb-4">Review</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-9 col-lg-10">
+									<div class="tab-content mb-0 b-0 pt-0">
+										<div class="tab-pane fade show active" id="first">
+											<div class="card">
+												<div class="card-header">
+													<h5 class="card-title">Project Details</h5>
+												</div>
+												<div class="card-body">
+													<form id="project-details">
+														<div class="row">
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="projectname" name="validation-projectname" type="text"
+																		placeholder="Enter Project Name" class="form-control">
+																	<label for="projectname">Project Name <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="projectowner" name="validation-projectowner" type="text"
+																		placeholder="Enter Project Owner" class="form-control">
+																	<label for="projectowner">Project Owner <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<div class="input-date flex-fill">
+																		<input id="startdate" name="validation-start" type="text" placeholder="Start Date"
+																			class="form-control">
+																		<div class="date-icon">
+																			<i class="bx bx-calendar fs-sm"></i>
+																		</div>
+																		<label for="startdate">Start Date <span class="text-danger">*</span></label>
+																		<div class="validation-error d-none fs-13">This field is required</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<div class="input-date flex-fill">
+																		<input id="enddate" name="validation-end" type="text" placeholder="End Date"
+																			class="form-control">
+																		<div class="date-icon">
+																			<i class="bx bx-calendar fs-sm"></i>
+																		</div>
+																		<label for="enddate">End Date <span class="text-danger">*</span></label>
+																		<div class="validation-error d-none fs-13">This field is required</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="projectbudget" name="validation-budget" type="text"
+																		placeholder="Enter Project Budget" class="form-control">
+																	<label for="projectbudget">Budget <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<select class="form-control wide" id="projectTeam" name="validation-member" multiple>
+																		<option value="AJ">AJ</option>
+																		<option value="AS">AS</option>
+																		<option value="BOSS">BOSS</option>
+																		<option value="NA">NA</option>
+																		<option value="ZS">ZS</option>
+																	</select>
+																	<label for="projectTeam">Team Members</label>
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="projectTags" name="validation-tags" type="text"
+																		placeholder="Enter Project Tags" class="form-control" />
+																	<label for="projectTags">Project Tags</label>
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<textarea id="project-desc">Enter Project Description</textarea>
+																	<label for="projectTags">Project Description<span class="text-danger">*</span></label>
+																</div>
+															</div>
+														</div>
+														<!-- This button link with id-sw-default-step-1 if you change it change in serial number like below -->
+														<div class="d-none">
+															<button class="btn btn-primary" id="step-0">submit</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="second">
+											<div class="card">
+												<div class="card-header">
+													<h5 class="card-title">Client Details</h5>
+												</div>
+												<div class="card-body">
+													<form id="client-details">
+														<div class="row">
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="clientname" name="validation-clientname" type="text"
+																		placeholder="Enter Client Name" class="form-control">
+																	<label for="clientname">Client Name <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12 col-lg-6">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="personname" name="validation-personname" type="text"
+																		placeholder="Enter Contact Name" class="form-control">
+																	<label for="personname">Contact Person <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<input id="clientemail" name="validation-email" type="text"
+																		placeholder="Enter Contact Name" class="form-control">
+																	<label for="clientemail">Email Address <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<textarea id="clientaddress" name="validation-clientaddress" rows="2"
+																		placeholder="Enter Client Address*" class="form-control"></textarea>
+																	<label for="clientaddress">Address <span class="text-danger">*</span></label>
+																	<div class="validation-error d-none fs-13">This field is required</div>
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="form-group floating-label enable-floating-label show-label">
+																	<textarea id="company-desc">Enter Company Description</textarea>
+																	<label for="company-desc">Company Description</label>
+																</div>
+															</div>
+															<div class="col-12">
+																<div class="dropzone" id="companylogo">
+																	<div class="fallback">
+																		<input name="file" type="file" />
+																	</div>
+																	<div class="dz-message needsclick">
+																		<i class="bx bx-cloud-upload fs-xl text-muted"></i>
+																		<h3 class="mt-1">Click or Drop Logo to upload.</h3>
+																	</div>
+																</div>
+																<div class="dropzone-previews mt-3" id="client-file-previews"></div>
+																<!-- file preview template -->
+																<div class="d-none" id="clientPreviewTemplate">
+																	<div class="card mb-0 shadow-none border">
+																		<div class="p-2">
+																			<div class="row align-items-center">
+																				<div class="col-auto">
+																					<img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light"
+																						alt="Lettstart Admin">
+																				</div>
+																				<div class="col pl-0">
+																					<a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
+																					<p class="mb-0" data-dz-size></p>
+																				</div>
+																				<div class="col-auto">
+																					<a href="javascript:void(0)"
+																						class="avatar avatar-xs bg-soft-danger text-danger me-0" data-effect="wave"
+																						data-dz-remove>
+																						<i class="bx bx-x fs-sm"></i>
+																					</a>
+																					<!-- Button -->
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- This button link with id-sw-default-step-2 if you change it change in serial number like below -->
+														<div class="d-none">
+															<button class="btn btn-primary" id="step-1">submit</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="third">
+											<div class="card">
+												<div class="card-header">
+													<h5 class="card-title">Upload Documents</h5>
+												</div>
+												<div class="card-body">
+													<div class="dropzone" id="projectfiles">
+														<div class="fallback">
+															<input name="file" type="file" multiple />
+														</div>
+														<div class="dz-message needsclick">
+															<i class="fs-xl text-muted  bx bx-cloud-upload"></i>
+															<h3 class="mt-1">Click or Drop files to upload.</h3>
+														</div>
+													</div>
+													<div class="dropzone-previews mt-3" id="project-file-previews"></div>
+													<!-- file preview template -->
+													<div class="d-none" id="projectPreviewTemplate">
+														<div class="card mb-0 shadow-none border">
+															<div class="p-2">
+																<div class="row align-items-center">
+																	<div class="col-auto">
+																		<img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light"
+																			alt="Lettstart Admin">
+																	</div>
+																	<div class="col pl-0">
+																		<a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
+																		<p class="mb-0" data-dz-size></p>
+																	</div>
+																	<div class="col-auto">
+																		<a href="javascript:void(0)"
+																			class="avatar avatar-xs bg-soft-danger text-danger me-0" data-effect="wave"
+																			data-dz-remove>
+																			<i class="bx bx-x fs-sm"></i>
+																		</a>
+																		<!-- Button -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="fourth">
+											<div class="card">
+												<div class="card-header">
+													<h5 class="card-title">Review Data</h5>
+												</div>
+												<div class="card-body" id="review-data">
+												</div>
+											</div>
+										</div>
+
+										<ul class="list-inline wizard mb-0">
+											<li class="previous list-inline-item">
+												<button class="btn btn-secondary">Previous</button>
+											</li>
+											<li class="next list-inline-item float-end">
+												<button class="btn btn-primary">Next</button>
+											</li>
+										</ul>
+									</div>
+								</div> <!-- tab-content -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js"></script>
+	<script src="assets/libs/select2/js/select2.min.js"></script>
+	<script src="assets/libs/flatpicker/js/flatpickr.js"></script>
+	<script src="assets/libs/ckeditor4/ckeditor.js"></script>
+	<script src="assets/libs/dropzone/js/dropzone.min.js"></script>
+	<script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
+	<script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
+
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<script src="assets/js/pages/create-project.init.js"></script>
+	<!-- ================== BEGIN PAGE JS ================== -->
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+
+</body>
+
+</html>

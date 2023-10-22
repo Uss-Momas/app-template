@@ -1,0 +1,81 @@
+//
+// clockpicker.scss
+//
+
+.clockpicker-popover {
+  .btn-default {
+      background-color: $primary;
+      color: $white;
+  }
+  &.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: block;
+    max-width: 276px;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: normal;
+    line-break: auto;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e2e7f1;
+    border-radius: 0.3rem;
+  }
+  .clockpicker-button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.clockpicker-popover {
+  background: $dropdown-bg;
+  box-shadow: $box-shadow;
+  border: 1px solid $dropdown-border-color;
+  .popover-title {
+      background-color: transparent;
+  }
+
+  .clockpicker-plate {
+      background: $dropdown-link-hover-bg;
+      border: 1px solid $dropdown-border-color;
+  }
+
+  .popover-content {
+      background-color: transparent;
+  }
+}
+
+.clockpicker-tick {
+  color: $dropdown-link-color;
+
+  &:hover {
+      background-color: rgba($primary,0.35);
+  }
+}
+
+.clockpicker-canvas line {
+  stroke: $primary;
+}
+
+.clockpicker-canvas-bg {
+  fill: rgba($primary,0.35);
+}
+
+.clockpicker-canvas-bearing, 
+.clockpicker-canvas-fg {
+  fill: $primary;
+}

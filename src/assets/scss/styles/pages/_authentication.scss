@@ -1,0 +1,58 @@
+.backhome{
+  @include position(absolute, 2rem, 2rem, null, null, 1);
+}
+
+.auth-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0 50px 0;
+}
+
+
+.auth-page-sidebar {
+  padding: 0;
+  background-image: url('#{$image-path}/auth/auth-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+
+  .overlay {
+    flex: 1;
+    opacity: 0.4;
+  }
+
+  .auth-user-testimonial {
+    @include position(absolute, null, 0, 3rem, 0);
+    text-align: center;
+    color: $white;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    @include media-breakpoint-down(sm) {
+      position: static;
+      padding: 50px;
+    }
+  }
+}
+
+.full-auth-screen{
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+  .auth-page-sidebar{
+    @include media-breakpoint-up(md) {
+      min-height: 100vh;
+    }
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .backhome{
+    top: 1rem;
+    right: 1rem;
+  }
+}

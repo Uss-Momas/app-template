@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include("partials/title.html", {"title": "Add Product"})
+   <!-- ================== Plugins CSS  ================== -->
+   <link href="assets/libs/dropzone/css/dropzone.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
+   <!-- ================== Plugins CSS ================== -->
+   @@include("partials/head.html")
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      @@include('partials/topbar.html')
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      @@include('partials/left-sidebar.html')
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                     <h3 class="mb-1 fw-bold">Add Product</h3>
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                           <a href="../index.html">
+                              <i class="bx bx-home fs-xs"></i>
+                           </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                           <a href="calender.html">
+                              Apps
+                           </a>
+                        </li>
+                        <li class="breadcrumb-item active">Add Product</li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <div class="card">
+                     <div class="card-header">
+                        <h5>Basic Information</h5>
+                        <p class="mb-0">Fill all information below</p>
+                     </div>
+                     <div class="card-body">
+                        <form id="addProductForm">
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <input id="productname" name="validation-productname" type="text"
+                                       placeholder="Enter Product Name" class="form-control">
+                                    <label for="productname">Product Name <span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <input id="brandname" name="validation-brandname" type="text"
+                                       placeholder="Enter Brand Name" class="form-control">
+                                    <label for="brandname">Brand Name <span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <input class="form-control" id="colors" name="validation-colors" placeholder="Please enter colors" />
+                                    <label for="colors">Colors<span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">
+                                       Please enter atleast one color
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <select class="form-control select2" name="validation-productcat">
+                                       <option value="">Select Category</option>
+                                       <option value="shirt">Shirt</option>
+                                       <option value="tshirt">T-Shirt</option>
+                                       <option value="jeans">Jeans</option>
+                                       <option value="top">Top</option>
+                                       <option value="jacket">Jacket</option>
+                                       <option value="hoodie">Hoodie</option>
+                                    </select>
+                                    <label>Category <span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <select class="form-control select2" name="validation-currency">
+                                       <option value="">Select Category</option>
+                                       <option value="usd">USD</option>
+                                       <option value="inr">INR</option>
+                                    </select>
+                                    <label>Currency <span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <input id="projectbudget" name="validation-budget" type="text"
+                                       placeholder="Enter Project Budget..." class="form-control">
+                                    <label for="projectbudget">Price <span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <input id="productqty" name="validation-qty" type="text"
+                                       placeholder="Enter Product Quantity" class="form-control">
+                                    <label for="productqty">Quantity <span class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                 </div>
+                              </div>
+                              <div class="col-12">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <textarea name="validation-editor" id="product-desc"></textarea>
+                                    <label>Product Description<span
+                                          class="text-danger">*</span></label>
+                                    <div class="validation-error d-none fs-13">
+                                       Item description can not be blank
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-12">
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <div class="dropzone" id="productImages">
+                                       <div class="fallback">
+                                          <input name="file" type="file" multiple />
+                                       </div>
+                                       <div class="dz-message needsclick">
+                                          <i class="fs-xl text-muted  bx bx-cloud-upload"></i>
+                                          <h3 class="mt-1">Upload Product Images</h3>
+                                       </div>
+                                    </div>
+                                    <div class="dropzone-previews mt-3" id="file-previews"></div>
+                                    <!-- file preview template -->
+                                    <div class="d-none" id="uploadPreviewTemplate">
+                                      <div class="card mb-0 shadow-none border">
+                                        <div class="p-2">
+                                          <div class="row align-items-center">
+                                            <div class="col-auto">
+                                              <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light" alt="Lettstart Admin">
+                                            </div>
+                                            <div class="col pl-0">
+                                              <a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
+                                              <p class="mb-0" data-dz-size></p>
+                                            </div>
+                                            <div class="col-auto">
+                                             <a href="javascript:void(0)" class="avatar avatar-xs bg-soft-danger text-danger me-0" data-effect="wave" data-dz-remove>
+                                                <i class="bx bx-x fs-sm"></i>
+                                              </a>
+                                              <!-- Button -->
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="validation-error d-none fs-13">
+                                       Upload atleast one image
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- This button link with id-sw-default-step-1 if you change it change in serial number like below -->
+                           <div class="clearfix">
+                              <button type="submit" class="btn btn-primary">Add Product</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      @@include('partials/footer.html')
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <script src="assets/libs/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js"></script>
+   <script src="assets/libs/select2/js/select2.min.js"></script>
+   <script src="assets/libs/ckeditor4/ckeditor.js"></script>
+   <script src="assets/libs/dropzone/js/dropzone.min.js"></script>
+   <script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
+   <script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
+
+   <!-- ================== END PAGE LEVEL JS ================== -->	
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/pages/ecommerce-add-product.init.js"></script>
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+
+</body>
+
+</html>

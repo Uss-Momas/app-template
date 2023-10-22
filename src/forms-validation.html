@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Form Validation"})
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Form Validation</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="forms-elements.html">
+                    Forms
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Form Validation</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bootstrap Validation - Normal</h5>
+                    <h6 class="card-subtitle">Provide valuable, actionable feedback to your users with HTML5 form
+                      validation–available in all our supported browsers.</h6>
+                  </div>
+                  <div class="card-body">
+                    <form id="validation-basic" class="needs-validation" novalidate>
+                      <div class="form-group">
+                        <label for="validation-fname">First name</label>
+                        <input type="text" class="form-control" id="validation-fname" placeholder="First name"
+                          value="Mark" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="validation-lname">Last name</label>
+                        <input type="text" class="form-control" id="validation-lname" placeholder="Last name"
+                          value="Otto" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="validation-username">Username</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          </div>
+                          <input type="text" class="form-control" id="validation-username" placeholder="Username"
+                            aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="validation-city">City</label>
+                        <input type="text" class="form-control" id="validation-city" placeholder="City" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="validation-state">State</label>
+                        <input type="text" class="form-control" id="validation-state" placeholder="State" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="validation-zip">Zip</label>
+                        <input type="text" class="form-control" id="validation-zip" placeholder="Zip" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="custom-control custom-checkbox form-check">
+                          <input type="checkbox" class="custom-control-input" id="invalidCheck" required>
+                          <label class="custom-control-label" for="invalidCheck">Agree to terms and conditions</label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bootstrap Validation (Tooltips)</h5>
+                    <h6 class="card-subtitle">If your form layout allows it, you can swap the
+                      <code>.{valid|invalid}-feedback</code>
+                      classes for <code>.{valid|invalid}-tooltip</code> classes to display validation feedback
+                      in a styled tooltip.</h6>
+                  </div>
+                  <div class="card-body">
+                    <form class="needs-validation" novalidate>
+                      <div class="form-group position-relative mb-3">
+                        <label for="validationTooltip01">First name</label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name"
+                          value="Mark" required>
+                        <div class="valid-tooltip">
+                          Looks good!
+                        </div>
+                        <div class="invalid-tooltip">
+                          Please enter first name.
+                        </div>
+                      </div>
+                      <div class="form-group position-relative mb-3">
+                        <label for="validationTooltip02">Last name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name"
+                          value="Otto" required>
+                        <div class="valid-tooltip">
+                          Looks good!
+                        </div>
+                        <div class="invalid-tooltip">
+                          Please enter last name.
+                        </div>
+                      </div>
+                      <div class="form-group position-relative mb-3">
+                        <label for="validationTooltipUsername">Username</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                          </div>
+                          <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username"
+                            aria-describedby="validationTooltipUsernamePrepend" required>
+                          <div class="invalid-tooltip">
+                            Please choose a unique and valid username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group position-relative mb-3">
+                        <label for="validationTooltip03">City</label>
+                        <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                        <div class="invalid-tooltip">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="form-group position-relative mb-3">
+                        <label for="validationTooltip04">State</label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                        <div class="invalid-tooltip">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="form-group position-relative mb-3">
+                        <label for="validationTooltip05">Zip</label>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                        <div class="invalid-tooltip">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Jquery Validation Examples</h5>
+                    <h6 class="card-subtitle">Jquery Validation is a javascript form validation library. It helps you
+                      provide your
+                      users
+                      with feedback on
+                      their form submission before sending it to your server.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="alert alert-warning d-none fade show" id="alert-warn">
+                      <h4 class="mt-0 text-warning">Oh snap!</h4>
+                      <p class="mb-0">This form seems to be invalid :(</p>
+                    </div>
+
+                    <div class="alert alert-info d-none fade show" id="alert-info">
+                      <h4 class="mt-0 text-info">Yay!</h4>
+                      <p class="mb-0">Everything seems to be ok :)</p>
+                    </div>
+
+                    <form id="demo-form">
+                      <div class="form-group">
+                        <label for="fullname">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="validation-fname1" id="fullname">
+                        <div class="validation-error d-none fs-13">
+                          This field is required
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email">Email <span class="text-danger">*</span></label>
+                        <input type="email" id="email" class="form-control" name="validation-email1">
+                        <div class="validation-error d-none fs-13">
+                          This field is required
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Gender *:</label>
+
+                        <div class="radio mb-1">
+                          <input type="radio" name="validation-gender1" id="genderM" value="Male">
+                          <label for="genderM">
+                            Male
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <input type="radio" name="validation-gender1" id="genderF" value="Female">
+                          <label for="genderF">
+                            Female
+                          </label>
+                        </div>
+                        <div class="validation-error d-none fs-13">
+                          Select one radio button
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Hobbies (Optional, but 2 minimum)</label>
+
+                        <div class="checkbox checkbox-pink mb-1">
+                          <input type="checkbox" name="hobbies[]" id="hobby1" value="ski">
+                          <label for="hobby1"> Skiing </label>
+                        </div>
+                        <div class="checkbox checkbox-pink mb-1">
+                          <input type="checkbox" name="hobbies[]" id="hobby2" value="run">
+                          <label for="hobby2"> Running </label>
+                        </div>
+                        <div class="checkbox checkbox-pink">
+                          <input type="checkbox" name="hobbies[]" id="hobby3" value="eat">
+                          <label for="hobby3"> Eating </label>
+                        </div>
+                        <div class="validation-error d-none fs-13">
+                          Atleast select 2 checkbox
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="heard">Heard about us via <span class="text-danger">*</span></label>
+                        <select id="heard" class="form-control" name="validation-select">
+                          <option value="">Choose..</option>
+                          <option value="press">Press</option>
+                          <option value="net">Internet</option>
+                          <option value="mouth">Word of mouth</option>
+                          <option value="other">Other..</option>
+                        </select>
+                        <div class="validation-error d-none fs-13">
+                          This field is required
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="message">Message (20 chars min, 100 max)</label>
+                        <textarea id="message" class="form-control" name="validation-message1"></textarea>
+                        <div class="validation-error d-none fs-13">
+                          This field is required
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-0">
+                        <button type="submit" class="btn btn-success">Validate</button>
+                      </div>
+
+                    </form>
+                  </div>
+                </div> <!-- end card-box-->
+              </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Basic Form</h5>
+                    <h6 class="card-subtitle">Parsley is a javascript form validation library. It helps you provide your
+                      users with feedback on
+                      their form submission before sending it to your server.</h6>
+                  </div>
+                  <div class="card-body">
+
+                    <form id="signupForm" name="signupForm" novalidate>
+                      <div class="form-group floating-label">
+                        <input type="text" class="form-control" name="validation-fullname2" id="name1" />
+                        <label for="name1">Name</label>
+                        <div class="validation-error d-none fs-13">
+                          <p>This Field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group floating-label">
+                        <input type="email" class="form-control" name="validation-email2" id="email2" />
+                        <label for="email2">Email Address</label>
+                        <div class="validation-error d-none fs-13">
+                          <p>Email must be a valid email address</p>
+                        </div>
+                      </div>
+                      <div class="form-group floating-label">
+                        <input type="password" class="form-control" name="validation-password3" id="password3" />
+                        <label for="password3">Password</label>
+                        <div class="validation-error d-none fs-13">
+                          <p>This field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group floating-label">
+                        <input type="password" class="form-control" name="validation-cpassword4" id="cpassword4" />
+                        <label for="cpassword4">Confirm Password</label>
+                        <div class="validation-error d-none fs-13">
+                          <p>This field is required</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <input id="checkbox6a" type="checkbox" name="validation-checkbox2[]">
+                          <label for="checkbox6a">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group text-end">
+                        <button class="btn btn-primary" data-effect="wave" type="submit">Register
+                        </button>
+                        <button type="button" class="btn btn-secondary reset-form"
+                          data-target="#signupForm">Reset</button>
+                      </div>
+                    </form>
+                  </div>
+                </div> <!-- end card-box -->
+              </div>
+              <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Horizontal Form</h5>
+                    <h6 class="card-subtitle">Parsley is a javascript form validation library. It helps you provide your
+                      users with feedback on
+                      their form submission before sending it to your server.</h6>
+                  </div>
+                  <div class="card-body">
+                    <form id="h-form">
+                      <div class="form-group">
+                        <div class="row">
+                          <label for="email3" class="col-4 col-form-label">Email Address <span
+                              class="text-danger">*</span></label>
+                          <div class="col-7">
+                            <input type="email" class="form-control" name="validation-email3" id="email3" />
+                            <div class="validation-error d-none fs-13">
+                              <p>Email must be a valid email address</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label for="password4" class="col-4 col-form-label">Password <span
+                              class="text-danger">*</span></label>
+                          <div class="col-7">
+                            <input type="password" class="form-control" name="validation-password4" id="password4" />
+
+                            <div class="validation-error d-none fs-13">
+                              <p>This field is required</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label for="cpassword5" class="col-4 col-form-label">Confirm Password <span
+                              class="text-danger">*</span></label>
+                          <div class="col-7">
+                            <input type="password" class="form-control" name="validation-cpassword5" id="cpassword5" />
+
+                            <div class="validation-error d-none fs-13">
+                              <p>This field is required</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label for="website" class="col-4 col-form-label">Website <span
+                              class="text-danger">*</span></label>
+                          <div class="col-7">
+                            <input type="text" class="form-control" name="validation-website" id="website" />
+                            <div class="validation-error d-none fs-13">
+                              <p>This field is required</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-8 offset-4">
+                          <div class="checkbox mb-4">
+                            <input id="checkbox7a" type="checkbox" name="validation-checkbox3[]">
+                            <label for="checkbox7a">
+                              Remember me
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <div class="col-8 offset-4">
+                          <button type="submit" class="btn btn-primary" data-effect="wave">
+                            Register
+                          </button>
+                          <button type="button" class="btn btn-secondary waves-effect waves-light reset-form"
+                            data-target="#h-form">
+                            Reset
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div> <!-- end card-box -->
+
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Validation Type Parsley</h5>
+                    <h6 class="card-subtitle">Parsley is a javascript form validation library. It helps you provide your
+                      users with feedback on
+                      their form submission before sending it to your server.</h6>
+                  </div>
+                  <div class="card-body">
+                    <form class="parsley-examples">
+                      <div class="form-group">
+                        <label>Required</label>
+                        <input type="text" class="form-control" required placeholder="Type something" />
+                      </div>
+
+                      <div class="form-group">
+                        <label>Equal To</label>
+                        <div>
+                          <input type="password" id="pass2" class="form-control" required placeholder="Password" />
+                        </div>
+                        <div class="mt-2">
+                          <input type="password" class="form-control" required data-parsley-equalto="#pass2"
+                            placeholder="Re-Type Password" />
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>E-Mail</label>
+                        <div>
+                          <input type="email" class="form-control" required parsley-type="email"
+                            placeholder="Enter a valid e-mail" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>URL</label>
+                        <div>
+                          <input parsley-type="url" type="url" class="form-control" required placeholder="URL" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Digits</label>
+                        <div>
+                          <input data-parsley-type="digits" type="text" class="form-control" required
+                            placeholder="Enter only digits" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Number</label>
+                        <div>
+                          <input data-parsley-type="number" type="text" class="form-control" required
+                            placeholder="Enter only numbers" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Alphanumeric</label>
+                        <div>
+                          <input data-parsley-type="alphanum" type="text" class="form-control" required
+                            placeholder="Enter alphanumeric value" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Textarea</label>
+                        <div>
+                          <textarea required class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group mb-0">
+                        <div>
+                          <button type="submit" class="btn btn-primary" data-effect="wave">
+                            Submit
+                          </button>
+                          <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col-->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Parsley Range validation</h5>
+                    <h6 class="card-subtitle">Parsley is a javascript form validation library. It helps you provide your
+                      users with feedback on
+                      their form submission before sending it to your server.</h6>
+                  </div>
+                  <div class="card-body">
+                    <form action="#" id="test" class="parsley-examples">
+
+                      <div class="form-group">
+                        <label>Min Length</label>
+                        <div>
+                          <input type="text" class="form-control" required data-parsley-minlength="6"
+                            placeholder="Min 6 chars." />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Max Length</label>
+                        <div>
+                          <input type="text" class="form-control" required data-parsley-maxlength="6"
+                            placeholder="Max 6 chars." />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Range Length</label>
+                        <div>
+                          <input type="text" class="form-control" required data-parsley-length="[5,10]"
+                            placeholder="Text between 5 - 10 chars length" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Min Value</label>
+                        <div>
+                          <input type="text" class="form-control" required data-parsley-min="6"
+                            placeholder="Min value is 6" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Max Value</label>
+                        <div>
+                          <input type="text" class="form-control" required data-parsley-max="6"
+                            placeholder="Max value is 6" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Range Value</label>
+                        <div>
+                          <input class="form-control" required type="text" min="6" max="100"
+                            placeholder="Number between 6 - 100" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Regular Exp</label>
+                        <div>
+                          <input type="text" class="form-control" required data-parsley-pattern="#[A-Fa-f0-9]{6}"
+                            placeholder="Hex. Color" />
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-0">
+                        <div>
+                          <button type="submit" class="btn btn-primary" data-effect="wave">
+                            Submit
+                          </button>
+                          <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
+  <script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
+  <script src="assets/libs/parsleyjs/parsley.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/form-validation.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Task List"})
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Tasks</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Tasks</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<!-- tasks panel -->
+						<div class="row">
+							<div class="col-xl-8" data-plugin="dragula"
+								data-containers='["task-list-one", "task-list-two", "task-list-three"]'
+								data-handleClass="dragula-handle">
+								<div class="card">
+									<div class="card-body">
+										<!-- cta -->
+										<div class="row">
+											<div class="col-sm-3">
+												<a href="task-create.html" class="btn btn-primary"><i
+														class='bx bx-plus bx-flashing me-1'></i>Add
+													New</a>
+											</div>
+											<div class="col-sm-9">
+												<div class="float-sm-end mt-3 mt-sm-0">
+												<form class="d-inline-block me-3">
+													<div class="search-box position-relative">
+														<input type="text" placeholder="Search..." class="form-control">
+														<i class="bx bx-search icon"></i>
+													</div>
+												</form>
+													<div class="dropdown d-inline-block">
+														<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															<i class='mdi mdi-sort-descending'></i>
+														</button>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a class="dropdown-item" href="#">Due Date</a>
+															<a class="dropdown-item" href="#">Added Date</a>
+															<a class="dropdown-item" href="#">Assignee</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+
+										<a class="text-dark" data-bs-toggle="collapse" href="#todayTasks" aria-expanded="false"
+											aria-controls="todayTasks">
+											<h5 class="mb-0"><i class='bx bx-chevron-down font-size-18'></i>Today <span
+													class="text-muted fs-14">(10)</span></h5>
+										</a>
+
+										<div class="collapse show" id="todayTasks">
+											<div class="card mb-0 shadow-none">
+												<div class="card-body" id="task-list-one">
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task1">
+																	<label class="form-check-label" for="task1">
+																		Draft the new contract document for
+																		sales team
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-md-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-9.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to Arya S" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		10am
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		21
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-danger p-1">High</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task2">
+																	<label class="form-check-label" for="task2">
+																		iOS App home page
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-md-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-2.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to James B" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		4pm
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		48
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-danger p-1">High</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task3">
+																	<label class="form-check-label" for="task3">
+																		Write a release note
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-md-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-4.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to Kevin C" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		6pm
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		73
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-info p-1">Medium</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+													<div class="text-center mt-4">
+														<a href="javascript:void(0);" class="btn btn-sm btn-white">
+															<i class="bx bx-loader me-1 align-middle bx-spin"></i>
+															<span class="align-middle">Load more</span>
+														</a>
+													</div>
+												</div> <!-- end card-body-->
+											</div> <!-- end card -->
+										</div> <!-- end .collapse-->
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+
+										<!-- upcoming tasks -->
+										<a class="text-dark" data-bs-toggle="collapse" href="#upcomingTasks" aria-expanded="false"
+											aria-controls="upcomingTasks">
+											<h5 class="mb-0">
+												<i class='bx bx-chevron-down font-18'></i>Upcoming <span
+													class="text-muted fs-14">(5)</span>
+											</h5>
+										</a>
+
+										<div class="collapse show" id="upcomingTasks">
+											<div class="card mb-0 shadow-none">
+												<div class="card-body" id="task-list-two">
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task4">
+																	<label class="form-check-label" for="task4">
+																		Invite user to a project
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-2.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to James B" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		Tomorrow,
+																		7am
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		1/12
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		36
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-danger p-1">High</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task5">
+																	<label class="form-check-label" for="task5">
+																		Enable analytics tracking
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-2.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to James B" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		27 Aug,
+																		10am
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		13/72
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		211
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-success p-1">Low</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task6">
+																	<label class="form-check-label" for="task6">
+																		Code HTML email template
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-7.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to Edward S" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		No Due
+																		Date
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		0/7
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		0
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-info p-1">Medium</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+													<div class="text-center mt-4">
+														<a href="javascript:void(0);" class="btn btn-sm btn-white">
+															<i class="bx bx-loader me-1 align-middle bx-spin"></i>
+															<span class="align-middle">Load more</span>
+														</a>
+													</div>
+												</div> <!-- end card-body-->
+											</div> <!-- end card -->
+										</div> <!-- end collapse-->
+										<!-- end upcoming tasks -->
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body">
+
+										<a class="text-dark" data-bs-toggle="collapse" href="#otherTasks" aria-expanded="false"
+											aria-controls="otherTasks">
+											<h5>
+												<i class='bx bx-chevron-down font-18'></i>Other <span class="text-muted fs-14">(5)</span>
+											</h5>
+										</a>
+
+										<div class="collapse show" id="otherTasks">
+											<div class="card mb-0 shadow-none">
+												<div class="card-body" id="task-list-three">
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task7">
+																	<label class="form-check-label" for="task7">
+																		Coordinate with business development
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-9.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to Arya S" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		Today
+																		10am
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		5/14
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		71
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-info p-1">Medium</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task8">
+																	<label class="form-check-label" for="task8">
+																		Kanban board design
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-2.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to James B" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		No Due
+																		Date
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		0/8
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		0
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-info p-1">Medium</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task11">
+																	<label class="form-check-label" for="task11">
+																		Draft the new contract document for
+																		sales team
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-9.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to Arya S" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		Today 10am
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		3/7
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		21
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-danger p-1">High</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task12">
+																	<label class="form-check-label" for="task12">
+																		iOS App home page
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-2.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to James B" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-calendar me-1'></i>
+																		Today 4pm
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		2/7
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		48
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-danger p-1">High</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+
+													<!-- task -->
+													<div class="row g-0 border-bottom align-items-center">
+														<div class="col-md-6 mt-2">
+															<div class="d-flex">
+																<div class="dragula-handle">
+																</div>
+																<div class="form-check custom-checkbox align-self-center col">
+																	<input type="checkbox" class="form-check-input" id="task13">
+																	<label class="form-check-label" for="task13">
+																		Write a release note
+																	</label>
+																</div> <!-- end checkbox -->
+															</div>
+														</div> <!-- end col -->
+														<div class="col-lg-6 my-2">
+															<div class="d-flex align-items-center justify-content-md-end fs-14">
+																<div class="me-3">
+																	<img src="assets/images/users/avatar-4.jpg" alt="image"
+																		class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-placement="bottom"
+																		title="Assigned to Kevin C" />
+																</div>
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item">
+																		<i class='bx bx-calendar me-1'></i>
+																		Today 6pm
+																	</li>
+																	<li class="list-inline-item pr-1">
+																		<i class='bx bx-align-middle me-1'></i>
+																		18/21
+																	</li>
+																	<li class="list-inline-item pr-2">
+																		<i class='bx bx-comment-dots me-1'></i>
+																		73
+																	</li>
+																	<li class="list-inline-item">
+																		<span class="badge badge-soft-info p-1">Medium</span>
+																	</li>
+																</ul>
+															</div> <!-- end .d-flex-->
+														</div> <!-- end col -->
+													</div>
+													<!-- end task -->
+													<div class="text-center mt-4">
+														<a href="javascript:void(0);" class="btn btn-sm btn-white">
+															<i class="bx bx-loader me-1 align-middle bx-spin"></i>
+															<span class="align-middle">Load more</span>
+														</a>
+													</div>
+												</div> <!-- end card-body-->
+											</div> <!-- end card -->
+										</div>
+									</div>
+								</div>
+								<div class="row mb-5">
+									<div class="col-12">
+										<div class="text-center">
+											<a href="javascript:void(0);" class="btn btn-white">
+												<i class="bx bx-loader me-1 align-middle bx-spin"></i>
+												<span class="align-middle">Load more</span>
+											</a>
+										</div>
+									</div> <!-- end col-->
+								</div>
+							</div>
+
+							<!-- task details -->
+							<div class="col-xl-4">
+								<div class="card">
+									<div class="card-body">
+
+										<div class="row">
+											<div class="col">
+												<div class="inner-header-title fw-semibold align-items-start">
+													<h4><a href="#" data-bs-toggle="modal" data-target="#task-detail-modal" class="text-dark">Draft the
+														new contract document for sales team</a></h4>
+													<div class="dropdown">
+														<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle edit-field-icon text-center" data-bs-toggle="dropdown"
+															aria-expanded="false">
+															<i class="mdi mdi-dots-vertical fs-sm"></i>
+														</a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item"><i
+																	class="bx bx-edit-alt me-2"></i>Edit</a>
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item"><i
+																	class="bx bx-user-plus me-2"></i>Add
+																People</a>
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item text-warning"><i
+																	class="bx bxs-exit me-2"></i>Leave</a>
+															<div class="dropdown-divider"></div>
+															<!-- item-->
+															<a href="javascript:void(0);" class="dropdown-item text-danger"><i
+																	class="bx bx-trash-alt me-2"></i>Delete</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-6">
+														<!-- assignee -->
+														<p class="mt-2 mb-1 text-muted">Assigned To</p>
+														<div class="media">
+															<img src="assets/images/users/avatar-9.jpg" alt="Arya S" class="rounded-circle me-2"
+																height="24" />
+															<div class="media-body">
+																<h5 class="mt-1 fs-14">
+																	Arya Stark
+																</h5>
+															</div>
+														</div>
+														<!-- end assignee -->
+													</div> <!-- end col -->
+
+													<div class="col-6">
+														<!-- start due date -->
+														<p class="mt-2 mb-1 text-muted">Due Date</p>
+														<div class="media align-items-center">
+															<i class='bx bx-calendar fs-sm text-success me-1'></i>
+															<div class="media-body">
+																<h5 class="fs-14 mb-0">
+																	Today 10am
+																</h5>
+															</div>
+														</div>
+														<!-- end due date -->
+													</div> <!-- end col -->
+												</div> <!-- end row -->
+
+												<!-- task description -->
+												<div class="row mt-3">
+													<div class="col">
+														<div id="taskDesk">
+															<p>This is a task description with markup support</p>
+															<ul>
+																<li>Select a text to reveal the toolbar.</li>
+																<li>Edit rich document on-the-fly, so elastic!</li>
+															</ul>
+															<p>End of air-mode area</p>
+														</div>
+													</div> <!-- end col -->
+												</div>
+												<!-- end task description -->
+
+												<!-- start sub tasks/checklists -->
+												<h5 class="mt-4 mb-2 fs-16">Checklists/Sub-tasks</h5>
+												<div class="form-check custom-checkbox mt-1">
+													<input type="checkbox" class="form-check-input" id="checklist1">
+													<label class="form-check-label strikethrough" for="checklist1">
+														Find out the old contract documents
+													</label>
+												</div>
+
+												<div class="form-check custom-checkbox mt-1">
+													<input type="checkbox" class="form-check-input" id="checklist2">
+													<label class="form-check-label strikethrough" for="checklist2">
+														Organize meeting sales associates to understand need in detail
+													</label>
+												</div>
+
+												<div class="form-check custom-checkbox mt-1">
+													<input type="checkbox" class="form-check-input" id="checklist3">
+													<label class="form-check-label strikethrough" for="checklist3">
+														Make sure to cover every small details
+													</label>
+												</div>
+												<!-- end sub tasks/checklists -->
+
+												<!-- start attachments -->
+												<h5 class="mt-4 mb-2 fs-16">Attachments</h5>
+												<div class="card mb-2 shadow-none border">
+													<div class="p-1 px-2">
+														<div class="row align-items-center">
+															<div class="col-auto">
+																<i class="bx bx-archive fs-sm"></i>
+															</div>
+															<div class="col pl-0">
+																<a href="javascript:void(0);" class="text-muted fw-bold">sales-assets.zip</a>
+																<p class="mb-0">2.3 MB</p>
+															</div>
+															<div class="col-auto">
+																<!-- Button -->
+																<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																	title="Download" class="btn btn-link text-primary btn-lg p-0">
+																	<i class='bx bxs-download fs-xs'></i>
+																</a>
+																<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																	title="Delete" class="btn btn-link text-danger btn-lg p-0">
+																	<i class='bx bx-x fs-sm'></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="card mb-2 shadow-none border">
+													<div class="p-1 px-2">
+														<div class="row align-items-center">
+															<div class="col-auto">
+																<i class="bx bxs-file-doc fs-sm"></i>
+															</div>
+															<div class="col pl-0">
+																<a href="javascript:void(0);" class="text-muted fw-bold">new-contarcts.docx</a>
+																<p class="mb-0">1.25 MB</p>
+															</div>
+															<div class="col-auto">
+																<!-- Button -->
+																<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																	title="Download" class="btn btn-link text-primary btn-lg p-0">
+																	<i class='bx bxs-download fs-xs'></i>
+																</a>
+																<a href="javascript:void(0);" data-bs-toggle="tooltip" data-placement="bottom"
+																	title="Delete" class="btn btn-link text-danger btn-lg p-0">
+																	<i class='bx bx-x fs-sm'></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- end attachments -->
+
+												<!-- comments -->
+												<div class="row mt-4 mb-2">
+													<div class="col">
+														<h5 class="mb-2 fs-16">Comments</h5>
+
+														<div class="media mt-3 p-1">
+															<img src="assets/images/users/avatar-9.jpg" class="me-2 rounded-circle" height="36"
+																alt="Arya Stark" />
+															<div class="media-body">
+																<h5 class="mt-0 mb-0 fs-14">
+																	<span class="float-end text-muted fs-12">4:30am</span>
+																	Arya Stark
+																</h5>
+																<p class="mt-1 mb-0 text-muted">
+																	Should I review the last 3 years legal documents as
+																	well?
+																</p>
+															</div>
+														</div> <!-- end comment -->
+
+														<hr />
+
+														<div class="media mt-2 p-1">
+															<img src="assets/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="36"
+																alt="Dominc B" />
+															<div class="media-body">
+																<h5 class="mt-0 mb-0 fs-14">
+																	<span class="float-end text-muted fs-12">3:30am</span>
+																	Gary Somya
+																</h5>
+																<p class="mt-1 mb-0 text-muted">
+																	@Arya FYI..I have created some general guidelines last
+																	year.
+																</p>
+															</div>
+														</div> <!-- end comment-->
+
+														<hr />
+														<div class="clearfix">
+															<button class="btn btn-primary" id="comment-btn">
+																Comment
+															</button>
+														</div>
+													</div> <!-- end col -->
+												</div> <!-- end row -->
+
+												<div class="d-none" id="comment-form">
+													<textarea id="compose-comment" placeholder="Your comment..."></textarea>
+													<div class="mt-3 dflex-between-center">
+														<button type="button" class="btn btn-sm btn-success" id="comment-submit-btn">
+															Submit
+														</button>
+														<button type="button" class="btn btn-sm btn-secondary" id="discard-btn">
+															Discard
+														</button>
+													</div>
+												</div> <!-- end row-->
+												<!-- end comments -->
+											</div> <!-- end col -->
+										</div> <!-- end row-->
+									</div> <!-- end card-body -->
+								</div> <!-- end card-->
+							</div> <!-- end col -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/dragula/dragula.min.js"></script>
+	<script src="assets/js/pages/dragula.init.js"></script>
+	<script src="assets/libs/ckeditor/js/ckeditor.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/pages/task-list.init.js"></script>
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

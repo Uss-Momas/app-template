@@ -1,0 +1,114 @@
+body {
+  overflow-x: hidden;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $gray-700;
+    font-family: $font-family-base;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: none;
+  }
+
+  &.text-primary {
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &.active {
+      color: $primaryHover !important;
+    }
+  }
+  &.text-default {
+    color: $default;
+    &:hover,
+    &:focus,
+    &.focus,
+    &.active {
+      color: $primary !important;
+    }
+  }
+  &.text-dark {
+    color: $dark;
+    &:hover,
+    &:focus,
+    &.focus,
+    &.active {
+      color: $primary !important;
+    }
+  }
+}
+
+// Forms
+label {
+  font-weight: $font-weight-semibold;
+}
+
+b, strong{
+  font-weight: 700;
+}
+
+small {
+  font-size: px-rem-converter(12);
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+//Content Page
+.main-content {
+  margin-left: $sidebar-width;
+  padding: 0 12px;
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  min-height: calc(100vh - 121px);
+  .page-content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.page-title-box {
+  padding: 30px 12px;
+  margin: 0 -12px;
+  // background: $primary;
+  color: $white;
+  // .breadcrumb {
+  //   display: none;
+  // }
+  h3 {
+    color: $white;
+  }
+  .date-icon{
+    color: $body-color;
+  }
+}
+
+.page-content-wrapper{
+  .preloader{
+    position: fixed;
+  }
+}

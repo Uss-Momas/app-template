@@ -1,0 +1,68 @@
+.card {
+  margin-bottom: $grid-gutter-width;
+  box-shadow: $card-shadow;
+  border-width: 0;
+  .card-header{
+    background: none;
+    padding: 1.25rem 1.25rem 0;
+  }
+  .card-body{
+    padding-top: 1rem;
+  }
+  .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .card-subtitle{
+    color: $text-muted;
+    margin: 0.5rem 0;
+  }
+}
+
+.card-img, .card-img-top {
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+}
+
+.card-img, .card-img-bottom {
+  border-bottom-right-radius: $card-border-radius;
+  border-bottom-left-radius: $card-border-radius;
+}
+
+
+//Card disable loading (Custom Cards)
+.card-disabled {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: $card-border-radius;
+  background: rgba($white, 0.8);
+  cursor: progress;
+
+  .card-portlets-loader {
+      background-color: $card-overlay-color;
+      animation: rotatebox 1.2s infinite ease-in-out;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 3px;
+      margin-left: - ($grid-gutter-width / 2);
+      margin-top: - ($grid-gutter-width / 2);
+  }
+}
+
+@keyframes rotatebox {
+  0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

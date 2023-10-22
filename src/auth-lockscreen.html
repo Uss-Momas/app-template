@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Lock Screen"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <div class="backhome">
+    <a href="index.html" class="avatar avatar-sm bg-primary text-white"><i class="bx bx-home-alt fs-sm"></i></a>
+  </div>
+  <!-- Begin Page -->
+  <div class="auth-pages">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-11 col-xl-10">
+          <div class="row justify-content-center">
+            <div class="col-md-6 pe-md-0">
+              <div class="auth-page-sidebar">
+                <div class="overlay"></div>
+                <div class="auth-user-testimonial">
+                  <div class="owl-carousel">
+                    <div class="item">
+                      <h3 class="text-white mb-1">I love this theme!</h3>
+                      <h5 class="text-white mb-3">"Admin templete. I love it very much!"</h5>
+                      <p>- Admin User</p>
+                    </div>
+                    <div class="item">
+                      <h3 class="text-white mb-1">I love this theme!</h3>
+                      <h5 class="text-white mb-3">"Admin templete. I love it very much!"</h5>
+                      <p>- Admin User</p>
+                    </div>
+                    <div class="item">
+                      <h3 class="text-white mb-1">I love this theme!</h3>
+                      <h5 class="text-white mb-3">"Admin templete. I love it very much!"</h5>
+                      <p>- Admin User</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ps-md-0">
+              <div class="card mb-0 p-2 p-md-3 border-bl-radius-0 border-tl-radius-0">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <div class="text-center">
+                      <img src="assets/images/users-thumbs/user-19.jpg" class="avatar-lg rounded-circle" alt="Lettstart Admin" />
+                      <h4 class="mt-2 fw-semibold">John Doe</h4>
+                    </div>
+                  </div>
+                  <form id="lockscreenForm" name="lockscreenForm" novalidate>
+                    <div class="form-group floating-label">
+                      <input type="password" class="form-control form-control-lg" name="validation-password" id="password" />
+                      <label for="password">Password</label>
+                      <div class="validation-error d-none fs-13">
+                        <p>This field is required</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group d-grid">
+                      <button class="btn btn-primary" data-effect="wave" type="submit"> Unlock
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/libs/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
+  <script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+  <script>
+    $(".auth-user-testimonial .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    });
+    //Initialize form
+    $('#lockscreenForm').validate({
+      focusInvalid: false,
+      rules: {
+        'validation-password': {
+          required: true,
+        }
+      },
+      errorPlacement: function errorPlacement(error, element) {
+        $(element).siblings(".validation-error").removeClass("d-none")
+        return true
+      },
+      highlight: function (element) {
+        var $el = $(element);
+        var $parent = $el.parents('.form-group');
+        $parent.addClass("invalid-field")
+      },
+      unhighlight: function (element) {
+        var $el = $(element);
+        var $parent = $el.parents('.form-group');
+        $parent.removeClass("invalid-field");
+        $(element).siblings(".validation-error").addClass("d-none")
+      },
+      submitHandler: function (form) {
+        var formdata = $(form).serializeArray();
+        var data = {};
+        $(formdata).each(function (index, obj) {
+          data[obj.name] = obj.value;
+        });
+        alert("Data has been submitted. Please see console log");
+        console.log("form data ===>", data);
+        $(form)[0].reset();
+        $(".floating-label").removeClass("enable-floating-label");
+      }
+    });
+  </script>
+</body>
+
+</html>

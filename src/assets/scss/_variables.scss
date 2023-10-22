@@ -1,0 +1,536 @@
+// Variables
+
+@import '../vendors/bootstrap/scss/functions';
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white: #fff;
+$gray-100: #f6f6f7;
+$gray-200: #f3f7f9;
+$gray-300: #e2e7f1;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #4B4B5A;
+$gray-800: #343a40;
+$gray-900: #1e2139;
+$black: #000;
+$default: #505d69;
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(("100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900),
+  $grays);
+
+// $blue:    #3051D3;
+// $indigo:  #564ab1;
+// $purple:  #6f42c1;
+// $pink:    #e83e8c;
+// $red:     #F06543;
+// $orange:  #f1734f;
+// $yellow:  #e4cc37;
+// $green:   #3ddc97;
+// $teal:    #008080;
+// $cyan:    #00A7E1;
+
+$blue: #7859f4;//#7859f4;//#3051d3;
+$indigo: #564ab1;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #ff5c75;
+$orange: #f77e53;
+$yellow: #ffbe0b;
+$green: #43d39e;
+$teal: #1ce1ac;
+$cyan: #25c2e3;
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(("blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800,
+    "default": $default),
+  $colors);
+
+$primary: $blue;
+$secondary: $gray-700;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-300;
+$dark: $gray-900;
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "default": $default),
+  $theme-colors);
+
+
+  
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret: false;
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: #f4f8f9;
+$body-color: $default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-decoration: none;
+$link-shade-percentage: 15%;
+// $link-hover-color: darken($primary, 15%);
+
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 24px;
+
+$box-shadow-xs: 0 .05rem .01rem rgba($gray-700, .075);
+$box-shadow-sm: 0 1px 4px 0 rgba($black,.1);
+$box-shadow: 0 .5rem 1rem rgba($black, .15);
+$box-shadow-lg: 0 1rem 2rem rgba($black, .175);
+$card-shadow: 0 0.75rem 1.5rem rgba($black,.03);
+
+$component-active-bg:         $primary;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// Font weight
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace;
+$font-family-base: $font-family-sans-serif;
+// Secondary font
+$font-family-secondary: 'Nunito Sans',
+sans-serif;
+
+
+
+$text-muted: $gray-600;
+$hr-border-color: rgba($black, .1);
+$mark-bg: #fcf8e3;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding-y:        1rem;
+$table-cell-padding-x:        1rem;
+$table-cell-padding-y-sm:     .5rem;
+$table-cell-padding-x-sm:     .5rem;
+$table-head-bg: $gray-100;
+$table-hover-bg: $gray-200;
+$table-active-bg: $table-hover-bg;
+$table-caption-color: $text-muted;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y: .45rem;
+$input-btn-padding-x: .75rem;
+
+$input-btn-focus-width: .15rem;
+$input-btn-focus-color: rgba($primary, .25);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+// Forms
+
+$input-bg: $white;
+$input-disabled-bg: $white;
+
+$input-color: $gray-700;
+$input-border-color: $gray-300;
+$input-box-shadow: 0px 0px 5px 1px rgba(229, 229, 229, 0.5); // inset 0 1px 1px rgba($black, .075);
+
+$input-focus-border-color: $primary; // $input-border-color
+$input-focus-box-shadow: none;
+
+$input-placeholder-color: $gray-600;
+$input-plaintext-color: $body-color;
+
+
+$input-group-addon-bg: $gray-200;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// scss-docs-start btn-variables
+$btn-link-color:  $primary;
+$btn-link-hover-color:       darken($primary, 4);
+$btn-padding-y:               0.45rem;
+$btn-padding-x:               0.75rem;
+
+// Form validation
+
+$form-feedback-font-size: $small-font-size;
+$form-select-bg: transparent;
+$form-check-input-checked-bg-color: $primary;
+$form-check-input-checked-border-color: $primary;
+$form-check-width: 2rem; 
+$form-check-height: 1.25rem; 
+// Navs
+
+$nav-link-disabled-color: var(--#{$prefix}gray-600);
+$nav-link-hover-color: $primary;
+$nav-pills-link-active-color:       $white;
+$nav-pills-link-active-bg:          $primary;
+
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-bg: $white;
+$dropdown-border-color: rgba($black, .15);
+$dropdown-border-radius: $border-radius-sm;
+$dropdown-border-width: 0;
+$dropdown-divider-bg: var(--#{$prefix}gray-200);
+$dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175);
+
+$dropdown-link-color: var(--#{$prefix}gray-900);
+$dropdown-link-hover-color: darken($gray-900, 5%);
+$dropdown-link-hover-bg: $gray-100;
+
+$dropdown-link-active-color: darken($gray-900, 5%);
+$dropdown-link-active-bg: $gray-100;
+
+$dropdown-link-disabled-color: $gray-600;
+
+$dropdown-item-padding-y: .5rem;
+$dropdown-item-padding-x: 1.5rem;
+
+
+// Pagination
+
+$pagination-padding-y: .5rem;
+$pagination-padding-x: .75rem;
+$pagination-padding-y-sm: .25rem;
+$pagination-padding-x-sm: .5rem;
+$pagination-padding-y-lg: .75rem;
+$pagination-padding-x-lg: 1.5rem;
+$pagination-line-height: 1.25;
+
+$pagination-color: $body-color;
+$pagination-bg: $white;
+$pagination-border-color: $gray-300;
+
+
+$pagination-hover-color: $white;
+$pagination-hover-bg: $primary;
+$pagination-hover-border-color: $primary;
+
+$pagination-focus-color: $primary;
+$pagination-focus-bg: transparent;
+
+$pagination-hover-color: $white;
+$pagination-hover-bg: $primary;
+$pagination-hover-border-color: $primary;
+$pagination-active-bg: $primary;
+$pagination-active-border-color: $primary;
+$pagination-disabled-color: $gray-600;
+$pagination-disabled-bg: $white;
+$pagination-disabled-border-color: $gray-300;
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+// Cards
+
+$card-title-color: #1C1F34;
+$card-spacer-y: 1.25rem;
+$card-spacer-x: 1.25rem;
+$card-border-width: 0;
+$card-border-radius: $border-radius-lg;
+$card-border-color: rgba($black, .125);
+$card-inner-border-radius: $card-border-radius;
+$card-cap-bg: $gray-200;
+$card-bg: $white;
+$card-img-overlay-padding: 1.25rem;
+
+
+
+// Tooltips
+
+$tooltip-font-size: $font-size-base;
+$tooltip-color: $white;
+$tooltip-bg: $black;
+$tooltip-padding-y: .3rem;
+$tooltip-padding-x: .6rem;
+
+// Popovers
+
+$popover-font-size: $font-size-base;
+$popover-bg: $white;
+$popover-border-color: $gray-300;
+$popover-border-radius: $border-radius;
+$popover-box-shadow: $box-shadow; // 0 .25rem .5rem rgba($black, .2);
+
+$popover-header-bg: darken($popover-bg, 3%);
+$popover-header-padding-y: .5rem;
+$popover-header-padding-x: .75rem;
+
+$popover-body-padding-y: $popover-header-padding-y;
+$popover-body-padding-x: $popover-header-padding-x;
+$popover-arrow-outer-color: fade-in($popover-border-color, .05);
+
+
+// Toasts
+
+
+
+$toast-padding-y: .25rem;
+$toast-background-color: rgba($white, .85);
+$toast-border-color: rgba(0, 0, 0, .1);
+$toast-border-radius: .25rem;
+$toast-box-shadow: 0 .25rem .75rem rgba($black, .1);
+$toast-header-color: $gray-600;
+$toast-header-background-color: rgba($white, .85);
+$toast-header-border-color: rgba(0, 0, 0, .05);
+
+
+// Badges
+
+$badge-font-size: 82%;
+$badge-font-weight: $font-weight-semibold;
+$badge-padding-y: .3em;
+$badge-padding-x: .5em;
+$badge-border-radius: $border-radius-sm;
+
+
+
+// Modals
+
+// Padding applied to the modal body
+
+$modal-content-bg: $white;
+$modal-content-border-color: rgba($black, .2);
+$modal-content-box-shadow-xs: 0 .25rem .5rem rgba($black, .5);
+$modal-content-box-shadow-sm-up: 0 .5rem 1rem rgba($black, .5);
+$modal-header-padding-y: 1rem;
+$modal-header-padding-x: 1rem;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y: .75rem;
+$alert-padding-x: 1.25rem;
+
+
+
+// Progress bars
+
+$progress-height: .75rem;
+$progress-bg: $gray-300;
+$progress-box-shadow: inset 0 .1rem .1rem rgba($black, .1);
+
+
+// List group
+
+$list-group-color: null;
+$list-group-bg: $white;
+$list-group-border-color: rgba($black, .125);
+
+$list-group-item-padding-y: .75rem;
+$list-group-item-padding-x: 1.25rem;
+
+$list-group-hover-bg: $gray-100;
+
+$list-group-disabled-color: $gray-600;
+
+$list-group-action-color: $gray-700;
+$list-group-action-hover-color: $list-group-action-color;
+$list-group-active-bg: $primary;
+$list-group-active-border-color: $primary;
+$list-group-action-active-bg: $gray-200;
+
+
+// Image thumbnails
+
+$thumbnail-border-color: $gray-300;
+$thumbnail-box-shadow: 0 1px 2px rgba($black, .075);
+
+
+// Figures
+
+$figure-caption-font-size: 90%;
+$figure-caption-color: $gray-600;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y: .75rem;
+$breadcrumb-padding-x: 1rem;
+$breadcrumb-item-padding: .3rem;
+
+$breadcrumb-margin-bottom: 1rem;
+
+$breadcrumb-bg: $gray-200;
+$breadcrumb-divider-color: $gray-600;
+$breadcrumb-active-color: $gray-600;
+
+// Carousel
+
+$carousel-control-icon-width: 20px;
+
+
+// Code
+
+$code-font-size: 87.5%;
+
+$kbd-padding-y: .2rem;
+$kbd-padding-x: .4rem;
+$kbd-color: $white;
+$kbd-bg: $gray-900;
+
+$pre-color: $gray-900;
+
+
+
+
+//Custom color of letstart
+
+//Icons
+$boxIcons: 'boxicons';
+
+
+// $primaryHover: darken($primary, 10);
+
+$theme-hover-colors: ("primary": $primary);
+
+
+//Sidebar Variables
+$sidebar-width: 250px;
+$sidebar-collapsed-width: 70px;
+$sidebar-width-sm: 150px;
+// Boxed layout width
+$boxed-layout-width: 1300px;
+
+// Vertical Sidebar - Dark
+$sidebar-dark-bg: #27333a; //2c313a
+$sidebar-dark-title-color: #adb5bd;
+$sidebar-dark-subitem-color: #adb5bd;
+$sidebar-dark-item-icon-color: rgba(255, 255, 255, .12);
+
+// $sidebar-dark-menu-item-active-color: #fff;
+//$sidebar-dark-menu-item-active-bg: #3b414e;
+
+$sidebar-dark-item-active-color: #d7e4ec;
+$sidebar-dark-item-active-bg: #2b3840;
+
+$sidebar-dark-topmenu-item-color: #636e75;
+
+
+//box shadow
+$box-shadow-lr: 0 .5rem -1px rgba($gray-700, .075);
+
+// SIdebar menu variables
+$menu-item: $gray-700; //#6e768e;
+$menu-item-hover: $primary;
+$menu-item-active: $primary;
+$menu-item-bg-hover: #f7f7ff;
+
+// Topbar - Deafult Light
+$header-height: 70px;
+$header-bg: #ffffff;
+$header-item-color: #636e75;
+
+// Topbar - Dark
+$header-dark-bg: #27333a;
+$header-icon-color: #e9ecef;
+
+// Topbar Search
+$topbar-search-bg: #f4f8f9;
+
+$height: 100px;
+$max-heights: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+
+$max-heights: map-merge((0: 0,
+    50: ($height * 0.5),
+    100: ($height * 1),
+    200: ($height * 2),
+    250: ($height * 2.5),
+    300: ($height * 3),
+    350: ($height * 3.5),
+  400: ($height * 400),
+    450: ($height * 4.5)
+    ),$max-heights);
+$widths: (20: 20%, 15: 15%);
+$image-path: "../../assets/images";
+
+$btn-widths:();
+$btn-widths: map-merge((
+  'xs': 80px,
+  'sm': 110px,
+  'md': 140px,
+  'lg': 170px,
+  'xl': 200px
+), $btn-widths);
+
+$card-overlay-color: #3e4852;
+
+// Apex chart
+$apex-grid-color: #f9f9fd;

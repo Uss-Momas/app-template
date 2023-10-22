@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    @@include("partials/title.html", {"title": "Invoice Details"})
+    <!-- ================== Plugins CSS  ================== -->
+    <!-- ================== Plugins CSS ================== -->
+    @@include("partials/head.html")
+ </head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+           <div class="container-fluid">
+              <div class="page-title dflex-between-center">
+                <h3 class="mb-1 fw-bold">Invoice Detail</h3>
+                <ol class="breadcrumb mb-0 mt-1">
+                   <li class="breadcrumb-item">
+                      <a href="../index.html">
+                         <i class="bx bx-home fs-xs"></i>
+                      </a>
+                   </li>
+                   <li class="breadcrumb-item">
+                      <a href="calender.html">
+                         Apps
+                      </a>
+                   </li>
+                   <li class="breadcrumb-item active">Invoice Detail</li>
+                </ol>
+              </div>
+           </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="card-body">
+                <div class="invoice-title">
+                  <h4 class="float-end fs-16">Order # 20202044874</h4>
+                  <div class="mb-4">
+                    <img src="assets/images/logo.png" alt="logo" height="20">
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-6">
+                    <address>
+                      <strong>Billed To:</strong><br>
+                      John Doe<br>
+                      1234 Main Road<br>
+                      Apt. 48<br>
+                      Frankfurt, GE 54321
+                    </address>
+                  </div>
+                  <div class="col-sm-6 text-sm-end">
+                    <address class="mt-2 mt-sm-0">
+                      <strong>Shipped To:</strong><br>
+                      Mark Henry<br>
+                      1234 Main Road<br>
+                      Apt. 4B<br>
+                      Frankfurt, GE 54321
+                    </address>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 mt-3">
+                    <address>
+                      <strong>Payment Method:</strong><br>
+                      Visa ending **** 8080<br>
+                      jDoe@example.com
+                    </address>
+                  </div>
+                  <div class="col-sm-6 mt-3 text-sm-end">
+                    <address>
+                      <strong>Order Date:</strong><br>
+                      May 16, 2020<br><br>
+                    </address>
+                  </div>
+                </div>
+                <div class="py-2 mt-3">
+                  <h3 class="fs-15 fw-bold">Order summary</h3>
+                </div>
+                <div class="table-responsive">
+                  <table class="table mt-4 table-centered">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>#</th>
+                        <th>Item</th>
+                        <th>Hours</th>
+                        <th>Hours Rate</th>
+                        <th class="text-end">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <h5 class="mb-2">Web Design</h5>
+                          <p class="text-muted mb-0">2 Pages static website - my website</p>
+                        </td>
+                        <td>22</td>
+                        <td>$30</td>
+                        <td class="text-end">$660.00</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <h5 class="mb-2">Software Development</h5>
+                          <p class="text-muted mb-0">Invoice editor software -
+                            Letstart
+                            Software</p>
+                        </td>
+                        <td>112</td>
+                        <td>$35</td>
+                        <td class="text-end">$3920</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                          <h5 class="mb-2">App Development</h5>
+                          <p class="text-muted mb-0">Invoice editor software -
+                            XZY
+                            Software</p>
+                        </td>
+                        <td>100</td>
+                        <td>$35</td>
+                        <td class="text-end">$3500</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" class="text-end">Sub Total</td>
+                        <td class="text-end">$8080.00</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" class="border-0 text-end">
+                          <strong>Shipping</strong></td>
+                        <td class="border-0 text-end">$20.00</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" class="border-0 text-end">
+                          <strong>Total</strong></td>
+                        <td class="border-0 text-end">
+                          <h4 class="m-0">$9000.00</h4>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="d-print-none">
+                  <div class="float-end">
+                    <a href="javascript:window.print()" class="btn btn-info waves-effect waves-light me-1"><i class="bx bxs-printer"></i> Print</a>
+                    <a href="javascript:void(0)" class="btn btn-primary w-md" data-effect="wave">Send</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main content End -->
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

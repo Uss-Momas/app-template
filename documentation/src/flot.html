@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("../partials/head.html", {"title": "Flot Charts"})
+  <link href="assets/vendors/c3/c3.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Flot Charts
+                </h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Demo</h5>
+                    <div class="chart-container">
+                      <div id="website-stats" class="chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Code</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;div class="chart-container"&gt;
+  &lt;div id="website-stats" class="chart"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Required Files</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.time.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.resize.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.pie.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.selection.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.stack.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-orderbars/js/jquery.flot.orderBars.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/flot-charts/js/jquery.flot.crosshair.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/utils/colors.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/pages/flot.init.js"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+    </div>
+
+    
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+  <script src="assets/vendors/flot-charts/js/jquery.flot.js"></script>
+  <script src="assets/vendors/flot-charts/js/jquery.flot.time.js"></script>
+  <script src="assets/vendors/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+  <script src="assets/vendors/flot-charts/js/jquery.flot.resize.js"></script>
+  <script src="assets/vendors/flot-charts/js/jquery.flot.pie.js"></script>
+  <script src="assets/vendors/flot-charts/js/jquery.flot.selection.js"></script>
+  <script src="assets/vendors/flot-charts/js/jquery.flot.stack.js"></script>
+  <script src="assets/vendors/flot-orderbars/js/jquery.flot.orderBars.js"></script>
+  <script src="assets/vendors/flot-charts/js/jquery.flot.crosshair.js"></script>
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/flot.init.js"></script>
+</body>
+
+</html>

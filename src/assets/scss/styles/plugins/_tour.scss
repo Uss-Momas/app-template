@@ -1,0 +1,139 @@
+//introjs
+//shepherd
+.shepherd-modal-overlay-container {
+  display: none !important;
+}
+.shepherd-element {
+  max-width: 300px !important;
+  min-width: 250px;
+  box-shadow:  0 3px 30px rgba($black, 0.3) !important;
+  .shepherd-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .shepherd-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.76563rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    border: 1px solid transparent;
+    color: $white;
+    text-shadow: none;
+  }
+  .shepherd-text {
+    padding: 15px !important;
+    h5 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+  }
+  .shepherd-footer {
+    padding: 0 15px 15px !important;
+  }
+  .shepherd-button {
+    background-color: $primary;
+    border-color: $primary;
+  
+    &:focus, &:hover {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+      box-shadow: none;
+    }
+  }
+  .shepherd-button-secondary {
+    background-color: $secondary;
+    border-color: $secondary;
+  
+    &:focus, &:hover {
+      background-color: $secondary !important;
+      border-color: $secondary !important;
+      color: $white !important;
+      box-shadow: none;
+    }
+  }
+  .shepherd-header {
+    padding-top: 0 !important;
+    position: relative;
+  }
+  .shepherd-cancel-icon {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 100%;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+}
+.tour {
+  border-color: $primary;
+
+  &.top {
+    .arrow {
+      bottom: -12px;
+
+      &:after {
+        border-top-color: $primary;
+      }
+    }
+  }
+
+  &.bottom {
+    .arrow {
+      top: -12px;
+
+      &:after {
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  &.left {
+    .arrow {
+      right: -17px;
+
+      &:after {
+        border-left-color: $primary;
+      }
+    }
+  }
+
+  &.right {
+    .arrow {
+      &:after {
+        border-right-color: $primary;
+      }
+    }
+  }
+
+  .btn {
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  }
+
+  .btn-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+  }
+
+  @each $color,
+  $value in $theme-colors {
+    .btn-#{$color} {
+      background: $value;
+      border-color: $value;
+      color: $white;
+    }
+  }
+
+  .popover-title {
+    background: none;
+    color: $dark;
+    font-weight: 700;
+    border: none;
+  }
+}

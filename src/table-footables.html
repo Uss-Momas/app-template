@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Foo Table"})
+  <!-- ================== Plugins CSS  ================== -->
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Foo Table</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="table-basic.html">
+                    Tables
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Foo Table</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Filtering</h5>
+                    <h6 class="card-subtitle">include filtering in your FooTable.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 text-sm-center dflex-between-center">
+                        <div class="form-group me-2">
+                          <select id="demo-foo-filter-status" class="form-select form-select-sm">
+                            <option value="">Show all</option>
+                            <option value="active">Active</option>
+                            <option value="disabled">Disabled</option>
+                            <option value="suspended">Suspended</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <div class="search-box position-relative">
+                            <input id="demo-foo-search" type="text" placeholder="Search"
+                              class="form-control" autocomplete="on">
+                            <i class="bx bx-search icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table id="demo-foo-filtering" class="table table-bordered toggle-circle mb-0" data-page-size="7">
+                        <thead>
+                          <tr>
+                            <th data-toggle="true">First Name</th>
+                            <th>Last Name</th>
+                            <th data-hide="phone">Job Title</th>
+                            <th data-hide="phone, tablet">DOB</th>
+                            <th data-hide="phone, tablet">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Isidra</td>
+                            <td>Boudreaux</td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Shona</td>
+                            <td>Woldt</td>
+                            <td>Airline Transport Pilot</td>
+                            <td>3 Oct 1981</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Granville</td>
+                            <td>Leonardo</td>
+                            <td>Business Services Sales Representative</td>
+                            <td>19 Apr 1969</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Easer</td>
+                            <td>Dragoo</td>
+                            <td>Drywall Stripper</td>
+                            <td>13 Dec 1977</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maple</td>
+                            <td>Halladay</td>
+                            <td>Aviation Tactical Readiness Officer</td>
+                            <td>30 Dec 1991</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maxine</td>
+                            <td><a href="#">Woldt</a></td>
+                            <td><a href="#">Business Services Sales Representative</a></td>
+                            <td>17 Oct 1987</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lorraine</td>
+                            <td>Mcgaughy</td>
+                            <td>Hemodialysis Technician</td>
+                            <td>11 Nov 1983</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lizzee</td>
+                            <td><a href="#">Goodlow</a></td>
+                            <td>Technical Services Librarian</td>
+                            <td>1 Nov 1961</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Judi</td>
+                            <td>Badgett</td>
+                            <td>Electrical Lineworker</td>
+                            <td>23 Jun 1981</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lauri</td>
+                            <td>Hyland</td>
+                            <td>Blackjack Supervisor</td>
+                            <td>15 Nov 1985</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Isidra</td>
+                            <td>Boudreaux</td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Shona</td>
+                            <td>Woldt</td>
+                            <td>Airline Transport Pilot</td>
+                            <td>3 Oct 1981</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Granville</td>
+                            <td>Leonardo</td>
+                            <td>Business Services Sales Representative</td>
+                            <td>19 Apr 1969</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Easer</td>
+                            <td>Dragoo</td>
+                            <td>Drywall Stripper</td>
+                            <td>13 Dec 1977</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maple</td>
+                            <td>Halladay</td>
+                            <td>Aviation Tactical Readiness Officer</td>
+                            <td>30 Dec 1991</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maxine</td>
+                            <td><a href="#">Woldt</a></td>
+                            <td><a href="#">Business Services Sales Representative</a></td>
+                            <td>17 Oct 1987</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lorraine</td>
+                            <td>Mcgaughy</td>
+                            <td>Hemodialysis Technician</td>
+                            <td>11 Nov 1983</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lizzee</td>
+                            <td><a href="#">Goodlow</a></td>
+                            <td>Technical Services Librarian</td>
+                            <td>1 Nov 1961</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Judi</td>
+                            <td>Badgett</td>
+                            <td>Electrical Lineworker</td>
+                            <td>23 Jun 1981</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lauri</td>
+                            <td>Hyland</td>
+                            <td>Blackjack Supervisor</td>
+                            <td>15 Nov 1985</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Isidra</td>
+                            <td>Boudreaux</td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Shona</td>
+                            <td>Woldt</td>
+                            <td>Airline Transport Pilot</td>
+                            <td>3 Oct 1981</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Granville</td>
+                            <td>Leonardo</td>
+                            <td>Business Services Sales Representative</td>
+                            <td>19 Apr 1969</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Easer</td>
+                            <td>Dragoo</td>
+                            <td>Drywall Stripper</td>
+                            <td>13 Dec 1977</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maple</td>
+                            <td>Halladay</td>
+                            <td>Aviation Tactical Readiness Officer</td>
+                            <td>30 Dec 1991</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maxine</td>
+                            <td><a href="#">Woldt</a></td>
+                            <td><a href="#">Business Services Sales Representative</a></td>
+                            <td>17 Oct 1987</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lorraine</td>
+                            <td>Mcgaughy</td>
+                            <td>Hemodialysis Technician</td>
+                            <td>11 Nov 1983</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lizzee</td>
+                            <td><a href="#">Goodlow</a></td>
+                            <td>Technical Services Librarian</td>
+                            <td>1 Nov 1961</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Judi</td>
+                            <td>Badgett</td>
+                            <td>Electrical Lineworker</td>
+                            <td>23 Jun 1981</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lauri</td>
+                            <td>Hyland</td>
+                            <td>Blackjack Supervisor</td>
+                            <td>15 Nov 1985</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr class="active">
+                            <td colspan="5">
+                              <div class="text-end">
+                                <ul
+                                  class="pagination pagination-rounded justify-content-end footable-pagination m-t-10 mb-0">
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div> <!-- end .table-responsive-->
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Add &amp; Remove Rows</h5>
+                    <h6 class="card-subtitle">Add or remove rows from your FooTable.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 text-sm-center dflex-between-center">
+                        <div class="form-group me-2">
+                          <button id="demo-btn-addrow" class="btn btn-primary"><i class="bx bx-plus bx-flashing"></i>
+                            Add New Row</button>
+                        </div>
+                        <div class="form-group">
+                          <div class="search-box position-relative">
+                            <input id="demo-input-search2" type="text" placeholder="Search" class="form-control"
+                              autocomplete="off">
+                            <i class="bx bx-search icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <table id="demo-foo-addrow"
+                      class="table table-centered table-striped table-bordered mb-0 toggle-circle" data-page-size="7">
+                      <thead>
+                        <tr>
+                          <th data-sort-ignore="true" class="min-width"></th>
+                          <th data-sort-initial="true" data-toggle="true">First Name</th>
+                          <th>Last Name</th>
+                          <th data-hide="phone">Job Title</th>
+                          <th data-hide="phone, tablet">DOB</th>
+                          <th data-hide="phone, tablet">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-center">
+                            <button class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button>
+                          </td>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><button
+                              class="demo-delete-row btn-icon btn-icon-xs bg-soft-danger text-danger"><i
+                                class="bx bx-x fs-sm"></i></button></td>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr class="active">
+                          <td colspan="6">
+                            <div class="text-end">
+                              <ul class="pagination pagination-split justify-content-end footable-pagination m-t-10">
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Triggers</h5>
+                    <h6 class="card-subtitle">Trigger certain FooTable actions.</h6>
+                  </div>
+                  <div class="card-body">
+                    <table id="demo-foo-row-toggler" class="table table-bordered toggle-circle mb-0">
+                      <thead>
+                        <tr>
+                          <th data-toggle="true"> First Name </th>
+                          <th> Last Name </th>
+                          <th data-hide="phone"> Job Title </th>
+                          <th data-hide="all"> DOB </th>
+                          <th data-hide="all"> Status </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Pagination</h5>
+                    <h6 class="card-subtitle">Include pagination in your FooTable.</h6>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-inline mb-3">
+                      Show
+                      <select id="demo-show-entries" class="form-control ms-1 me-1">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                      </select>
+                      entries
+                    </label>
+
+                    <div class="table-responsive">
+                      <table id="demo-foo-pagination" class="table mb-0 table-bordered toggle-arrow-tiny"
+                        data-page-size="5">
+                        <thead>
+                          <tr>
+                            <th data-toggle="true"> First Name </th>
+                            <th> Last Name </th>
+                            <th data-hide="phone"> Job Title </th>
+                            <th data-hide="all"> DOB </th>
+                            <th data-hide="all"> Status </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Isidra</td>
+                            <td>Boudreaux</td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Shona</td>
+                            <td>Woldt</td>
+                            <td>Airline Transport Pilot</td>
+                            <td>3 Oct 1981</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Granville</td>
+                            <td>Leonardo</td>
+                            <td>Business Services Sales Representative</td>
+                            <td>19 Apr 1969</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Easer</td>
+                            <td>Dragoo</td>
+                            <td>Drywall Stripper</td>
+                            <td>13 Dec 1977</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maple</td>
+                            <td>Halladay</td>
+                            <td>Aviation Tactical Readiness Officer</td>
+                            <td>30 Dec 1991</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maxine</td>
+                            <td><a href="#">Woldt</a></td>
+                            <td><a href="#">Business Services Sales Representative</a></td>
+                            <td>17 Oct 1987</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lorraine</td>
+                            <td>Mcgaughy</td>
+                            <td>Hemodialysis Technician</td>
+                            <td>11 Nov 1983</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lizzee</td>
+                            <td><a href="#">Goodlow</a></td>
+                            <td>Technical Services Librarian</td>
+                            <td>1 Nov 1961</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Judi</td>
+                            <td>Badgett</td>
+                            <td>Electrical Lineworker</td>
+                            <td>23 Jun 1981</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lauri</td>
+                            <td>Hyland</td>
+                            <td>Blackjack Supervisor</td>
+                            <td>15 Nov 1985</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Isidra</td>
+                            <td>Boudreaux</td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Shona</td>
+                            <td>Woldt</td>
+                            <td>Airline Transport Pilot</td>
+                            <td>3 Oct 1981</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Granville</td>
+                            <td>Leonardo</td>
+                            <td>Business Services Sales Representative</td>
+                            <td>19 Apr 1969</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Easer</td>
+                            <td>Dragoo</td>
+                            <td>Drywall Stripper</td>
+                            <td>13 Dec 1977</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maple</td>
+                            <td>Halladay</td>
+                            <td>Aviation Tactical Readiness Officer</td>
+                            <td>30 Dec 1991</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maxine</td>
+                            <td><a href="#">Woldt</a></td>
+                            <td><a href="#">Business Services Sales Representative</a></td>
+                            <td>17 Oct 1987</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lorraine</td>
+                            <td>Mcgaughy</td>
+                            <td>Hemodialysis Technician</td>
+                            <td>11 Nov 1983</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lizzee</td>
+                            <td><a href="#">Goodlow</a></td>
+                            <td>Technical Services Librarian</td>
+                            <td>1 Nov 1961</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Judi</td>
+                            <td>Badgett</td>
+                            <td>Electrical Lineworker</td>
+                            <td>23 Jun 1981</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lauri</td>
+                            <td>Hyland</td>
+                            <td>Blackjack Supervisor</td>
+                            <td>15 Nov 1985</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Isidra</td>
+                            <td>Boudreaux</td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Shona</td>
+                            <td>Woldt</td>
+                            <td>Airline Transport Pilot</td>
+                            <td>3 Oct 1981</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Granville</td>
+                            <td>Leonardo</td>
+                            <td>Business Services Sales Representative</td>
+                            <td>19 Apr 1969</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Easer</td>
+                            <td>Dragoo</td>
+                            <td>Drywall Stripper</td>
+                            <td>13 Dec 1977</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maple</td>
+                            <td>Halladay</td>
+                            <td>Aviation Tactical Readiness Officer</td>
+                            <td>30 Dec 1991</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Maxine</td>
+                            <td><a href="#">Woldt</a></td>
+                            <td><a href="#">Business Services Sales Representative</a></td>
+                            <td>17 Oct 1987</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lorraine</td>
+                            <td>Mcgaughy</td>
+                            <td>Hemodialysis Technician</td>
+                            <td>11 Nov 1983</td>
+                            <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lizzee</td>
+                            <td><a href="#">Goodlow</a></td>
+                            <td>Technical Services Librarian</td>
+                            <td>1 Nov 1961</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                          <tr>
+                            <td>Judi</td>
+                            <td>Badgett</td>
+                            <td>Electrical Lineworker</td>
+                            <td>23 Jun 1981</td>
+                            <td><span class="badge label-table badge-success">Active</span></td>
+                          </tr>
+                          <tr>
+                            <td>Lauri</td>
+                            <td>Hyland</td>
+                            <td>Blackjack Supervisor</td>
+                            <td>15 Nov 1985</td>
+                            <td><span class="badge label-table bg-danger">Suspended</span></td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr class="active">
+                            <td colspan="5">
+                              <div class="text-end">
+                                <ul class="pagination pagination-split justify-content-end footable-pagination m-t-10">
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div> <!-- end .table-responsive-->
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Accordion</h5>
+                    <h6 class="card-subtitle">Include accordion in your FooTable.</h6>
+                  </div>
+                  <div class="card-body">
+                    <table id="demo-foo-accordion" class="table table-colored mb-0 toggle-arrow-tiny">
+                      <thead>
+                        <tr>
+                          <th data-toggle="true"> First Name </th>
+                          <th> Last Name </th>
+                          <th data-hide="phone"> Job Title </th>
+                          <th data-hide="all"> DOB </th>
+                          <th data-hide="all"> Status </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Isidra</td>
+                          <td>Boudreaux</td>
+                          <td>Traffic Court Referee</td>
+                          <td>22 Jun 1972</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Shona</td>
+                          <td>Woldt</td>
+                          <td>Airline Transport Pilot</td>
+                          <td>3 Oct 1981</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Granville</td>
+                          <td>Leonardo</td>
+                          <td>Business Services Sales Representative</td>
+                          <td>19 Apr 1969</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Easer</td>
+                          <td>Dragoo</td>
+                          <td>Drywall Stripper</td>
+                          <td>13 Dec 1977</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maple</td>
+                          <td>Halladay</td>
+                          <td>Aviation Tactical Readiness Officer</td>
+                          <td>30 Dec 1991</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Maxine</td>
+                          <td><a href="#">Woldt</a></td>
+                          <td><a href="#">Business Services Sales Representative</a></td>
+                          <td>17 Oct 1987</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lorraine</td>
+                          <td>Mcgaughy</td>
+                          <td>Hemodialysis Technician</td>
+                          <td>11 Nov 1983</td>
+                          <td><span class="badge label-table bg-secondary">Disabled</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lizzee</td>
+                          <td><a href="#">Goodlow</a></td>
+                          <td>Technical Services Librarian</td>
+                          <td>1 Nov 1961</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                        <tr>
+                          <td>Judi</td>
+                          <td>Badgett</td>
+                          <td>Electrical Lineworker</td>
+                          <td>23 Jun 1981</td>
+                          <td><span class="badge label-table badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td>Lauri</td>
+                          <td>Hyland</td>
+                          <td>Blackjack Supervisor</td>
+                          <td>15 Nov 1985</td>
+                          <td><span class="badge label-table bg-danger">Suspended</span></td>
+                        </tr>
+                      </tbody>
+
+                    </table>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/footable/footable.all.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/foo-tables.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

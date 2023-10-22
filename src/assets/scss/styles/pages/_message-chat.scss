@@ -1,0 +1,246 @@
+.message-wrapper {
+  width: 100%;
+  // height: calc(100vh - 220px);
+  .message-sidebar {
+    max-width: 350px;
+    background: $white;
+    flex: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    @include border(right, 1px, solid, $border-color);
+  }
+
+  .user-message-wrapper {
+    flex: 1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    @include border(left, 1px, solid, $border-color);
+  }
+
+  .message-input {
+    display: flex;
+    align-items: center;
+    background-color: rgba($primary, 0.01);
+
+    .search-box {
+      flex: 1;
+    }
+  }
+}
+
+
+@mixin contact-item {
+  display: block;
+  position: relative;
+  padding: 1rem 1rem 1rem calc(1rem - 3px);
+  color: $body-color;
+  @include transition(all 0.4s);
+  @include border(bottom, 1px, solid, $border-color);
+  @include border(left, 3px, solid, transparent);
+
+  &:hover,
+  &.active,
+  &:focus {
+    border-left-color: $primary;
+    background-color: rgba($primary, 0.04);
+  }
+}
+
+.message-contact-tabs{
+  .tab-content {
+    .scroll-content {
+      max-height: 405px;
+    }
+    .tab-pane{
+      height: 100%;
+    }
+  }
+}
+
+.message-sidebar {
+  .search-box {
+    background: rgba($primary, 0.01);
+    @include border(bottom, 1px, solid, $border-color);
+  }
+}
+
+.chat-profile {
+  @include border(bottom, 1px, solid, $border-color);
+
+  .avatar {
+    @include border(null, 2px, solid, transparent);
+    padding: 1px;
+    &.online {
+      border-color: $success;
+    }
+    &.away {
+      border-color: $warning;
+    }
+    &.busy {
+      border-color: $danger;
+    }
+    &.offline {
+      border-color: $gray-600;
+    }
+  }
+
+  .status-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    display: inline-block;
+
+    &.online {
+      background-color: $success;
+    }
+
+    &.busy {
+      background-color: $danger;
+    }
+
+    &.away {
+      background-color: $warning;
+    }
+
+    &.offline {
+      background-color: $gray-600;
+    }
+  }
+}
+
+.chat-list {
+  .contact-status{
+    left: 0;
+    top: -2px;
+  }
+  li {
+    a {
+      @include contact-item;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      a {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.group-list {
+  li {
+    a {
+      @include contact-item;
+    }
+  }
+}
+
+.user-messages {
+  max-height: 500px;
+  overflow: auto;
+  background-color: $white;
+  // margin-bottom: 15px !important;
+  li {
+    padding-bottom: 1.5rem;
+    display: flex;
+  }
+
+  .conversation {
+    max-width: 65%;
+    min-width: 250px;
+    .profile-img {
+      float: left;
+    }
+
+    .dropdown {
+      float: right;
+      opacity: 0;
+      @include transition(opacity 0.25s ease-in-out);
+    }
+    &:hover {
+       .dropdown {
+         opacity: 1;
+       }
+    }
+  }
+
+  .chat-day-title {
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 10px;
+      bottom: 0;
+      height: 1px;
+      background-color: lighten($gray-300, 3);
+      content: "";
+    }
+
+    .title {
+      position: relative;
+      padding: 0.5rem 1rem;
+      background: $light;
+    }
+  }
+
+  .text-msg {
+    padding: 1rem;
+    position: relative;
+    border-radius: 8px;
+    max-width: calc(100% - 75px);
+    width: 100%;
+    display: inline-block;
+    color: $gray-700;
+    // display: flex;
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    .time-space {
+      width: 40px;
+      float: right;
+    }
+
+    .time-stamp {
+      position: absolute;
+      bottom: 0.5rem;
+      font-size: 11px;
+      font-weight: 700;
+      right: 1rem;
+    }
+  }
+
+  .sent {
+    .text-msg {
+      background-color: rgba($primary, 0.07);
+      margin-left: 0.5rem;
+    }
+  }
+
+  .replies {
+    .conversation {
+      margin-left: auto;
+    }
+
+    .text-msg {
+      background-color: rgba($gray-300, 0.5);
+      margin-right: 0.5rem;
+      margin-left: 2px;
+    }
+
+    .profile-img {
+      float: right;
+    }
+
+    .dropdown {
+      float: left;
+    }
+  }
+}

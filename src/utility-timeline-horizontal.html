@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Horizontal Timeline"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/horizontal-timeline/css/horizontal-timeline.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Horizontal Timeline</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="utility-animation.html">
+                    Utility
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Horizontal Timeline</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Horizontal Timeline</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="cd-horizontal-timeline loaded">
+                      <div class="timeline-header">
+                        <div class="events-wrapper">
+                          <div class="events" style="width: 1800px;">
+                            <ol class="list-unstyled">
+                              <li><a href="#" data-date="16/01/2017" class="older-event">16 Jan</a>
+                              </li>
+                              <li><a href="#" data-date="28/02/2017" class="older-event">28 Feb</a>
+                              </li>
+                              <li><a href="#" data-date="20/04/2017" class="selected">20 Mar</a></li>
+                              <li><a href="#" data-date="20/05/2017">20 May</a></li>
+                              <li><a href="#" data-date="09/07/2017">09 Jul</a></li>
+                              <li><a href="#" data-date="30/08/2017">30 Aug</a></li>
+                              <li><a href="#" data-date="15/09/2017">15 Sep</a></li>
+                              <li><a href="#" data-date="01/11/2017">01 Nov</a></li>
+                              <li><a href="#" data-date="10/12/2017">10 Dec</a></li>
+                              <li><a href="#" data-date="19/01/2018">29 Jan</a></li>
+                              <li><a href="#" data-date="03/03/2018">3 Mar</a></li>
+                            </ol>
+                            <span class="filling-line" aria-hidden="true"></span>
+                          </div>
+                          <!-- .events -->
+                        </div>
+                        <!-- .events-wrapper -->
+                        <ul class="cd-timeline-navigation">
+                          <li><a href="#" class="prev inactive">Prev</a></li>
+                          <li><a href="#" class="next">Next</a></li>
+                        </ul>
+                        <!-- .cd-timeline-navigation -->
+                      </div>
+                      <!-- .timeline -->
+                      <div class="events-content">
+                        <ol class="list-unstyled">
+                          <li data-date="16/01/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-17.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">January 16th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="28/02/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-1.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">Feb 28th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="20/04/2017" class="selected">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-2.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">March 20th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="20/05/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-3.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">May 20th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="09/07/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-4.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">July 9th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="30/08/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-5.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">August 30th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="15/09/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-6.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">September 15th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="01/11/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-7.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">November 1st, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="10/12/2017">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-8.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">December 10th, 2017</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="19/01/2018">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-9.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">January 19th, 2018</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                          <li data-date="03/03/2018">
+                            <div class="media mb-3">
+                              <img class="rounded-circle me-3" width="60" alt="user"
+                                src="assets/images/users-thumbs/user-11.jpg">
+                              <div class="media-body">
+                                <h5>
+                                  Horizontal timeline
+                                  <small class="fw-semibold d-block mt-2">March 3rd, 2018</small>
+                                </h5>
+                              </div>
+                            </div>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                              more-or-less
+                              normal distribution of letters, as opposed to using 'Content here, content here', making
+                              it
+                              look like readable English. Many desktop publishing packages and web page editors infancy.
+                            </p>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-effect="wave">Read more</a>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Horizontal Timeline</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="horizontal-timeline-owl">
+                      <div class="owl-carousel">
+                        <div class="item event-list">
+                          <div class="event-date">
+                            <div class="text-primary mb-1">12 September</div>
+                            <h5 class="fw-semibold mb-4">First event</h5>
+                          </div>
+                          <div class="event-down-icon">
+                            <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                          </div>
+
+                          <div class="mt-3 px-3">
+                            <p class="text-muted">It will be as simple as occidental in fact it will be Cambridge</p>
+                          </div>
+                        </div>
+                        <div class="item event-list">
+                          <div class="event-date">
+                            <div class="text-primary mb-1">06 October</div>
+                            <h5 class="fw-semibold mb-4">Second event</h5>
+                          </div>
+                          <div class="event-down-icon">
+                            <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                          </div>
+
+                          <div class="mt-3 px-3">
+                            <p class="text-muted">To an English person, it will seem like simplified English existence.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="item event-list active">
+                          <div class="event-date">
+                            <div class="text-primary mb-1">25 October</div>
+                            <h5 class="fw-semibold mb-4">Third event</h5>
+                          </div>
+                          <div class="event-down-icon">
+                            <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                          </div>
+
+                          <div class="mt-3 px-3">
+                            <p class="text-muted">For science, music, sport, etc, Europe uses the same vocabulary.</p>
+                          </div>
+                        </div>
+                        <div class="item event-list">
+                          <div class="event-date">
+                            <div class="text-primary mb-1">04 November</div>
+                            <h5 class="fw-semibold mb-4">Fourth event</h5>
+                          </div>
+                          <div class="event-down-icon">
+                            <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                          </div>
+
+                          <div class="mt-3 px-3">
+                            <p class="text-muted">New common language will be more simple than existing.</p>
+                          </div>
+                        </div>
+                        <div class="item event-list">
+                          <div class="event-date">
+                            <div class="text-primary mb-1">19 November</div>
+                            <h5 class="fw-semibold mb-4">Sixth event</h5>
+                          </div>
+                          <div class="event-down-icon">
+                            <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                          </div>
+
+                          <div class="mt-3 px-3">
+                            <p class="text-muted">It will be as simple as occidental in fact it will be Cambridge</p>
+                          </div>
+                        </div>
+                        <div class="item event-list">
+                          <div class="event-date">
+                            <div class="text-primary mb-1">21 December</div>
+                            <h5 class="fw-semibold mb-4">Seventh event</h5>
+                          </div>
+                          <div class="event-down-icon">
+                            <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                          </div>
+
+                          <div class="mt-3 px-3">
+                            <p class="text-muted">To an English person, it will seem like simplified English existence.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+  <script src="assets/libs/horizontal-timeline/js/horizontal-timeline.min.js"></script>
+  <script src="assets/libs/owl-carousel/js/owl.carousel.min.js"></script>
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/utility-timeline.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

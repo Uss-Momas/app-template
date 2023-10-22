@@ -1,0 +1,131 @@
+.product-filter-list{
+  li {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.product-item{
+  box-shadow: none;
+  @include transition(all 0.3s);
+  @include border(null, 1px, solid, $border-color);
+  .wishlist-icon{
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  .item-description{
+    position: relative;
+    .desc{
+      padding-right: 4rem;
+    }
+    .avatar{
+       position: absolute;
+       top: 50%;
+       @include transform(translateY(-50%));
+       right: 0;
+    }
+  }
+  &:hover{
+    box-shadow: $box-shadow;
+  }
+}
+
+.product-color-options {
+  a {
+    display: inline-block;
+    text-align: center;
+    margin-right: 0.5rem;
+    color: $body-color;
+    img{
+      padding: 0.25rem;
+      @include border(null, 1px,solid, $border-color);
+      margin-bottom: 0.5rem;
+    }
+    &.active, &:hover{
+      color: $primary;
+      img{ 
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+.product-detail-imgs{
+  .nav{
+    .nav-link{
+      height: 100%;
+      &.active{
+        background: $light;
+      }
+    }
+  }
+}
+
+.visa-card{
+  .visa-pattern{
+    position: absolute;
+    font-size: 20rem;
+    color: rgba($white,.05);
+    line-height: .4;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.custom-wizard-container {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    padding-top: 130px;
+  }
+  .custom-wizard-content {
+    position: static;
+    .step-container {
+      @include media-breakpoint-up(md) {
+        @include position(absolute, 0, 15px, null, 15px);
+      }
+    }
+  }
+  .sw-toolbar {
+    padding: 1.5rem 0;
+  }
+}
+
+.custom-nav-tabs {
+  a {
+    background: $gray-200;
+    color: $secondary;
+    padding: 1rem 1.5rem;
+    @include border(bottom, 1px, solid, $light);
+    @include border(left, 3px, solid, transparent);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    &.active {
+      border-left-color: $primary;
+      color: $primary;
+      background: $white;
+    }
+  }
+}
+
+.saved-card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.25rem;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+  .scard-details {
+    display: flex;
+    align-items: center;
+    .card-info {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-control {
+      width: 100px;
+    }
+  }
+}

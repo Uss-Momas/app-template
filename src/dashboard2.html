@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include("partials/title.html", {"title": "E-Commerce"})
+   <!-- ================== Plugins CSS  ================== -->
+   <link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css">
+   <!-- ================== Plugins CSS ================== -->
+   @@include("partials/head.html")
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      @@include('partials/topbar.html')
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      @@include('partials/left-sidebar.html')
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="row align-items-center">
+                     <div class="col-sm-4 col-xl-6">
+                        <div class="page-title">
+                           <h3 class="mb-1 fw-bold">E-Commerce</h3>
+                           <ol class="breadcrumb mb-3 mb-md-0">
+                              <li class="breadcrumb-item active">Welcome to Admin Dashboard</li>
+                           </ol>
+                        </div>
+                     </div>
+                     <div class="col-sm-8 col-xl-6">
+                        <form class="d-flex justify-content-sm-end">
+                           <div class="d-inline-flex me-2 input-date input-date-sm">
+                              <input class="form-control" type="text" id="dashdaterange"
+                                 placeholder="03-10-19 To 04-06-20">
+
+                              <div class="date-icon">
+                                 <i class="bx bx-calendar fs-sm"></i>
+                              </div>
+                           </div>
+                           <div class="btn-group dropdown">
+                              <button type="button" data-bs-toggle="dropdown" class="btn btn-light dropdown-toggle">
+                                 <i class="bx bx-download me-1"></i> Download <i class="bx bx-chevron-down"></i>
+                              </button>
+                              <div class="dropdown-menu-right dropdown-menu">
+                                 <a href="javascript: void(0);" class="dropdown-item">
+                                    <i class="bx bx-mail-send me-1"></i> Email
+                                 </a>
+                                 <a href="javascript: void(0);" class="dropdown-item">
+                                    <i class="bx bx-printer me-1"></i> Print
+                                 </a>
+                                 <a href="javascript: void(0);" class="dropdown-item">
+                                    <i class="bx bx-file me-1"></i> Re-Generate
+                                 </a>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <!-- Widget  -->
+                  <div class="row">
+                     <div class="col-md-6 col-xl-3">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media align-items-center flex-wrap">
+                                 <div class="media-body">
+                                    <span class="text-muted text-uppercase fs-12 fw-bold">Products
+                                       Sold</span>
+                                    <h2 class="mb-0 mt-1">3000</h2>
+                                 </div>
+                                 <div class="align-self-center">
+                                    <span class="text-primary">
+                                       <i class="bx bx-cart fs-lg"></i>
+                                    </span>
+                                 </div>
+                                 <div class="progress progress-sm mt-3 w-100">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 65%"
+                                       aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-xl-3">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media align-items-center flex-wrap">
+                                 <div class="media-body">
+                                    <span class="text-muted text-uppercase fs-12 fw-bold">Today
+                                       Revenue</span>
+                                    <h2 class="mb-0 mt-1">$2000</h2>
+                                 </div>
+                                 <div class="align-self-center">
+                                    <span class="text-warning">
+                                       <i class="bx bx-money fs-lg"></i>
+                                    </span>
+                                 </div>
+                                 <div class="progress progress-sm mt-3 w-100">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"
+                                       aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-xl-3">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media align-items-center flex-wrap">
+                                 <div class="media-body">
+                                    <span class="text-muted text-uppercase fs-12 fw-bold">New
+                                       Customer</span>
+                                    <h2 class="mb-0 mt-1">100</h2>
+                                 </div>
+                                 <div class="align-self-center">
+                                    <span class="text-success">
+                                       <i class="bx bx-user-plus fs-lg"></i>
+                                    </span>
+                                 </div>
+                                 <div class="progress progress-sm mt-3 w-100">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                       aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-xl-3">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="media align-items-center flex-wrap">
+                                 <div class="media-body">
+                                    <span class="text-muted text-uppercase fs-12 fw-bold">Total
+                                       Orders</span>
+                                    <h2 class="mb-0 mt-1">5000</h2>
+                                 </div>
+                                 <div class="align-self-center">
+                                    <span class="text-info">
+                                       <i class="bx bxs-shopping-bags fs-lg"></i>
+                                    </span>
+                                 </div>
+                                 <div class="progress progress-sm mt-3 w-100">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 65%"
+                                       aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Row 2-->
+                  <div class="row">
+                     <div class="col-lg-8">
+                        <div class="card">
+                           <div class="card-header dflex-between-center">
+                              <h5 class="card-title">Total Revenue</h5>
+                              <div class="btn-group earningTabs">
+                                 <button class="btn btn-primary btn-sm" data-effect="wave" data-type="monthly">
+                                    Monthly
+                                 </button>
+                                 <button class="btn btn-outline-primary btn-sm" data-effect="wave"
+                                    data-type="yearly">
+                                    Yearly
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="card-body pt-2">
+                              <div id="sales-order"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Begin Product carousel-->
+                     <div class="col-lg-4">
+                        <div class="card">
+                           <div class="card-header d-flex justify-content-between mb-3">
+                              <h5 class="card-title align-self-center">Product Status</h5>
+                              <div class="d-flex">
+                                 <span
+                                    class="avatar avatar-xs me-2 text-primary bg-soft-primary carousel-left-trigger waves-effect">
+                                    <i class="bx bx-chevron-left"></i>
+                                 </span>
+                                 <span
+                                    class="avatar avatar-xs me-0 text-primary bg-soft-primary carousel-right-trigger waves-effect">
+                                    <i class="bx bx-chevron-right"></i>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="product-owl owl-carousel mb-3">
+                              <div class="item">
+                                 <img src="assets/images/640/selfie-640.jpg" alt="Lettstart Admin" />
+                                 <div class="card-body">
+                                    <h5 class="fw-semibold">Shoes</h5>
+                                    <p>Lorem ipsum dolor sit amet, conse adipiscing spacing goes...</p>
+                                    <div class="product-timeline mt-2">
+                                       <div class="checkpoint active">
+                                          <span class="active">Initiate</span>
+                                       </div>
+                                       <div class="checkpoint active">
+                                          <span class="active">Dispatched</span>
+                                       </div>
+                                       <div class="checkpoint">
+                                          <span>Out for delivery</span>
+                                       </div>
+                                       <div class="checkpoint">
+                                          <span>Delivered</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <img src="assets/images/640/selfie-640.jpg" alt="Lettstart Admin" />
+                                 <div class="card-body">
+                                    <h5 class="fw-semibold">Shirt</h5>
+                                    <p>Lorem ipsum dolor sit amet, conse adipiscing spacing goes...</p>
+                                    <div class="progress-w-percent mb-0">
+                                       <div class="progress progress-md">
+                                          <div class="progress-bar progress-bar-striped  progress-bar-animated"
+                                             role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                       </div>
+                                       <div class="progress-value">
+                                          80%
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div><!-- End Product carousel-->
+                  </div>
+                  <!-- Row 3-->
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="card">
+                           <div class="card-header">
+                              <h5 class="card-title">Sales By Category</h5>
+                           </div>
+                           <div class="card-body chart-container">
+                              <div class="chart h-350">
+                                 <canvas id="cat-sale" class=""></canvas>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Begin Customer Acquisition cards-->
+                     <div class="col-lg-8">
+                        <div class="card">
+                           <div class="card-header dflex-between-center">
+                              <h5 class="card-title">Customer Acquisition</h5>
+                              <div class="dropdown stats-dropdown">
+                                 <button class="btn btn-outline-primary btn-sm" id="monthly" type="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="update-text">Weekly</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                 </button>
+                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="monthly">
+                                    <a href="javascript:void(0)" data-type="weekly" class="dropdown-item"> Weekly </a>
+                                    <a href="javascript:void(0)" data-type="monthly" class="dropdown-item"> Monthly </a>
+                                    <a href="javascript:void(0)" data-type="yearly" class="dropdown-item"> Yearly </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body pt-2">
+                              <div id="customer-aqu"></div>
+                           </div>
+                        </div>
+                     </div><!-- End Customer Acquisition cards-->
+                  </div>
+                  <!-- Row 4-->
+                  <div class="row">
+                     <!-- Product 1-->
+                     <div class="col-md-4">
+                        <div class="card product-item">
+                           <div class="card-body position-relative">
+                              <a href="javascript:void(0);" class="d-block"><img src="assets/images/product/chair.jpg" alt="Lettstart Admin"
+                                    class="img-fluid mx-auto d-block"></a>
+                              <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                                 data-bs-toggle="tooltip" title="" data-bs-title="Add to wishlist">
+                                 <i class="bx bx-heart fs-xs"></i>
+                              </button>
+                              <div class="item-description mt-3">
+                                 <div class="desc">
+                                    <h6 class="fs-16 mb-1 text-truncate">
+                                       <a href="javascript:void(0);" class="text-dark">Zara</a>
+                                    </h6>
+                                    <p class="text-muted mb-2 text-truncate">
+                                       Color Block Men Round Neck Half sleeve T-Shirt
+                                    </p>
+                                    <h5 class="my-0 fw-bold">$450</h5>
+                                 </div>
+                                 <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart" data-bs-toggle="tooltip" title=""
+                                    data-bs-title="Add to cart">
+                                    <i class="bx bx-cart fs-sm"></i>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Product 2-->
+                     <div class="col-md-4">
+                        <div class="card product-item">
+                           <div class="card-body position-relative">
+                              <a href="javascript:void(0);" class="d-block"><img src="assets/images/product/chair2.jpg" alt="Lettstart Admin"
+                                    class="img-fluid mx-auto d-block"></a>
+                              <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                                 data-bs-toggle="tooltip" title="" data-bs-title="Add to wishlist">
+                                 <i class="bx bx-heart fs-xs"></i>
+                              </button>
+                              <div class="item-description mt-3">
+                                 <div class="desc">
+                                    <h6 class="fs-16 mb-1 text-truncate">
+                                       <a href="javascript:void(0);" class="text-dark">Polo</a>
+                                    </h6>
+                                    <p class="text-muted mb-2 text-truncate">
+                                       Color Block Men Round Neck Full Sleeve T-Shirt
+                                    </p>
+                                    <h5 class="my-0 fw-bold">$600</h5>
+                                 </div>
+                                 <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart" data-bs-toggle="tooltip" title=""
+                                    data-bs-title="Add to cart">
+                                    <i class="bx bx-cart fs-sm"></i>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Product 3-->
+                     <div class="col-md-4">
+                        <div class="card product-item">
+                           <div class="card-body position-relative">
+                              <a href="javascript:void(0);" class="d-block"><img src="assets/images/product/chair3.jpg" alt="Lettstart Admin"
+                                    class="img-fluid mx-auto d-block"></a>
+                              <button class="btn avatar avatar-xs bg-light text-default wishlist-icon me-0" data-effect="wave"
+                                 data-bs-toggle="tooltip" title="" data-bs-title="Add to wishlist">
+                                 <i class="bx bx-heart fs-xs"></i>
+                              </button>
+                              <div class="item-description mt-3">
+                                 <div class="desc">
+                                    <h6 class="fs-16 mb-1 text-truncate">
+                                       <a href="javascript:void(0);" class="text-dark">Nike</a>
+                                    </h6>
+                                    <p class="text-muted mb-2 text-truncate">
+                                       Nike ripped jeans
+                                    </p>
+                                    <h5 class="my-0 fw-bold"><del class="me-1">$900</del> $700</h5>
+                                 </div>
+                                 <button class="btn avatar bg-primary text-white me-0" data-effect="wave" data-icon="cart" data-bs-toggle="tooltip" title=""
+                                    data-bs-title="Add to cart">
+                                    <i class="bx bx-cart fs-sm"></i>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Row 5 -->
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="card">
+                           <div class="card-header">
+                              <h5 class="card-title">Inventory Stock</h5>
+                           </div>
+                           <div class="card-body">
+                              <div class="table-responsive">
+                                 <table class="table table-nowrap table-centered">
+                                    <thead>
+                                       <tr>
+                                          <th>Serial</th>
+                                          <th>Image</th>
+                                          <th>Name</th>
+                                          <th>Id</th>
+                                          <th>Quantity</th>
+                                          <th>Price</th>
+                                          <th>Time</th>
+                                          <th>Customer</th>
+                                          <th>Status</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>1</td>
+                                          <td><img src="assets/images/product-1.png" alt="product"></td>
+                                          <td>Shirt</td>
+                                          <td><strong>12001</strong></td>
+                                          <td>20</td>
+                                          <td>$10</td>
+                                          <td>Jan 18, 2019 14:22:20</td>
+                                          <td>Patricia J. King </td>
+                                          <td>
+                                             <i class="mdi mdi-alert-circle-outline text-warning fs-xs align-middle"></i>
+                                             <span class="align-middle">Pending</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>2</td>
+                                          <td><img src="assets/images/product-2.png" alt="product mat"></td>
+                                          <td>Shirt</td>
+                                          <td><strong>12002</strong></td>
+                                          <td>30</td>
+                                          <td>$12</td>
+                                          <td>Jan 19, 2019 14:22:20</td>
+                                          <td>Micheal K </td>
+                                          <td>
+                                             <i class="mdi mdi-close text-danger fs-xs align-middle"></i>
+                                             <span class="align-middle">Declined</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>3</td>
+                                          <td><img src="assets/images/product-1.png" alt="product mat"></td>
+                                          <td>Shirt</td>
+                                          <td><strong>12003</strong></td>
+                                          <td>40</td>
+                                          <td>$15</td>
+                                          <td>Jan 20, 2019 14:22:20</td>
+                                          <td>Rachel J. Wicker</td>
+                                          <td>
+                                             <i class="mdi mdi-check-all text-success fs-xs align-middle"></i>
+                                             <span class="align-middle">Delivered</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>4</td>
+                                          <td><img src="assets/images/product-2.png" alt="product mat"></td>
+                                          <td>Shirt</td>
+                                          <td><strong>12004</strong></td>
+                                          <td>50</td>
+                                          <td>$16</td>
+                                          <td>Jan 21, 2019 14:22:20</td>
+                                          <td>Patricia J. King </td>
+                                          <td>
+                                             <i class="mdi mdi-check-all text-success fs-xs align-middle"></i>
+                                             <span class="align-middle">Delivered</span>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="my-3 d-flex justify-content-end">
+                                 <ul class="pagination flat-rounded-pagination">
+                                    <li class="page-item disabled">
+                                       <a href="javascript:void(0)" class="page-link" data-effect="wave"
+                                          aria-label="Previous" tabindex="-1" aria-disabled="true">
+                                          <i class="bx bx-chevron-left"></i>
+                                       </a>
+                                    </li>
+                                    <li class="page-item active" aria-current="page">
+                                       <a href="javascript:void(0)" class="page-link" data-effect="wave">1</a>
+                                    </li>
+                                    <li class="page-item" aria-current="page">
+                                       <a href="javascript:void(0)" class="page-link" data-effect="wave">2</a>
+                                    </li>
+                                    <li class="page-item" aria-current="page">
+                                       <a href="javascript:void(0)" class="page-link" data-effect="wave">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                       <a href="javascript:void(0)" class="page-link" data-effect="wave"
+                                          aria-label="Next">
+                                          <i class="bx bx-chevron-right"></i>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      @@include('partials/footer.html')
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <script src="assets/libs/flatpicker/js/flatpickr.js"></script>
+   <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+   <script src="assets/libs/chartjs/js/Chart.bundle.min.js"></script>
+   <script src="assets/libs/owl-carousel/js/owl.carousel.min.js"></script>
+   <script src="assets/js/utils/colors.js"></script>
+   <script src="assets/js/pages/dashboard2.init.js"></script>
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

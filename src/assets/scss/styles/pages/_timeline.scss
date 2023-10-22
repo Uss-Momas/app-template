@@ -1,0 +1,226 @@
+// 
+// timeline.scss
+//
+
+.activity-list {
+  position: relative;
+
+  &:before {
+    background-color: rgba($primary, 0.1);
+    width: 2px;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    position: absolute;
+    content: "";
+  }
+
+  .media {
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  &:last-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+// 
+// timeline.scss
+//
+
+/************** vertical timeline **************/
+
+.timeline-primary {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: -12px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    bottom: 0;
+    background-color: darken($gray-300, 4%);
+  }
+
+  .timeline-item {
+    display: flex;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50%;
+    }
+
+    .time-show-btn {
+      margin-bottom: 30px;
+    }
+
+    .timeline-box {
+      margin-bottom: 30px;
+      position: relative;
+      width: 50%;
+      margin-left: 90px;
+    }
+
+    .timeline-icon {
+      line-height: 1;
+      position: absolute;
+      left: -60px;
+      top: 14px;
+      height: 45px;
+      background: $topbar-search-bg;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: rgba($primary, 0.2);
+        top: 19px;
+        left: 40px;
+      }
+
+      .quarter-fill {
+        fill: $primary;
+        opacity: 0.25;
+      }
+
+      .half-fill {
+        fill: $primary;
+        opacity: 0.5;
+      }
+
+      .full-fill {
+        fill: $primary;
+      }
+    }
+
+    &.timeline-left {
+      text-align: right;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 50%;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      .timeline-box {
+        margin-left: 0;
+        margin-right: 90px;
+      }
+
+      .timeline-icon {
+        left: auto;
+        right: -60px;
+
+        &:after {
+          left: auto;
+          right: 40px;
+        }
+      }
+    }
+  }
+}
+
+.timeline-left-only {
+  .timeline-item {
+    &::before {
+      display: none;
+    }
+
+    .timeline-box {
+      margin-left: 45px;
+    }
+  }
+
+  .timeline-primary {
+    &:before {
+      left: 0;
+      @include transform(translateX(0));
+    }
+  }
+}
+
+.timeline-half {
+  .timeline-item {
+    width: 50%;
+    .timeline-box {
+      width: 100%;
+    }
+  }
+}
+
+.horizontal-timeline-owl {
+  padding: 1rem 0;
+  .event-list {
+    text-align: center;
+
+    .event-down-icon {
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 100%;
+        @include position(absolute, 50%, 0, null, 0);
+        @include transform(translateY(-50%));
+        @include border(bottom, 3px, dashed, $border-color);
+      }
+    }
+
+    .down-arrow-icon {
+      position: relative;
+      background-color: #fff;
+      padding: 4px;
+      margin-bottom: 0;
+    }
+
+    &.active {
+      .down-arrow-icon {
+        animation: fade-down 1.5s infinite linear;
+      }
+    }
+  }
+  .owl-nav{
+    text-align: center;
+    margin-top: 1rem;
+    .disabled {
+      opacity: 0.7;
+    }
+  }
+}
+
+.cd-horizontal-timeline {
+  .events {
+    a {
+      padding-bottom: 6px;
+      color: $body-color;
+
+      &.selected {
+        color: $primary;
+
+        &:after {
+          background: $primary;
+          border-color: $primary;
+        }
+      }
+    }
+
+    .filling-line {
+      background: $primary;
+    }
+  }
+
+  a.btn-primary,
+  a.btn-primary:hover,
+  a.btn-primary:focus {
+    color: $white;
+  }
+}

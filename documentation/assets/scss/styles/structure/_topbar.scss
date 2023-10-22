@@ -1,0 +1,197 @@
+.topbar-header {
+  @include position(fixed, 0, 0, null, 0, 99);
+  height: 70px;
+  padding-right: 24px;
+  background-color: $primary;
+
+  .scroll-content {
+    max-height: 240px;
+  }
+}
+
+.header-item {
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  color: $header-icon-color;
+  &.btn {
+    min-width: auto;
+  }
+  &:hover,
+  &:focus,
+  &.active {
+    color: $header-icon-color;
+  }
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-height;
+
+  .left-bar,
+  .right-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .hamburg-icon {
+    background: none;
+    border: none;
+    padding: 0 15px 0 22px;
+
+    i {
+      font-size: 1.75rem;
+      color: $header-icon-color;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.navbar-brand-box {
+  padding: 0 1.5rem;
+  text-align: center;
+  width: $sidebar-width;
+  background: $white;
+  height: 100%;
+  line-height: $header-height;
+
+  .logo-dark {
+    display: none;
+  }
+
+  .logo {
+    max-height: 19px;
+  }
+}
+
+.app-search {
+  .form-control {
+    background-color: rgba($topbar-search-bg, 0.07);
+    color: $white;
+    border: none;
+    height: 38px;
+    padding-left: 40px;
+    padding-right: 15px;
+    border-radius: 30px;
+  }
+
+  span {
+    @include position(absolute, 0, null, 0, 14px);
+    color: rgba($white, 0.5);
+    display: flex;
+    align-items: center;
+  }
+
+  span,
+  input.form-control::-webkit-input-placeholder {
+    color: rgba($white, 0.5);
+  }
+
+  input.form-control::-moz-placeholder,
+  input.form-control:-moz-placeholder {
+    color: rgba($white, 0.5);
+  }
+}
+
+
+.notify-icon {
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.notify-icon-badge {
+  @include position(absolute !important, 15px !important, 5px, null, null);
+  font-size: px-rem-converter(10);
+}
+
+.notify-title {
+  h5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.notification-item {
+  padding: 0.75rem 1rem;
+
+  .media {
+    align-items: center;
+  }
+
+  .media-body {
+    display: flex;
+    flex-direction: column;
+    color: $menu-item;
+    margin-bottom: 0;
+  }
+}
+
+.notify-all {
+  display: flex;
+  align-items: center;
+
+  a {
+    display: block;
+    width: 100%;
+
+    &:hover {
+      background-color: $light;
+    }
+  }
+}
+
+.dark-sidebar-menu {
+  .topbar-header {
+    background: $white;
+  }
+
+  .header-item {
+    color: $sidebar-dark-topmenu-item-color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $sidebar-dark-topmenu-item-color;
+    }
+  }
+
+  .dropdown.show {
+    .header-item {
+      background-color: rgba($black, 0.03);
+    }
+  }
+
+  .navbar-header {
+    .hamburg-icon {
+      i {
+        color: $sidebar-dark-topmenu-item-color;
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: $sidebar-dark-topmenu-item-color;
+        }
+      }
+    }
+  }
+
+  .app-search {
+    .form-control {
+      background-color: $light;
+      color: $body-color;
+    }
+
+    span {
+      color: $body-color;
+    }
+  }
+}

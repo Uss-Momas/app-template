@@ -1,0 +1,48 @@
+/*
+Template Name: Marvel - Multipurpose Admin Template
+Author: LettstartDesign
+Version: 1.0.0
+Website: https://lettstartdesign.com/
+File: Main Css File
+*/
+
+/* TABLES OF CSS
+
+1. Fonts
+2. Bootstrap functions
+3. Bootstrap variables
+4. App variables
+5. Bootstrap mixins
+6. App mixins
+7. App functions
+8. Components
+
+*/
+
+@import '../vendors/bootstrap/scss/functions';
+@import '../vendors/bootstrap/scss/variables';
+@import 'variables';
+@import 'mixins';
+@import '../vendors/bootstrap/scss/bootstrap';
+
+@import 'mixins';
+@import 'functions';
+@import 'styles/components/helpers';
+@import 'styles/components/forms';
+@import 'styles/components/buttons';
+@import 'styles/components/badge';
+@import 'styles/components/breadcrumb';
+@import 'styles/components/border';
+@import 'styles/components/collpasable';
+@import 'styles/components/dropdown';
+@import 'styles/components/modal';
+@import 'styles/components/backgrounds';
+@import 'styles/components/pagination';
+@import 'styles/components/progress';
+@import 'styles/components/card';
+@import 'styles/components/tables';
+@import 'styles/components/navs';
+@import 'styles/components/list-group';
+@import 'styles/components/tooltips';
+@import 'styles/components/ribbons';
+@import 'styles/components/checkbox-radios';

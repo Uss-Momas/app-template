@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Chat"})
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">
+                <i class="mdi mdi-menu me-1 d-lg-none" data-bs-toggle="sidebar"></i>
+                Chat
+              </h3>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="calender.html">
+                    Apps
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Chat</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="message-wrapper d-flex">
+              <div data-sidebar="mobile" class="message-sidebar card">
+                <div class="chat-profile p-3 d-flex align-items-center">
+                  <div class="dropdown me-2" id="profile">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
+                      <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar"
+                        class="online avatar avatar-sm me-0">
+                    </a>
+                    <div class="dropdown-menu">
+                      <a href="javascript:void(0)" class="dropdown-item" data-status="online"><span
+                          class="status-circle online me-2"></span> Online</a>
+                      <a href="javascript:void(0)" class="dropdown-item" data-status="away"><span
+                          class="status-circle away me-2"></span> Away</a>
+                      <a href="javascript:void(0)" class="dropdown-item" data-status="busy"><span
+                          class="status-circle busy me-2"></span> Busy</a>
+                      <a href="javascript:void(0)" class="dropdown-item" data-status="offline"><span
+                          class="status-circle offline me-2"></span> Offline</a>
+                    </div>
+                  </div>
+                  <div class="actions ms-auto">
+                    <div class="dropdown">
+                      <a href="javascript:void(0)"
+                        class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle" data-effect="wave"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="mdi mdi-dots-vertical fs-sm"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:void(0)" class="dropdown-item">New Group</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Setting</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Archive</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-box p-3">
+                  <div class="position-relative">
+                    <input type="text" placeholder="Search..." class="form-control">
+                    <i class="bx bx-search icon"></i>
+                  </div>
+                </div>
+                <div class="message-contact-tabs">
+                  <div class="p-3 pb-4">
+                    <ul class="nav-pills nav-justified nav bg-light border-radius" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-effect="wave" data-bs-toggle="pill" href="#chat" role="tab"
+                          aria-controls="chat" aria-selected="true">Chat</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-effect="wave" data-bs-toggle="pill" href="#group" role="tab"
+                          aria-controls="group" aria-selected="false">Group</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-effect="wave" data-bs-toggle="pill" href="#contact" role="tab"
+                          aria-controls="contact" aria-selected="false">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content pt-0">
+                    <div class="tab-pane fade show active chat-list" id="chat" role="tabpanel" aria-labelledby="chat">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary position-relative">
+                                LL
+                                <span class="contact-status online"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Louis Litt</h5>
+                                <p class="text-truncate">You just got LITT up, Mike.</p>
+                              </div>
+                              <div class="fs-11 text-dark">10 min</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="active">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-8.jpg" class="avatar avatar-sm" alt="user thumb" />
+                                <span class="contact-status online"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Rockey</h5>
+                                <p class="text-truncate">I was thinking that we could have chicken tonight, sounds good?
+                                </p>
+                              </div>
+                              <div class="fs-11 text-dark">24 min</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-2.jpg" class="avatar avatar-sm" alt="user thumb"/>
+                                <span class="contact-status away"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Harvey Specter</h5>
+                                <p class="text-truncate">Wrong. You take the gun, or you pull out a bigger one. Or, you
+                                  call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                              </div>
+                              <div class="fs-11 text-dark">30 min</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-3.jpg" class="avatar avatar-sm"  alt="user thumb" />
+                                <span class="contact-status offline"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Donna Paulsen</h5>
+                                <p class="text-truncate">Mike, I know everything! I'm Donna...</p>
+                              </div>
+                              <div class="fs-11 text-dark">1 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-4.jpg" class="avatar avatar-sm"  alt="user thumb"/>
+                                <span class="contact-status offline"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Jessica Pearson</h5>
+                                <p class="text-truncate">Have you finished the draft on the Hinsenburg deal?</p>
+                              </div>
+                              <div class="fs-11 text-dark">2 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary position-relative">
+                                HG
+                                <span class="contact-status online"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Harold Gunderson</h5>
+                                <p class="text-truncate">Thanks Mike! :)</p>
+                              </div>
+                              <div class="fs-11 text-dark">3 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary position-relative">
+                                DH
+                                <span class="contact-status busy"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Daniel Hardman</h5>
+                                <p class="text-truncate">We'll meet again, Mike. Tell Jessica I said 'Hi'.</p>
+                              </div>
+                              <div class="fs-11 text-dark">4 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-5.jpg" class="avatar avatar-sm"  alt="user thumb"/>
+                                <span class="contact-status away"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Katrina Bennett</h5>
+                                <p class="text-truncate">I've sent you the files for the Garrett trial.</p>
+                              </div>
+                              <div class="fs-11 text-dark">5 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-6.jpg" class="avatar avatar-sm"  alt="user thumb"/>
+                                <span class="contact-status offline"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Charles Forstman</h5>
+                                <p class="text-truncate">Mike, this isn't over.</p>
+                              </div>
+                              <div class="fs-11 text-dark">5 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media">
+                              <div class="align-self-center position-relative">
+                                <img src="assets/images/users-thumbs/user-7.jpg" class="avatar avatar-sm"  alt="user thumb"/>
+                                <span class="contact-status online"></span>
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Jonathan Sidwell</h5>
+                                <p class="text-truncate"><span class="text-dark">You:</span> That's bullshit. This deal
+                                  is solid.</p>
+                              </div>
+                              <div class="fs-11 text-dark">5 hr</div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-pane fade group-list" id="group" role="tabpanel" aria-labelledby="group">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media align-items-center">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary">
+                                G
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">General</h5>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media align-items-center">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary">
+                                M
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Meeting</h5>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media align-items-center">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary">
+                                T
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Team</h5>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media align-items-center">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary">
+                                P
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Project</h5>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);">
+                            <div class="media align-items-center">
+                              <div class="avatar avatar-sm align-self-center bg-soft-primary text-primary">
+                                H
+                              </div>
+                              <div class="media-body overflow-hidden">
+                                <h5 class="text-truncate fs-14 mb-1">Hangout</h5>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-pane fade contact-list" id="contact" role="tabpanel" aria-labelledby="contact">
+                      <div class="contact-item mb-4 ms-3">
+                        <div class="avatar avatar-sm mb-3">
+                          <span class="avatar-title rounded-circle bg-soft-primary text-primary"> A </span>
+                        </div>
+                        <ul class="list-unstyled chat-list">
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Adam</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Abhay</h5>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="contact-item mb-4 ms-3">
+                        <div class="avatar avatar-sm mb-3">
+                          <span class="avatar-title rounded-circle bg-soft-primary text-primary"> B </span>
+                        </div>
+                        <ul class="list-unstyled chat-list">
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Boss</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Baby</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Bobby</h5>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="contact-item mb-4 ms-3">
+                        <div class="avatar avatar-sm mb-3">
+                          <span class="avatar-title rounded-circle bg-soft-primary text-primary"> C </span>
+                        </div>
+                        <ul class="list-unstyled chat-list">
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Captain</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Charles</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Charley</h5>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="contact-item ms-3">
+                        <div class="avatar avatar-sm mb-3">
+                          <span class="avatar-title rounded-circle bg-soft-primary text-primary"> D </span>
+                        </div>
+                        <ul class="list-unstyled chat-list">
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Don</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Ditto</h5>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);">
+                              <h5 class="text-truncate fs-14 mb-0">Debut</h5>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="user-message-wrapper card">
+                <div class="chat-profile p-3 d-flex align-items-center">
+                  <div class="me-2">
+                    <img src="assets/images/users/avatar-8.jpg" alt="Header Avatar"
+                      class="online avatar avatar-sm me-0">
+                  </div>
+                  <div class="clearfix">
+                    <h5 class="mb-0 fw-semibold">Rockey</h5>
+                  </div>
+                  <div class="d-flex ms-auto">
+                    <div class="dropdown">
+                      <a href="javascript:void(0)"
+                        class="avatar avatar-sm bg-soft-primary text-primary me-2" data-effect="wave"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bx bx-search-alt-2 fs-xs"></i>
+                      </a>
+                      <div aria-labelledby="page-header-search-dropdown"
+                        class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                        <form class="p-3">
+                          <div class="search-box">
+                            <div class="position-relative">
+                              <input type="text" placeholder="Search..." class="form-control">
+                              <i class="bx bx-search icon"></i>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <a href="javascript:void(0)"
+                        class="avatar avatar-sm bg-soft-primary text-primary dropdown-toggle waves-effect waves-light me-0"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="mdi mdi-dots-horizontal fs-xs"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:void(0)" class="dropdown-item">New Group</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Setting</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Archive</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="user-messages p-3" id="usermsg-scrollbar">
+                  <ul class="list-unstyled">
+                    <li>
+                      <div class="chat-day-title">
+                        <span class="title">Today</span>
+                      </div>
+                    </li>
+                    <li class="sent">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!
+                          </p>
+                          <span class="time-stamp">10:11</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="replies">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-8.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>When you're backed against the wall, break the god damn thing down.</p>
+                          <span class="time-stamp">10:11</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="replies">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-8.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>Excuses don't win championships.</p>
+                          <span class="time-stamp">10:11</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="sent">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>Oh yeah, did Michael Jordan tell you that?</p>
+                          <span class="time-stamp">11:11</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="replies">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-8.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p> No, I told him that.</p>
+                          <span class="time-stamp">12:05</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="replies">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-8.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>What are your choices when someone puts a gun to your head?</p>
+                          <span class="time-stamp">12:06</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="sent">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>What are you talking about? You do what they say or they shoot you.</p>
+                          <span class="time-stamp">12:10</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="replies">
+                      <div class="conversation">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="avatar-xs rounded-circle justify-content-center dropdown-toggle waves-effect waves-circle">
+                            <i class="bx bx-dots-vertical-rounded fs-sm"></i>
+                          </a>
+                          <div class="dropdown-menu">
+                            <a href="javascript:void(0)" class="dropdown-item">Attachments</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Status</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Forward</a>
+                            <a href="javascript:void(0)" class="dropdown-item">Copy</a>
+                          </div>
+                        </div>
+                        <div class="profile-img">
+                          <img src="assets/images/users/avatar-8.jpg" alt="Header Avatar"
+                            class="online avatar avatar-xs me-0">
+                        </div>
+                        <div class="text-msg">
+                          <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do
+                            any one of a hundred and forty six other things.</p>
+                          <span class="time-stamp">12:15</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="message-input p-3 border-top">
+                  <button class="btn btn-link p-0 avatar-sm rounded-circle waves-effect waves-circle">
+                    <i class='bx bx-smile fs-md align-middle'></i>
+                  </button>
+                  <div class="search-box position-relative right-icon me-3">
+                    <input type="text" class="form-control" placeholder="Enter your message" />
+                    <i class="bx bx-paperclip fs-xs icon right"></i>
+                  </div>
+                  <button class="btn btn-primary btn-rounded chat-send-btn" data-effect="wave">
+                    <span class="d-none d-sm-inline-block ms-1 align-middle">Send</span>
+                    <i class='bx bxs-send fs-sm align-middle'></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/chat.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

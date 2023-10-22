@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("../partials/head.html", {"title": "Theme Colors"})
+
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Theme Colors
+                </h4>
+              </div>
+            </div>
+
+            <div class="row" id="intro">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4">
+$blue: #3051d3;
+$indigo: #564ab1;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #ff5c75;
+$orange: #f77e53;
+$yellow: #ffbe0b;
+$green: #43d39e;
+$teal: #1ce1ac;
+$cyan: #25c2e3;
+                    </code>
+                  </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+    </div>
+
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+</body>
+
+</html>

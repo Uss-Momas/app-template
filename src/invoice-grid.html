@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Invoice Grid List"})
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Invoices</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Invoices</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<div class="card">
+							<div class="card-body">
+								<!-- cta -->
+								<div class="row">
+									<div class="col-sm-3 col-md-6">
+										<a href="invoice-create.html" class="btn btn-outline-primary"><i
+												class="bx bx-plus bx-flashing me-1"></i>Add
+											Invoice</a>
+									</div>
+									<div class="col-sm-9 col-md-6">
+										<form class="float-sm-end mt-3 mt-sm-0">
+											<div class="search-box">
+												<div class="position-relative">
+													<input type="text" placeholder="Search Invoice..." class="form-control">
+													<i class="bx bx-search icon"></i>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-info text-info mb-3">
+												AS
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #200101101</a>
+												<h6 class="text-truncate mb-3 text-default">Admin Dashboard UI</h6>
+												<h5 class="fw-bold mb-0">$1,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">10 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-danger text-danger mb-3">
+												DI
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122014414</a>
+												<h6 class="text-truncate mb-3 text-default">Dashboard UI</h6>
+												<h5 class="fw-bold mb-0">$2,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">10 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="me-3 mb-3">
+												<img src="assets/images/users-thumbs/user-1.jpg" class="avatar-md rounded-circle"
+													alt="Lettstart Admin" />
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122014458</a>
+												<h6 class="text-truncate mb-3 text-default">Admin Dashboard UI</h6>
+												<h5 class="fw-bold mb-0">$1,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">10 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-success text-success mb-3">
+												SU
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122015478</a>
+												<h6 class="text-truncate mb-3 text-default">Dashboard UI</h6>
+												<h5 class="fw-bold mb-0">$4,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">15 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-primary text-primary mb-3">
+												AP
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122014465</a>
+												<h6 class="text-truncate mb-3 text-default">App Theme</h6>
+												<h5 class="fw-bold mb-0">$10,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">16 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="me-3 mb-3">
+												<img src="assets/images/users-thumbs/user-2.jpg" class="avatar-md rounded-circle"
+													alt="Lettstart Admin" />
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122014475</a>
+												<h6 class="text-truncate mb-3 text-default">One Page Template</h6>
+												<h5 class="fw-bold mb-0">$2,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">17 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-secondary text-secondary mb-3">
+												DS
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122025465</a>
+												<h6 class="text-truncate mb-3 text-default">Admin Template</h6>
+												<h5 class="fw-bold mb-0">$5,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">18 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-light text-dark mb-3">
+												OR
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20124774874</a>
+												<h6 class="text-truncate mb-3 text-default">ORYO website</h6>
+												<h5 class="fw-bold mb-0">$3,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">19 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-info text-info mb-3">
+												LS
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122015587</a>
+												<h6 class="text-truncate mb-3 text-default">Lettstart Template</h6>
+												<h5 class="fw-bold mb-0">$4,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">20 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-dark text-dark mb-3">
+												OR
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122015578</a>
+												<h6 class="text-truncate mb-3 text-default">Option Page UI</h6>
+												<h5 class="fw-bold mb-0">$2,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">10 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="me-3 mb-3">
+												<img src="assets/images/users-thumbs/user-11.jpg" alt="Lettstart Admin"
+													class="avatar-md rounded-circle">
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122015513</a>
+												<h6 class="text-truncate mb-3 text-default">Admin Dashboard UI</h6>
+												<h5 class="fw-bold mb-0">$1,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">10 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="media">
+											<div class="avatar avatar-md bg-soft-primary text-primary mb-3">
+												OP
+											</div>
+											<div class="media-body">
+												<a href="invoices-detail.html" class="d-block text-primary mb-1 fs-14">Invoice #20122015518</a>
+												<h6 class="text-truncate mb-3 text-default"> Calender UI</h6>
+												<h5 class="fw-bold mb-0">$2,000</h5>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer bg-transparent border-top">
+										<div class="dflex-between-center">
+											<div class="d-flex me-2">
+												<h5 class="fs-14 mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+													data-bs-title="Due Date">
+													<i class="bx bx-calendar text-secondary op-5 fs-sm align-middle"></i>
+													<span class="fw-semibold align-middle fs-13">10 Oct, 20</span>
+												</h5>
+											</div>
+											<div class="d-flex">
+												<a href="invoice-details.html" class="avatar avatar-xs bg-soft-primary text-primary me-2">
+													<i class="bx bxs-show fs-xs"></i>
+												</a>
+												<a href="assets/pdf/dummy.pdf" download="" class="avatar avatar-xs bg-soft-info text-info me-0">
+													<i class="bx bxs-download fs-xs"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- ================== BEGIN PAGE JS ================== -->
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

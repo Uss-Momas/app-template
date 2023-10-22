@@ -1,0 +1,42 @@
+// 
+// badge.scss
+//
+.badge-soft {
+    color: $gray-800;
+}
+
+// badge soft
+@mixin badge-soft-variant($bg) {
+    background-color: rgba($bg, 0.2);
+    color: $bg !important;
+}
+
+@each $color, $value in $theme-colors {
+    .badge-soft-#{$color} {
+      @include badge-soft-variant($value);
+    }
+}
+
+
+// Outline badge
+@mixin badge-variant-outline($bg) {
+    color: $bg;
+    border: 1px solid $bg;
+    background-color: transparent;
+    box-shadow: none;
+
+    &[href] {
+        @include hover-focus {
+            color: $bg;
+            text-decoration: none;
+            background-color: rgba($bg, 0.2);
+        }
+    }
+}
+// Outline badge
+@each $color,
+$value in $theme-colors {
+    .badge-outline-#{$color} {
+        @include badge-variant-outline($value);
+    }
+}

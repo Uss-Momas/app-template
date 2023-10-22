@@ -1,0 +1,72 @@
+// 
+// tasks.scss
+//
+
+.board {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.tasks {
+    display: inline-block;
+    width: 22rem;
+    vertical-align: top;
+    margin-bottom: $grid-gutter-width;
+    @include border-radius($border-radius);
+
+    &.tasks:not(:last-child) {
+        margin-right: 1.25rem;
+    }
+
+    .card {
+        white-space: normal;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .task-header {
+        padding: 1rem 0;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+}
+
+.task-list-items {
+    min-height: 100px;
+    position: relative;
+    padding: 1.25rem;
+    background-color: $card-bg;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    .card {
+        cursor: pointer;
+    }
+
+    &:before {
+        content: "No Tasks";
+        @include position(absolute, 50px, 0, null, 0);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.sortable-chosen{
+    background: $light;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+}
+

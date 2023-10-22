@@ -1,0 +1,26 @@
+.search-listing{
+  li{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    @include border(bottom, 1px, solid, $border-color);
+    a{
+      &:hover{
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+    .search-links{
+      color: $secondary;
+      font-weight: 600;
+      &:hover{
+        color: $dark;
+        text-decoration: none;
+      }
+    }
+    &:last-child{
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

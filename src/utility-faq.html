@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Utility FAQ"})
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">FAQS</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="utility-animation.html">
+                    Utility
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">FAQS</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="vertical-app-tabs">
+              <div class="row">
+                <div class="col-md-3 col-lg-2">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-gen-ques-tab" data-bs-toggle="pill" href="#v-pills-gen-ques"
+                      role="tab" aria-controls="v-pills-gen-ques" aria-selected="true">
+                      <i class="bx bx-question-mark d-block fs-lg mt-4 mb-2"></i>
+                      <p class="fw-bold mb-4">General Questions</p>
+                    </a>
+                    <a class="nav-link" id="v-pills-privacy-tab" data-bs-toggle="pill" href="#v-pills-privacy" role="tab"
+                      aria-controls="v-pills-privacy" aria-selected="false">
+                      <i class="bx bx-check-shield d-block fs-lg mt-4 mb-2"></i>
+                      <p class="fw-bold mb-4">Privacy Policy</p>
+                    </a>
+                    <a class="nav-link" id="v-pills-support-tab" data-bs-toggle="pill" href="#v-pills-support" role="tab"
+                      aria-controls="v-pills-support" aria-selected="false">
+                      <i class="bx bx-support d-block fs-lg mt-4 mb-2"></i>
+                      <p class="fw-bold mb-4">Support</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-9 col-lg-10">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-gen-ques" role="tabpanel"
+                          aria-labelledby="v-pills-gen-ques-tab">
+                          <h5 class="card-title mb-4">General Questions</h5>
+                          <div class="accordion custom-accordion" id="general">
+                            <div class="card shadow-none mb-3">
+                              <a data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                <div class="card-header py-3" id="headingOne">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>What is Lorem Ipsum?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#general">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To an English person, it will seem like simplified
+                                    English, as a skeptical Cambridge friend of mine told me what languages are members
+                                    of the same family.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse one end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="true"
+                                aria-controls="collapseTwo">
+                                <div class="card-header py-3" id="headingTwo">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Where does it come from?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#general">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To achieve this, it would be necessary to have
+                                    uniform grammar, pronunciation and more common words. If several languages coalesce
+                                    of the resulting language.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseThree" aria-expanded="true"
+                                aria-controls="collapseThree">
+                                <div class="card-header py-3" id="headingThree">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Why do we use it?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#general">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">If several languages coalesce, the grammar of the
+                                    resulting language is more simple and regular than that of the individual languages
+                                    new common will be more simple.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+                            <div class="card shadow-none mb-3">
+                              <a data-bs-toggle="collapse" href="#collapseFour" aria-expanded="true"
+                                aria-controls="collapseFour" class="collapsed">
+                                <div class="card-header py-3" id="headingFour">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>What is Lorem Ipsum?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#general">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To an English person, it will seem like simplified
+                                    English, as a skeptical Cambridge friend of mine told me what languages are members
+                                    of the same family.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse one end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseFive" aria-expanded="true"
+                                aria-controls="collapseFive">
+                                <div class="card-header py-3" id="headingFive">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Where does it come from?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#general">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To achieve this, it would be necessary to have
+                                    uniform grammar, pronunciation and more common words. If several languages coalesce
+                                    of the resulting language.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseSix" aria-expanded="true"
+                                aria-controls="collapseSix">
+                                <div class="card-header py-3" id="headingSix">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Why do we use it?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#general">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">If several languages coalesce, the grammar of the
+                                    resulting language is more simple and regular than that of the individual languages
+                                    new common will be more simple.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel"
+                          aria-labelledby="v-pills-privacy-tab">
+                          <h5 class="card-title mb-4">Privacy Policy</h5>
+
+                          <div class="accordion custom-accordion" id="policy">
+                            <div class="card shadow-none mb-3">
+                              <a data-bs-toggle="collapse" href="#collapseSeven" aria-expanded="true"
+                                aria-controls="collapseSeven">
+                                <div class="card-header py-3" id="headingSeven">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>What is Lorem Ipsum?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
+                                data-bs-parent="#policy">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To an English person, it will seem like simplified
+                                    English, as a skeptical Cambridge friend of mine told me what languages are members
+                                    of the same family.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse one end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseEight" aria-expanded="true"
+                                aria-controls="collapseEight">
+                                <div class="card-header py-3" id="headingEight">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Where does it come from?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                data-bs-parent="#policy">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To achieve this, it would be necessary to have
+                                    uniform grammar, pronunciation and more common words. If several languages coalesce
+                                    of the resulting language.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseNine" aria-expanded="true"
+                                aria-controls="collapseNine">
+                                <div class="card-header py-3" id="headingNine">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Why do we use it?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                                data-bs-parent="#policy">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">If several languages coalesce, the grammar of the
+                                    resulting language is more simple and regular than that of the individual languages
+                                    new common will be more simple.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+                            <div class="card shadow-none mb-3">
+                              <a data-bs-toggle="collapse" href="#collapseTen" aria-expanded="true"
+                                aria-controls="collapseTen" class="collapsed">
+                                <div class="card-header py-3" id="headingTen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>What is Lorem Ipsum?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-bs-parent="#policy">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To an English person, it will seem like simplified
+                                    English, as a skeptical Cambridge friend of mine told me what languages are members
+                                    of the same family.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse one end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseEleven" aria-expanded="true"
+                                aria-controls="collapseEleven">
+                                <div class="card-header py-3" id="headingEleven">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Where does it come from?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven"
+                                data-bs-parent="#policy">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To achieve this, it would be necessary to have
+                                    uniform grammar, pronunciation and more common words. If several languages coalesce
+                                    of the resulting language.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseTwelve" aria-expanded="true"
+                                aria-controls="collapseTwelve">
+                                <div class="card-header py-3" id="headingTwelve">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Why do we use it?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve"
+                                data-bs-parent="#policy">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">If several languages coalesce, the grammar of the
+                                    resulting language is more simple and regular than that of the individual languages
+                                    new common will be more simple.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-support" role="tabpanel"
+                          aria-labelledby="v-pills-support-tab">
+                          <h5 class="card-title mb-3">Support</h5>
+
+
+                          <div class="accordion custom-accordion" id="support">
+                            <div class="card shadow-none mb-3">
+                              <a data-bs-toggle="collapse" href="#collapseThirteen" aria-expanded="true"
+                                aria-controls="collapseThirteen">
+                                <div class="card-header py-3" id="headingThirteen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>What is Lorem Ipsum?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseThirteen" class="collapse show" aria-labelledby="headingThirteen"
+                                data-bs-parent="#support">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To an English person, it will seem like simplified
+                                    English, as a skeptical Cambridge friend of mine told me what languages are members
+                                    of the same family.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse one end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseFourteen" aria-expanded="true"
+                                aria-controls="collapseFourteen">
+                                <div class="card-header py-3" id="headingFourteen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Where does it come from?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen"
+                                data-bs-parent="#support">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To achieve this, it would be necessary to have
+                                    uniform grammar, pronunciation and more common words. If several languages coalesce
+                                    of the resulting language.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseFifteen" aria-expanded="true"
+                                aria-controls="collapseFifteen">
+                                <div class="card-header py-3" id="headingFifteen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Why do we use it?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen"
+                                data-bs-parent="#support">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">If several languages coalesce, the grammar of the
+                                    resulting language is more simple and regular than that of the individual languages
+                                    new common will be more simple.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+                            <div class="card shadow-none mb-3">
+                              <a data-bs-toggle="collapse" href="#collapseSixteen" aria-expanded="true"
+                                aria-controls="collapseSixteen" class="collapsed">
+                                <div class="card-header py-3" id="headingSixteen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>What is Lorem Ipsum?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen"
+                                data-bs-parent="#support">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To an English person, it will seem like simplified
+                                    English, as a skeptical Cambridge friend of mine told me what languages are members
+                                    of the same family.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse one end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseSeventeen" aria-expanded="true"
+                                aria-controls="collapseSeventeen">
+                                <div class="card-header py-3" id="headingSeventeen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Where does it come from?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen"
+                                data-bs-parent="#support">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">To achieve this, it would be necessary to have
+                                    uniform grammar, pronunciation and more common words. If several languages coalesce
+                                    of the resulting language.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+
+                            <div class="card shadow-none mb-3">
+                              <a class="collapsed" data-bs-toggle="collapse" href="#collapseEighteen" aria-expanded="true"
+                                aria-controls="collapseEighteen">
+                                <div class="card-header py-3" id="headingEighteen">
+                                  <h6 class="mb-0">
+                                    <i class="mdi mdi-help text-primary h5 me-3"></i>Why do we use it?
+                                    <i class="mdi mdi-chevron-up float-end toggle-icon fs-sm"></i>
+                                  </h6>
+                                </div>
+                              </a>
+
+                              <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen"
+                                data-bs-parent="#support">
+                                <div class="card-body">
+                                  <p class="text-muted mb-0 faq-ans">If several languages coalesce, the grammar of the
+                                    resulting language is more simple and regular than that of the individual languages
+                                    new common will be more simple.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- collapse two end -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6">
+                          <div class="my-4 text-center">
+                            <div class="clearfix mb-3 text-primary">
+                              <i class="bx bx-comment-add fs-md"></i>
+                            </div>
+                            <h5>Can't find what you are looking for?</h5>
+                            <div class="text-muted">
+                              <p class="mb-4">To achieve this, it would be necessary to have uniform grammar,
+                                pronunciation and common words</p>
+                            </div>
+                            <div>
+                              <button type="button" class="btn btn-primary mt-1 me-2" data-effect="wave"><i
+                                  class="mdi mdi-email-outline me-1"></i> Email Us</button>
+                              <button type="button" class="btn btn-info mt-1" data-effect="wave"><i
+                                  class="mdi mdi-twitter me-1"></i> Send us a tweet</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+/*
+Template Name: Marvel - Multipurpose Admin Template
+Author: LettstartDesign
+Version: 1.0.0
+Website: https://lettstartdesign.com/
+File: Main Css File
+*/
+
+/* TABLES OF CSS
+
+1. Fonts
+2. Bootstrap functions
+3. Bootstrap variables
+4. App variables
+5. Bootstrap mixins
+6. App mixins
+7. App functions
+8. Utilities
+9. Preloader
+10. Print
+11. Layout (header, footer, sidebar, topbar)
+12. Plugins
+13. Pages
+14. Responsive
+*/
+
+@import 'styles/fonts/fonts';
+
+//Core Components
+@import '../vendors/bootstrap/scss/functions';
+@import '../vendors/bootstrap/scss/variables';
+@import 'variables';
+@import '../vendors/bootstrap/scss/mixins';
+
+@import 'mixins';
+@import 'functions';
+@import 'styles/utilities/sizing';
+@import "styles/components/preloader";
+@import "styles/components/print";
+@import 'styles/structure/footer';
+@import 'styles/structure/setting-sidebar';
+@import 'styles/structure/topbar';
+@import 'styles/structure/horizontal-topnav';
+@import 'styles/structure/layout';
+@import 'styles/structure/vertical';
+@import 'styles/structure/common';
+
+
+// Plugins
+
+@import 'styles/plugins/slimscroll';
+@import 'styles/plugins/apex';
+@import 'styles/plugins/c3';
+@import 'styles/plugins/chartist';
+@import 'styles/plugins/flot';
+@import 'styles/plugins/morris';
+@import 'styles/plugins/datatable';
+@import 'styles/plugins/hopscotch';
+@import 'styles/plugins/dragula';
+@import 'styles/plugins/parsley';
+
+@import './responsive';
+/*
+    Documentation
+*/
+.plugin-details > * {
+    display: none;
+    &:first-child {
+        display: block; 
+    }
+}

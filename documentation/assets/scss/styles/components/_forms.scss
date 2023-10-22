@@ -1,0 +1,281 @@
+.form-control{
+  height: calc(#{$input-line-height * 1em} + #{$input-btn-padding-x * 2} + #{$input-height-border + 1});
+  padding: $input-btn-padding-x;
+}
+.form-control-sm{
+  height: calc(#{$line-height-sm * 1em} + #{$input-btn-padding-x-sm * 2.25} + #{$input-height-border + 2});
+  padding: $input-btn-padding-x-sm;
+}
+
+.form-control-light {
+  background: $light;
+  &:focus {
+    border-color: transparent;
+    background: $light;
+  }
+}
+
+.form-group.is-invalid{
+  .invalid-feedback{
+    display: block;
+  }
+}
+
+.floating-label {
+  position: relative;
+
+  .form-control {
+    &:focus {
+      border-color: $primary;
+
+      &+label {
+        top: -10px;
+        @include transform(scale(0.9));
+        background: $white;
+        color: $primary;
+        transform-origin: left;
+      }
+    }
+  }
+
+  label {
+    @include position(absolute, 14px, null, null, 10px, 3);
+    padding: 0 5px;
+    cursor: text;
+    @include transition(all 0.25s ease-out 0.1s);
+  }
+
+  &.is-valid,
+  &.enable-floating-label {
+    margin-bottom: 1.75rem;
+    .form-control {
+      border-color: $gray-400;
+
+      &:focus {
+        border-color: $primary;
+
+        &+label {
+          color: $primary;
+        }
+      }
+    }
+
+    label {
+      top: -10px;
+      @include transform(scale(0.9));
+      background: $white;
+      color: $body-color;
+      transform-origin: left;
+    }
+  }
+
+  &.is-invalid {
+    .form-control {
+      border-color: $danger;
+
+      &:focus {
+        &+label {
+          color: $danger;
+        }
+      }
+    }
+
+    label {
+      top: -10px;
+      @include transform(scale(0.9));
+      background: $white;
+      color: $danger;
+      transform-origin: left;
+    }
+  }
+}
+
+@each $key, $val in $theme-colors {
+  .custom-checkbox {
+    &.checkbox-#{$key} {
+      .custom-control-input:checked{
+        ~ .custom-control-label {
+          &:before {
+            background: $val;
+          }
+          &:after {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom-control-label {
+  padding-top: 1px;
+}
+
+.custom-checkbox {
+  .custom-control-label:after{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after{
+    font-family: $boxIcons;
+    content: "\ea0f";
+    background: none;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+.was-validated {
+  .custom-checkbox {
+    .custom-control-input:valid:checked ~ .custom-control-label::after{
+      color: $white;
+    }
+  }
+}
+
+.input-date{
+  position: relative;
+  .form-control{
+    padding-right: 2.5rem;
+  }
+  .date-icon{
+    position: absolute;
+    top: 15px;
+    // @include transform(translateY(-50%));
+    right: 0.75rem;
+    bottom: 0;
+    opacity: 0.6;
+    pointer-events: none;
+    &.active{
+      opacity: 1;
+      color: $primary;
+    }
+  }
+}
+
+.input-date-sm {
+  .date-icon {
+    top: 10px;
+  }
+}
+
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+
+  .custom-control-label {
+    &::before {
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-width;
+      pointer-events: all;
+      // stylelint-disable-next-line property-blacklist
+      border-radius: $custom-switch-indicator-border-radius;
+      background-color: $white;
+    }
+
+    &::after {
+      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
+      left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      background-color: $custom-control-indicator-border-color;
+      // stylelint-disable-next-line property-blacklist
+      border-radius: $custom-switch-indicator-border-radius;
+      @include transition(transform .15s ease-in-out);
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $white;
+      transform: translateX($custom-switch-width - $custom-control-indicator-size);
+    }
+    &:before{
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+  }
+}
+
+.custom-range{
+  &::-webkit-slider-thumb:active{
+    background-color: rgba($primary, 0.8);
+  }
+  &::-moz-range-thumb:active{
+    background-color: rgba($primary, 0.8);
+  }
+  &::-ms-thumb:active{
+    background-color: rgba($primary, 0.8);
+  }
+}
+
+
+.custom-file-input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: $custom-file-height;
+  margin: 0;
+  opacity: 0;
+
+  &:focus ~ .custom-file-label {
+    border-color: $custom-file-focus-border-color;
+    box-shadow: $custom-file-focus-box-shadow;
+  }
+
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled] ~ .custom-file-label,
+  &:disabled ~ .custom-file-label {
+    background-color: $custom-file-disabled-bg;
+  }
+
+  @each $lang, $value in $custom-file-text {
+    &:lang(#{$lang}) ~ .custom-file-label::after {
+      content: $value;
+    }
+  }
+
+  ~ .custom-file-label[data-browse]::after {
+    content: attr(data-browse);
+  }
+}
+
+.custom-file-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: $custom-file-height;
+  padding: $custom-file-padding-y $custom-file-padding-x;
+  font-family: $custom-file-font-family;
+  font-weight: $custom-file-font-weight;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  background-color: $custom-file-bg;
+  border: $custom-file-border-width solid $custom-file-border-color;
+  @include border-radius($custom-file-border-radius);
+  @include box-shadow($custom-file-box-shadow);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: $custom-file-height-inner;
+    padding: $custom-file-padding-y $custom-file-padding-x;
+    line-height: $custom-file-line-height;
+    color: $custom-file-button-color;
+    content: "Browse";
+    @include gradient-bg($custom-file-button-bg);
+    border-left: inherit;
+    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+  }
+}

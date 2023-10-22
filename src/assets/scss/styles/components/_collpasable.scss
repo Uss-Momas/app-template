@@ -1,0 +1,30 @@
+.accordian-plus-minus-header{
+  .plus{
+    display: none;
+  }
+  .collapsed{
+    .plus{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .minus{
+      display: none;
+    }
+  }
+}
+
+.custom-accordion{
+  .card{
+    @include border(null, 1px, solid, $border-color !important);
+    border-radius: $card-border-radius !important;
+    border-top: none !important;
+    .card-header{
+      background: $gray-300;
+    }
+    .collapsed{
+      .toggle-icon:before{
+        content: "\F0140";
+      }
+    }
+  }
+}

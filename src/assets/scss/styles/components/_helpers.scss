@@ -1,0 +1,196 @@
+.mt--45{
+  margin-top: -45px;
+}
+
+.mh-16{
+  max-height: 16px;
+}
+
+.mh-12{
+  max-height: 12px;
+}
+
+.overlay{
+  @include position(absolute, 0, 0, 0, 0);
+  background: rgba($black, 0.9);
+}
+
+@for $i from 1 to 9 {
+  .op-#{$i}{
+    opacity: $i*0.1;
+  }
+}
+
+.text-underline{
+  text-decoration: underline;
+  &:focus {
+    text-decoration: underline;  
+  }
+}
+
+.clear-both{
+  clear: both;
+}
+
+.dflex-between-center{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// Minimum width
+@each $key, $value in $btn-widths {
+  .width-#{$key}{
+    min-width: $value;
+  }
+}
+
+
+// Icons
+.icon-dual {
+  color: $text-muted;
+  fill: rgba($text-muted, 0.12);
+}
+
+@each $color,
+$value in $theme-colors {
+  .icon-dual-#{$color} {
+      color: $value;
+      fill: rgba($value, 0.16);
+  }
+}
+
+.icons-xs {
+  height: 16px;
+  width: 16px;
+}
+
+.icons-sm {
+  height: 24px;
+  width: 24px;
+}
+
+.icons-md {
+  height: 32px;
+  width: 32px;
+}
+
+.icons-lg {
+  height: 40px;
+  width: 40px;
+}
+
+.icons-xl {
+  height: 48px;
+  width: 48px;
+}
+
+.icons-xxl {
+  height: 60px;
+  width: 60px;
+}
+
+//default list 
+.default-list{
+  li {
+    padding:0.5rem 0;
+  }
+}
+
+// avatar height
+.avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  margin-right: 1rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.avatar-xs {
+  height: 2rem;
+  width: 2rem;
+  font-size: px-rem-converter(14);
+  .contact-status {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.avatar-sm {
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1rem;
+  .contact-status {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+.avatar-md {
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 1.25rem;
+  .contact-status {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.avatar-lg {
+  height: 4.5rem;
+  width: 4.5rem;
+  font-size: 1.5rem;
+  .contact-status {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.avatar-xl {
+  height: 6rem;
+  width: 6rem;
+  font-size: 2rem;
+  .contact-status {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.avatar-xxl {
+  height: 7.5rem;
+  width: 7.5rem;
+  font-size: 2.15rem;
+  .contact-status {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.avatar-title {
+  align-items: center;
+  color: $white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.center-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include position(absolute, 50%, null, null, 50%);
+  @include transform(translate(-50%, -50%));
+  &.modal-dialog{
+    @include transform(translate(-50%, -50%)!important);
+  }
+}
+

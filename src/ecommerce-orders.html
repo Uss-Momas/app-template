@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "Order List"})
+	<!-- ================== Plugins CSS  ================== -->
+	<link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+	<link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+	<link href="assets/libs/datatables/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+	<link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" />
+	<!-- ================== Plugins CSS ================== -->
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">Orders</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="calender.html">
+										Apps
+									</a>
+								</li>
+								<li class="breadcrumb-item active">Orders</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+						<div class="card card-body">
+							<table class="table table-hover table-centered dt-responsive nowrap w-100 fs-14" id="ordered-table">
+								<thead class="table-light">
+									<tr>
+										<th>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</th>
+										<th>Order Number</th>
+										<th>Customer Name</th>
+										<th>Date</th>
+										<th>Amount</th>
+										<th>Payment Status</th>
+										<th>Payment Mode</th>
+										<th>Status</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20122014</b></td>
+										<td>John Doe</td>
+										<td>10 Apr, 2020</td>
+										<td>$560</td>
+										<td>
+											<span class="badge bg-success">Paid</span>
+										</td>
+										<td>
+											<i class="bx bxl-mastercard fs-xs align-middle align-middle"></i><span class="align-middle">
+												Master Card</span>
+										</td>
+										<td>
+											<span class="badge bg-info">Shipped</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20122015</b></td>
+										<td>Micky Mouse</td>
+										<td>11 Apr, 2020</td>
+										<td>$600</td>
+										<td>
+											<span class="badge bg-info">COD</span>
+										</td>
+										<td>
+											<i class="bx bxl-visa fs-sm align-middle"></i>
+											<span class="align-middle">VISA</span>
+										</td>
+										<td>
+											<span class="badge bg-warning text-white">Processing</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20122015</b></td>
+										<td>Mark Henry</td>
+										<td>13 Apr, 2020</td>
+										<td>$1,000</td>
+										<td>
+											<span class="badge bg-light text-default">Refund</span>
+										</td>
+										<td>
+											<i class="bx bxl-mastercard fs-xs align-middle"></i><span class="align-middle">
+												Master Card</span>
+										</td>
+										<td>
+											<span class="badge bg-light text-default">Returned</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20122017</b></td>
+										<td>Kree</td>
+										<td>16 Apr, 2020</td>
+										<td>$1,100</td>
+										<td>
+											<span class="badge bg-success">Paid</span>
+										</td>
+										<td>
+											<i class="bx bxl-paypal fs-xs align-middle"></i>
+											<span class="align-middle">Paypal</span>
+										</td>
+										<td>
+											<span class="badge bg-success">Delivered</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20122014</b></td>
+										<td>John Doe</td>
+										<td>10 Apr, 2020</td>
+										<td>$560</td>
+										<td>
+											<span class="badge bg-danger">
+												<i class="mdi mdi-cancel"></i> Payment Failed
+											</span>
+										</td>
+										<td>
+											<i class="bx bxl-mastercard fs-xs align-middle"></i><span class="align-middle">
+												Master Card</span>
+										</td>
+										<td>
+											<span class="badge bg-danger">Cancelled</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20122020</b></td>
+										<td>Rhea</td>
+										<td>22 Apr, 2020</td>
+										<td>$800</td>
+										<td>
+											<span class="badge bg-light text-default">Refund</span>
+										</td>
+										<td>
+											<i class="bx bxl-mastercard fs-xs align-middle"></i><span class="align-middle">
+												Master Card</span>
+										</td>
+										<td>
+											<span class="badge bg-light text-default">Returned</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#20187787</b></td>
+										<td>Mickey Hitch</td>
+										<td>23 Apr, 2020</td>
+										<td>$500</td>
+										<td>
+											<span class="badge bg-warning text-white">
+												<i class="mdi mdi-timer-sand"></i> Confirmation Awaited</span>
+										</td>
+										<td>
+											<i class="bx bxl-visa fs-sm align-middle"></i>
+											<span class="align-middle"> VISA</span>
+										</td>
+										<td>
+											<span class="badge bg-info">Shipped</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#15414787</b></td>
+										<td>John Smith</td>
+										<td>24 Apr, 2020</td>
+										<td>$800</td>
+										<td>
+											<span class="badge bg-success">Paid</span>
+										</td>
+										<td>
+											<i class="bx bxl-mastercard fs-xs align-middle"></i><span class="align-middle">
+												Master Card</span>
+										</td>
+										<td>
+											<span class="badge bg-info">Shipped</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#1004414</b></td>
+										<td>Misty</td>
+										<td>25 Apr, 2020</td>
+										<td>$300</td>
+										<td>
+											<span class="badge bg-info">COD</span>
+										</td>
+										<td>
+											<i class="bx bxl-mastercard fs-xs align-middle"></i><span class="align-middle">
+												Master Card</span>
+										</td>
+										<td>
+											<span class="badge bg-warning text-white">Processing</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="form-check custom-checkbox">
+												<input type="checkbox" class="form-check-input">
+												<label class="form-check-label"></label>
+											</div>
+										</td>
+										<td><b>#25414414</b></td>
+										<td>Stephen Mark</td>
+										<td>1 May, 2020</td>
+										<td>$2,000</td>
+										<td>
+											<span class="badge bg-success">Paid</span>
+										</td>
+										<td>
+											<i class="bx bxl-paypal fs-xs align-middle"></i>
+											<span class="align-middle">Paypal</span>
+										</td>
+										<td>
+											<span class="badge bg-info">Shipped</span>
+										</td>
+										<td>
+											<div class="dropdown">
+												<a href="#" class="btn-icon btn-icon-sm btn-icon-soft-primary dropdown-toggle"
+													data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-horizontal fs-sm"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li> <a href="#" class="dropdown-item" data-effect="wave-dark"> <i
+																class="mdi mdi-eye text-info me-1"></i> View</a> </li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-pencil text-success me-1"></i> Edit</a></li>
+													<li><a href="#" class="dropdown-item" data-effect="wave-dark"><i
+																class="mdi mdi-close text-danger me-1"></i> Delete</a></li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main content End -->
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="assets/libs/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="assets/libs/datatables/js/responsive.bootstrap4.min.js"></script>
+
+	<script src="assets/libs/datatables/js/dataTables.buttons.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.bootstrap4.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.html5.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.flash.min.js"></script>
+	<script src="assets/libs/datatables/js/buttons.print.min.js"></script>
+	<script src="assets/libs/datatables/js/pdfmake.min.js"></script>
+	<script src="assets/libs/datatables/js/jszip.min.js"></script>
+	<script src="assets/libs/datatables/js/vfs_fonts.js"></script>
+
+	<script src="assets/libs/datatables/js/dataTables.keyTable.min.js"></script>
+	<script src="assets/libs/datatables/js/dataTables.select.min.js"></script>
+	<script src="assets/libs/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- ================== BEGIN PAGE JS ================== -->
+	<script src="assets/js/pages/ecommerce-order.init.js"></script>
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

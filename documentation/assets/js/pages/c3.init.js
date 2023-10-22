@@ -1,0 +1,1 @@
+function barRoated(){var t=[colors.info,colors.primary];c3.generate({bindto:"#roated-chart",data:{columns:[["Desktops",30,200,100,400,150,250],["Tablets",50,20,10,40,15,25]],types:{Desktops:"bar"}},color:{pattern:t},axis:{rotated:!0,x:{type:"categorized"}}})}jQuery,barRoated();

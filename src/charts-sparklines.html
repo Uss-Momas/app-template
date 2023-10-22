@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Sparkline Charts"})
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Sparkline</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="charts-apex.html">
+                    Charts
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Sparkline</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line Charts</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline1"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bar Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline2" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Pie Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline3" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Custom Line Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline4" data-colors="#2d7bf4,#4eb7eb" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Mouse Speed Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline5" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Composite bar Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline6" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Discrete Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline7" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bullet Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline8" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Box Plot Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline9" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Tristate Charts</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="sparkline10" class="text-center"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/sparkline.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

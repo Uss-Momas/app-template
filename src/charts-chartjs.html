@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Chart JS"})
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Chart JS</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="charts-apex.html">
+                    Charts
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Chart JS</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="line-chart-example" class="chart"></canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bar Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="bar-chart-example" class="chart"></canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+            </div> <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Multi Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="multi-chart-example" class="chart"></canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Pie Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="pie-chart-example" class="chart"></canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+            </div><!-- end row -->
+            
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Donut Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="donut-chart-example" class="chart"></canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Polar area Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="polar-chart-example" class="chart">
+                    </canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+            </div><!-- end row -->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Radar Chart</h5>
+                  </div>
+                  <div class="card-body chart-container">
+                    <canvas id="radar-chart-example" class="chart"></canvas>
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col -->
+            </div><!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/chartjs/js/Chart.bundle.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/chartjs.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

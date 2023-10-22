@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Create Invoice"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css" type="text/css">
+  <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+  <!-- ================== Plugins CSS ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Create Invoice</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="calender.html">
+                    Apps
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Create Invoice</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Generate your invoice by filling this form</h5>
+              </div>
+              <div class="card-body mt-3">
+                <form action="#" novalidate="novalidate" id="invoiceform">
+                  <div class="row">
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <input class="form-control" id="fname" name="validation-fname" type="text" placeholder="Let">
+                        <label class="control-label" for="fname">First Name <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">
+                          First name can not be blank.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <input class="form-control" id="lname" name="validation-lname" type="text" placeholder="Start">
+                        <label class="control-label" for="lname">Last Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <input class="form-control" id="email" name="validation-email" type="email"
+                          placeholder="example@example.com">
+                        <label class="control-label" for="email">Email Address <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">
+                          Please enter valid email address
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <input class="form-control" id="invnumber" name="validation-invnumber" type="number"
+                          placeholder="12110110">
+                        <label class="control-label" for="invnumber">Invoice Number <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">
+                          Invoice number can not be blank.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <!-- <div class="d-inline-flex me-2 input-date input-date-sm">
+                         <input class="form-control" type="text" id="dashdaterange"
+                            placeholder="03-10-19 To 04-06-20">
+                         <div class="date-icon">
+                            <i class="bx bx-calendar fs-sm"></i>
+                         </div>
+                      </div> -->
+                      <div class="form-group floating-label enable-floating-label show-label input-date">
+                        <input class="form-control" type="text" id="invdate" name="validation-invdate" placeholder="03-10-19 To 04-06-20">
+                              
+                        <label class="control-label" for="invdate">Invoice Date <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">
+                          Invoice date can not be blank
+                        </div>
+                        <div class="date-icon">
+                          <i class="bx bx-calendar fs-sm"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label input-date">
+                        <input class="form-control" id="duedate" name="validation-duedate" type="text" placeholder="2020-01-10">
+                        <label class="control-label" for="duedate">Due Date <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">
+                          Due date can not be blank
+                        </div>
+                        <div class="date-icon">
+                          <i class="bx bx-calendar fs-sm"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="floating-label enable-floating-label show-label">
+                        <div class="input-group" id="upload-logo">
+                          <input type="text" class="form-control" placeholder="Upload Company Logo" readonly>
+                          <div class="input-group-append">
+                            <button class="btn btn-dark" data-effect="wave" type="button">Button</button>
+                          </div>
+                        </div>
+                        <input id="logo" type="file" style="display: none;"  accept="image/png, image/jpeg"/>
+                        <label>Upload Logo</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <select class="form-control select2" name="validation-category">
+                          <option value="">Product Category</option>
+                          <option value="mens">Mens</option>
+                          <option value="womens">Womens</option>
+                          <option value="kids">Kids</option>
+                          <option value="elc">Electronics</option>
+                          <option value="mob">Mobiles</option>
+                        </select>
+                        <label>Category <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">This field is required</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <select class="form-control select2" name="validation-subcategory">
+                          <option value="">Product Sub Category</option>
+                          <option value="jeans">Jeans</option>
+                          <option value="top">Top</option>
+                          <option value="shirt">Shirt</option>
+                          <option value="tshirt">Tshirt</option>
+                          <option value="shoe">Shoes</option>
+                        </select>
+                        <label>Sub Category <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">This field is required</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <select class="form-control select2" name="validation-currency">
+                          <option value="">Select Currency</option>
+                          <option value="USD">USD</option>
+                          <option value="INR">INR</option>
+                          <option value="AR">AR</option>
+                          <option value="CD">CD</option>
+                          <option value="EURO">EURO</option>
+                        </select>
+                        <label>Currency <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">This field is required</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label">
+                        <input class="form-control" id="price" name="validation-price" type="number" placeholder="15">
+                        <label class="control-label" for="price">Unit Price</label>
+                        <div class="validation-error d-none fs-13">
+                          Price can not be blank
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="form-group floating-label enable-floating-label">
+                        <input class="form-control" id="qty" name="validation-qty" type="number" placeholder="5">
+                        <label class="control-label" for="qty">Quantity</label>
+                        <div class="validation-error d-none fs-13">
+                          Quantity can not be blank
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group floating-label enable-floating-label show-label">
+                        <textarea class="form-control" id="address" name="validation-ponumber"
+                          placeholder="312, dark lane, australia - 1100141"></textarea>
+                        <label class="control-label" for="address">P.O/S.O Number <span class="text-danger">*</span></label>
+                        <div class="validation-error d-none fs-13">
+                          PO numner can not be blank
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-4">
+                    <button class="btn btn-primary ms-1" data-effect="wave" type="submit">Add Invoice</button>
+                    <button class="btn btn-secondary" data-effect="wave" type="button"
+                      id="reset-invoice-form">Reset</button>
+                  </div>
+                </form>
+                <div class="table-responsive">
+                  <table id="invoice-table" class="table mt-4 table-centered d-none">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Total</th>
+                        <th style="width:50px;"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main content End -->
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/flatpicker/js/flatpickr.js"></script>
+  <script src="assets/libs/select2/js/select2.min.js"></script>
+  <script src="assets/libs/ckeditor4/ckeditor.js"></script>
+  <script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
+  <script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/invoice-create.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

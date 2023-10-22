@@ -1,0 +1,53 @@
+.font-size-11{
+  font-size: px-rem-converter(11);
+}
+
+.font-size-12{
+  font-size: px-rem-converter(12);
+}
+
+.font-size-13{
+  font-size: px-rem-converter(13);
+}
+
+.font-size-14{
+  font-size: px-rem-converter(14);
+}
+
+.font-size-15{
+  font-size: px-rem-converter(15);
+}
+
+.font-size-16, .font-default{
+  font-size: px-rem-converter(16);
+}
+
+.fs-xl{
+  font-size: 3rem;
+}
+
+.fs-lg{
+  font-size: 2rem;
+}
+
+.fs-md{
+  font-size: 1.5rem;
+}
+
+.fs-sm{
+  font-size: 1.25rem;
+}
+
+.fs-xs{
+  font-size: 1rem;
+}
+
+.font-weight-600{
+  font-weight: 600 !important;
+}
+
+@each $class, $value in $max-heights {
+  .ah-#{$class} {
+    height: $value;
+  }
+}

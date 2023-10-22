@@ -1,0 +1,282 @@
+//
+// datatable.scss
+//
+
+.dataTables_wrapper.container-fluid {
+  padding: 0;
+}
+div.dataTables_wrapper {
+  div.dataTables_length {
+    select {
+      min-width: 50px;
+    }
+  } 
+  .dt-checkboxes-select-all {
+    &:before, &:after {
+      display: none;
+    }
+  }
+  .dataTables_length, .dataTables_info {
+    label {
+      margin-bottom: 0;
+    }
+  }
+  div.dataTables_filter{
+    .search-box{
+      text-indent: -9999px;
+      width: 210px;
+      margin-bottom: 0;
+      &:after{
+        content: '\ebbc';
+        font-family: $boxIcons;
+        font-size: 1rem;
+        color: $primary;
+        left: 1rem;
+        top: 50%;
+        left: 1rem;
+        position: absolute;
+        text-indent: 0;
+        @include transform(translateY(-50%));
+      }
+      .form-control{
+        width: 100%; 
+      }
+      .icon{
+        text-indent: 0;
+      }
+    }
+  }
+  div.dataTables_info{
+    padding-top: 0;
+  }
+  div.dataTables_paginate {
+    margin-top: 0;
+  }
+}
+
+table.dataTable {
+  border-collapse: collapse !important;
+  margin: 1.75rem 0 !important;
+  thead{
+    .sorting,
+    .sorting_asc,
+    .sorting_desc,
+    .sorting_asc_disabled,
+    .sorting_desc_disabled {
+      &:after {
+        content: "\2193";
+        left: 0.5rem;
+        opacity: 0.5;
+        opacity: 0.5;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 26px;
+      }
+
+      &:before {
+        content: "\2191";
+        position: absolute;
+        left: 1rem;
+        opacity: 0.5;
+        opacity: 0.5;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 26px;
+      }
+    }
+
+    .sorting_desc:after,
+    .sorting_asc:before {
+      opacity: 1;
+    }
+
+    &>tr>th {
+
+      &.sorting_asc,
+      &.sorting_desc,
+      &.sorting {
+        padding-left: 1.75rem;
+      }
+    }
+
+    &>tr>td {
+
+      &.sorting_asc,
+      &.sorting_desc,
+      &.sorting {
+        padding-left: 1.75rem;
+      }
+    }
+  }
+  tbody {
+      // Multi select table
+
+      > tr.selected, 
+      >tr >.selected {
+          background-color: $primary;
+          
+          td {
+              border-color: $primary;
+          }
+      }
+      td {
+          &:focus {
+              outline: none !important;
+          }
+      }
+      // Key Tables
+      th.focus,td.focus{
+          outline: 2px solid $primary !important;
+          outline-offset: -1px;
+          color: $primary;
+          background-color: rgba($primary, 0.15);
+      }
+  }
+}
+
+.dataTables_info {
+  font-weight: 600;
+}
+
+
+// Responsive data table
+table.dataTable.dtr-inline.collapsed {
+  > tbody {
+      >tr[role=row] {
+          > td, > th {
+              &:first-child{
+                  &:before{
+                      box-shadow: $box-shadow-lg;
+                      background-color: $success;
+                      top: $table-cell-padding;
+                      font-family: $boxIcons;
+                      content: "\eb8a";
+                      border: none;
+                      background: none;
+                      box-shadow: none;
+                      font-size: 1.25rem;
+                      color: $success;
+                      top: 50%;
+                      transform: translateY(-50%);
+                  }
+              }
+          }
+      }
+      >tr.parent {
+          > td, > th {
+              &:first-child{
+                  &:before{
+                      content: "\eb58";
+                      color: $danger;
+                  }
+              }
+          }
+      }
+  }
+}
+
+
+div.dt-buttons {
+  button.btn.processing,
+  div.btn.processing, a.btn.processing {
+    color: rgba($white, 0.5);
+  }
+}
+
+// Data Table copy button
+div.dt-button-info {
+  background-color: $primary;
+  border: none;
+  color: $white;
+  box-shadow: none;
+  border-radius: 3px;
+  text-align: center;
+  z-index: 21;
+
+  h2 {
+      border-bottom: none;
+      background-color: rgba($white, 0.2);
+      color: $white;
+  }
+}
+
+//Responsive datatable
+table.dataTable{
+  &>tbody{
+    &>tr.child {
+      ul.dtr-details{
+        &>li {
+          display: flex;
+          justify-content: space-between;
+          .avatar {
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.activate-select {
+  .sorting_1 {
+      background-color: $dropdown-link-hover-bg;
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  li.paginate_button.previous,li.paginate_button.next {
+      display: inline-block;
+      font-size: 1.5rem;
+  }
+
+  li.paginate_button {
+      display: none;
+  }
+  .dataTables_paginate {
+      ul {
+          text-align: center;
+          display: block;
+          margin: $spacer 0 0 !important;
+      }
+  }
+  div.dt-buttons {
+      display: inline-table;
+  }
+  div.dataTables_wrapper {
+    div.dataTables_length, div.dataTables_filter, div.dataTables_paginate{
+      text-align: left;
+    }
+    div.dataTables_info {
+      text-align: center;
+    }
+    div.dataTables_filter {
+      input {
+        margin-left: 0;
+      }
+      .search-box {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  div.dataTables_wrapper {
+    div.dataTables_length, div.dataTables_filter, div.dataTables_info, div.dataTables_paginate{
+      width: 100%
+    }
+  }
+  div.dataTables_length {
+    margin-bottom: 15px;
+  }
+  .dt-buttons {
+    margin-top: 15px;
+  } 
+}
+

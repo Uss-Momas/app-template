@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="assets/vendors/chartist/chartist.min.css">
+  <link rel="stylesheet" href="assets/vendors/chartist-plugin-tooltips/chartist-plugin-tooltips.css">
+  @@include("../partials/head.html", {"title": "Chartist Charts"})
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Chartist Charts
+                </h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Demo</h5>
+                    <div id="smil-animations" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Code</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;div id="scatter-diagram" class="ct-chart ct-golden-section"&gt;&lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Required Files</h5>
+                    <pre class="highlight typescript">
+                      <code class="shadow-sm px-4">
+&lt;link rel="stylesheet" href="assets/libs/chartist/chartist.min.css"&gt;
+<br/>
+&lt;script src="assets/libs/chartist/chartist.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/pages/chartist.init.js"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+    </div>
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+  <script src="assets/vendors/chartist/chartist.min.js"></script>
+  <script src="assets/vendors/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+  <script src="assets/js/pages/chartist.init.js"></script>
+</body>
+
+</html>

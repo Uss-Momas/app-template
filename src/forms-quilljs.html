@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Quill Editor"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link href="assets/libs/quill/quill.core.css" rel="stylesheet" />
+  <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" />
+  <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Quill Editor</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="forms-elements.html">
+                    Forms
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Quill Editor</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Snow Editor</h5>
+                    <h6 class="card-subtitle">Snow is a clean, flat toolbar theme.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="snow-editor" style="height: 300px;">
+                      <h3><span class="ql-size-large">Hello World!</span></h3>
+                      <p><br></p>
+                      <h3>This is an simple editable area.</h3>
+                      <p><br></p>
+                      <ul>
+                        <li>
+                          Select a text to reveal the toolbar.
+                        </li>
+                        <li>
+                          Edit rich document on-the-fly, so elastic!
+                        </li>
+                      </ul>
+                      <p><br></p>
+                      <p>
+                        End of simple area
+                      </p>
+
+                    </div> <!-- end Snow-editor-->
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bubble Editor</h5>
+                    <h6 class="card-subtitle">Bubble is a simple tooltip based theme.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="bubble-editor" style="height: 300px;">
+                      <h3><span class="ql-size-large">Hello World!</span></h3>
+                      <p><br></p>
+                      <h3>This is an simple editable area.</h3>
+                      <p><br></p>
+                      <ul>
+                        <li>
+                          Select a text to reveal the toolbar.
+                        </li>
+                        <li>
+                          Edit rich document on-the-fly, so elastic!
+                        </li>
+                      </ul>
+                      <p><br></p>
+                      <p>
+                        End of simple area
+                      </p>
+                    </div> <!-- end Snow-editor-->
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div><!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/quill/quill.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/form-quilljs.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

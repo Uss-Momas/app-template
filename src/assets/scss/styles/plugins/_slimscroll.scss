@@ -1,0 +1,17 @@
+.slimScrollDiv {
+  height: auto !important;
+}
+
+.slimscroll-menu {
+  height: 100%;
+}
+
+.scrollbar-track {
+  background: transparent !important;
+}
+
+.scrollbar-thumb {
+  background: $gray-500 !important;
+  opacity: 0.4;
+  width: 4px !important
+}

@@ -1,0 +1,28 @@
+// 
+// tables.scss
+//
+
+
+//Table centered (Custom)
+.table-centered {
+    td,th {
+        vertical-align: middle !important;
+    }
+}
+
+// Tables fluid
+.table-nowrap {
+    th, td {
+      white-space: nowrap;
+    }
+}
+
+//No thead
+.table-no-head{
+    td:first-child{
+        padding-left: 0;
+    }
+    td:last-child{
+        padding-right: 0;
+    }
+}

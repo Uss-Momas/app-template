@@ -1,0 +1,27 @@
+.setting-sidebar {
+  @include position(fixed, 0, 0, 0, null, 100);
+  width: 280px;
+  background: $white;
+  display: flex;
+  @include transition(transform 0.3s ease-in-out);
+  @include transform(translateX(105%));
+  overflow: auto;
+  .layout {
+    margin-bottom: 30px;
+    text-align: center;
+    a{
+      &:hover h6{
+        color: $primary;
+      }
+    }
+    h6 {
+      margin: 10px 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.show {
+    @include transform(translateX(0));
+  }
+}

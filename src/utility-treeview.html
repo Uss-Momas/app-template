@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Tree View"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/bootstrap-treeview/css/bootstrap-treeview.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Tree View</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="utility-animation.html">
+                    Utility
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Tree View</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Default</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="treeview1"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Collapsed</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="treeview2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Tags as Badges</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="treeview3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Custom Icon</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="treeview4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Searchable Tree</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+
+                      <div class="col-md-5 col-lg-4">
+                        <!-- <form> -->
+                        <div class="form-group floating-label enable-floating-label show-label">
+                          <input type="text" class="form-control" id="input-search" placeholder="Type to search..."
+                            value="">
+                          <label for="input-search">Search Input</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-2">
+                          <input type="checkbox" class="custom-control-input" id="chk-ignore-case">
+                          <label class="custom-control-label" for="chk-ignore-case">
+                            Ignore Case
+                          </label>
+                        </div> <!-- end checkbox -->
+                        <div class="custom-control custom-checkbox mb-2">
+                          <input type="checkbox" class="custom-control-input" id="chk-exact-match">
+                          <label class="custom-control-label" for="chk-exact-match">
+                            Exact Match
+                          </label>
+                        </div> <!-- end checkbox -->
+                        <div class="custom-control custom-checkbox mb-4">
+                          <input type="checkbox" class="custom-control-input" id="chk-reveal-results">
+                          <label class="custom-control-label" for="chk-reveal-results">
+                            Reveal Results
+                          </label>
+                        </div> <!-- end checkbox -->
+                        <div class="clearfix mb-3">
+                          <button type="button" class="btn btn-primary" id="btn-search">Search</button>
+                          <button type="button" class="btn btn-default" id="btn-clear-search">Clear</button>
+                        </div>
+                        <div class="">
+                          <h6 class="fs-16 fw-semibold">Result</h6>
+                          <div id="search-output"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-7 col-lg-8">
+                        <div id="treeview-searchable" class="treeview-searchable"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/bootstrap-treeview/js/bootstrap-treeview.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/js/pages/treeview.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

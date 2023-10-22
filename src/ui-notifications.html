@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "UI Notifications"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Notification</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="ui-buttons.html">
+                    Components
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Notification</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bootstrap Toasts</h5>
+                    <h6 class="card-subtitle">Push notifications to your visitors with a toast, a lightweight and easily
+                      customizable alert message.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Basic</h6>
+                        <p class="text-muted">Toasts are as flexible as you need and have very little required markup.
+                          At a minimum, we
+                          require a single element to contain your “toasted” content and strongly encourage a dismiss
+                          button.</p>
+                        <div class="p-3">
+                          <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-toggle="toast">
+                            <div class="toast-header">
+                              <img src="assets/images/logo-sm.svg" alt="brand-logo" height="12" class="me-1" />
+                              <strong class="me-auto">LetStart</strong>
+                              <small>11 mins ago</small>
+                              <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                
+                              </button>
+                            </div>
+                            <div class="toast-body">
+                              Hello, world! This is a toast message.
+                            </div>
+                          </div>
+                          <!--end toast-->
+
+                        </div>
+                      </div> <!-- end col-->
+                      <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Translucent</h6>
+                        <p class="text-muted">Toasts are slightly translucent, too, so they blend over whatever they
+                          might appear over.
+                          For browsers that support the backdrop-filter CSS property, we’ll also attempt to blur the
+                          elements under a toast.</p>
+                        <div class="p-3 bg-secondary">
+                          <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-toggle="toast">
+                            <div class="toast-header">
+                              <img src="assets/images/logo-sm.svg" alt="brand-logo" height="12" class="me-1" />
+                              <strong class="me-auto">LetStart</strong>
+                              <small>11 mins ago</small>
+                              <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                
+                              </button>
+                            </div>
+                            <div class="toast-body">
+                              Hello, world! This is a toast message.
+                            </div>
+                          </div>
+                          <!--end toast-->
+                        </div>
+                      </div> <!-- end col-->
+                    </div>
+                    <!-- end row-->
+
+                    <div class="row">
+                      <div class="col-md-6 mt-4">
+                        <h6 class="fw-bold mb-2">Stacking</h6>
+                        <p class="text-muted">When you have multiple toasts, we default to vertiaclly stacking them in a
+                          readable manner.</p>
+                        <div class="p-3">
+                          <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+                            <!-- Position it -->
+                            <div style="position: absolute; top: 0; right: 0;">
+
+                              <!-- Then put toasts within -->
+                              <div class="toast fade show mb-3" role="alert" aria-live="assertive" aria-atomic="true"
+                                data-toggle="toast">
+                                <div class="toast-header">
+                                  <img src="assets/images/logo-sm.svg" alt="brand-logo" height="12" class="me-1" />
+                                  <strong class="me-auto">LetStart</strong>
+                                  <small class="text-muted">just now</small>
+                                  <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                    
+                                  </button>
+                                </div>
+                                <div class="toast-body">
+                                  See? Just like this.
+                                </div>
+                              </div>
+                              <!--end toast-->
+
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true"
+                                data-toggle="toast">
+                                <div class="toast-header">
+                                  <img src="assets/images/logo-sm.svg" alt="brand-logo" height="12" class="me-1" />
+                                  <strong class="me-auto">LetStart</strong>
+                                  <small class="text-muted">2 seconds ago</small>
+                                  <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                    
+                                  </button>
+                                </div>
+                                <div class="toast-body">
+                                  Heads up, toasts will stack automatically
+                                </div>
+                              </div>
+                              <!--end toast-->
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- end col-->
+                      <div class="col-md-6 mt-4">
+                        <h6 class="fw-bold mb-2">Placement</h6>
+                        <p class="text-muted">Place toasts with custom CSS as you need them. The top right is often used
+                          for
+                          notifications, as is the top middle. If you’re only ever going to show one toast at a time,
+                          put the positioning
+                          styles right on the <code>.toast</code>.</p>
+                        <div class="p-3">
+                          <div aria-live="polite" aria-atomic="true"
+                            class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+                            <!-- Then put toasts within -->
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true"
+                              data-toggle="toast">
+                              <div class="toast-header">
+                                <img src="assets/images/logo-sm.svg" alt="brand-logo" height="12" class="me-1" />
+                                <strong class="me-auto">LetStart</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="ms-2 mb-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                  
+                                </button>
+                              </div>
+                              <div class="toast-body">
+                                Hello, world! This is a toast message.
+                              </div>
+                            </div>
+                            <!--end toast-->
+                          </div>
+                        </div>
+                      </div> <!-- end col-->
+                    </div>
+                    <!-- end row-->
+
+                  </div> <!-- end card-body-->
+                </div> <!-- end card-->
+              </div> <!-- end col-->
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Default Alert</h5>
+                    <h6 class="card-subtitle">Alerts are available for any length of text, as well as an optional
+                      dismiss button. For proper
+                      styling, use one of the eight
+                      <strong>required</strong> contextual classes (e.g., <code>.alert-success</code>).</h6>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="alert alert-primary" role="alert">
+                      This is a <strong>primary</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                      This is a <strong>secondary</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                      <i class="mdi mdi-check-all me-2"></i> This is a <strong>success</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                      <i class="mdi mdi-block-helper me-2"></i> This is a <strong>danger</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                      <i class="mdi mdi-alert-outline me-2"></i> This is a <strong>warning</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                      <i class="mdi mdi-alert-circle-outline me-2"></i> A simple info alert with <a href="#"
+                        class="alert-link">an example link</a>. Give it a click if you like.
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                      A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if
+                      you
+                      like.
+                    </div>
+                    <div class="alert alert-dark mb-0" role="alert">
+                      A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if
+                      you
+                      like.
+                    </div>
+                  </div>
+                </div> <!-- end card-box-->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Dismissing Alerts</h5>
+                    <h6 class="card-subtitle">Add a dismiss button and the <code>.alert-dismissible</code> class, which
+                      adds extra padding
+                      to the right of the alert and positions the <code>.close</code> button.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a info alert—check it out!
+                    </div>
+                    <div class="alert alert-light alert-dismissible fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a light alert—check it out!
+                    </div>
+                    <div class="alert alert-dark alert-dismissible fade show mb-0" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a dark alert—check it out!
+                    </div>
+                  </div> <!-- end card-box-->
+                </div>
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Custom Background Alert</h5>
+                    <h6 class="card-subtitle">Use <code>.bg-*</code>,<code>.border-0</code> classes.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="alert alert-primary bg-primary text-white border-0" role="alert">
+                      This is a <strong>primary</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary bg-secondary text-white border-0" role="alert">
+                      This is a <strong>secondary</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-success bg-success text-white border-0" role="alert">
+                      This is a <strong>success</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-danger bg-danger text-white border-0" role="alert">
+                      This is a <strong>danger</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-warning bg-warning text-white border-0" role="alert">
+                      This is a <strong>warning</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-info bg-info text-white border-0" role="alert">
+                      This is a <strong>info</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-light bg-light text-dark border-0" role="alert">
+                      This is a <strong>light</strong> alert—check it out!
+                    </div>
+                    <div class="alert alert-dark bg-dark text-white border-0 mb-0" role="alert">
+                      This is a <strong>dark</strong> alert—check it out!
+                    </div>
+                  </div>
+                </div> <!-- end card-box-->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Dismissing Custom Background Alert</h5>
+                    <h6 class="card-subtitle">Use <code>.bg-*</code>,<code>.border-0</code> classes.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="alert alert-primary alert-dismissible bg-primary text-white border-0 fade show"
+                      role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary alert-dismissible bg-secondary text-white border-0 fade show"
+                      role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success alert-dismissible bg-success text-white border-0 fade show"
+                      role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show"
+                      role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning alert-dismissible bg-warning text-white border-0 fade show"
+                      role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info alert-dismissible bg-info text-white border-0 fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a info alert—check it out!
+                    </div>
+                    <div class="alert alert-light alert-dismissible bg-light text-dark border-0 fade show" role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a light alert—check it out!
+                    </div>
+                    <div class="alert alert-dark alert-dismissible bg-dark text-white border-0 fade show mb-0"
+                      role="alert">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      This is a dark alert—check it out!
+                    </div>
+                  </div>
+                </div><!-- end card-box-->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <table class="table table-borderless table-centered mb-0">
+                      <thead class="table-light">
+                        <tr>
+                          <th style="min-width:50%;">Jquery Toast</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Info Example</td>
+                          <td>
+                            <button type="button" class="btn btn-info waves-effect waves-light btn-sm"
+                              id="toastr-one">Click me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Warning Example</td>
+                          <td>
+                            <button type="button" class="btn btn-warning waves-effect waves-light btn-sm"
+                              id="toastr-two">Click me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Success Example</td>
+                          <td>
+                            <button type="button" class="btn btn-success waves-effect waves-light btn-sm"
+                              id="toastr-three">Click me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Danger Example</td>
+                          <td>
+                            <button type="button" class="btn btn-danger waves-light waves-effect btn-sm"
+                              id="toastr-four">Click me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>The text can be an array</td>
+                          <td>
+                            <button type="button" class="btn btn-light waves-effect btn-sm" id="toastr-five">Click
+                              me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Put some HTML in the text</td>
+                          <td>
+                            <button type="button" class="btn btn-light waves-effect btn-sm" id="toastr-six">Click
+                              me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Making them sticky</td>
+                          <td>
+                            <button type="button" class="btn btn-light waves-effect btn-sm" id="toastr-seven">Click
+                              me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Fade transitions</td>
+                          <td>
+                            <button type="button" class="btn btn-light waves-effect btn-sm" id="toastr-eight">Click
+                              me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Slide up and down transitions</td>
+                          <td>
+                            <button type="button" class="btn btn-light waves-effect btn-sm" id="toastr-nine">Click
+                              me</button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Simple show from and hide to corner transition</td>
+                          <td>
+                            <button type="button" class="btn btn-light waves-effect btn-sm" id="toastr-ten">Click
+                              me</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div> <!-- end card-box-->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/jquery-toast/js/jquery.toast.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+  <script>
+    function send(heading, body, position, loaderBgColor, icon, hideAfter, stack, showHideTransition) {
+      // default      
+      if (!hideAfter)
+        hideAfter = 3000;
+      if (!stack)
+        stack = 1;
+
+      var options = {
+        heading: heading,
+        text: body,
+        position: position,
+        loaderBg: loaderBgColor,
+        icon: icon,
+        hideAfter: hideAfter,
+        stack: stack
+      };
+
+      if (showHideTransition)
+        options.showHideTransition = showHideTransition;
+
+      console.log(options);
+      $.toast().reset('all');
+      $.toast(options);
+    }
+    $("#toastr-one").on('click', function (e) {
+      send("Heads up!", "This alert needs your attention, but it is not super important.", 'top-right', '#3b98b5', 'info');
+    });
+
+    $("#toastr-two").on('click', function (e) {
+      send("Heads up!", "Check below fields please.", 'top-center', '#da8609', 'warning');
+    });
+
+    $("#toastr-three").on('click', function (e) {
+      send("Well Done!", "You successfully read this important alert message", 'top-right', '#5ba035', 'success');
+    });
+
+    $("#toastr-four").on('click', function (e) {
+      send("Oh snap!", "Change a few things up and try submitting again.", 'top-right', '#bf441d', 'error');
+    });
+
+    $("#toastr-five").on('click', function (e) {
+      send("How to contribute?", [
+        'Fork the repository',
+        'Improve/extend the functionality',
+        'Create a pull request'
+      ], 'top-right', '#1ea69a', 'info');
+    });
+
+    $("#toastr-six").on('click', function (e) {
+      send("Can I add <em>icons</em>?", "Yes! check this <a href='https://github.com/kamranahmedse/jquery-toast-plugin/commits/master'>update</a>.",
+        'top-right', '#1ea69a', 'info', false);
+    });
+
+    $("#toastr-seven").on('click', function (e) {
+      send("", "Set the `hideAfter` property to false and the toast will become sticky.", 'top-right', '#1ea69a', '');
+    });
+
+    $("#toastr-eight").on('click', function (e) {
+      send("", "Set the `showHideTransition` property to fade|plain|slide to achieve different transitions.",
+        'top-right', '#1ea69a', 'info', 3000, 1, 'fade');
+    });
+
+    $("#toastr-nine").on('click', function (e) {
+      send("Slide transition", "Set the `showHideTransition` property to fade|plain|slide to achieve different transitions.",
+        'top-right', '#1ea69a', 'info', 3000, 1, 'slide');
+    });
+
+    $("#toastr-ten").on('click', function (e) {
+      send("Plain transition", "Set the `showHideTransition` property to fade|plain|slide to achieve different transitions.",
+        'top-right', '#3b98b5', 'info', 3000, 1, 'plain');
+    });
+  </script>
+</body>
+
+</html>

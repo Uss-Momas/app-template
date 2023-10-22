@@ -1,0 +1,18 @@
+
+.jconfirm { 
+  .jconfirm-box {
+    div.jconfirm-title-c{
+      font-size: 1.25rem !important;
+      font-weight: 600;
+    }
+    .jconfirm-buttons {
+      button{
+        text-transform: capitalize !important;
+        @include button-size($btn-padding-y !important, $btn-padding-x !important, $btn-font-size !important, $btn-border-radius !important);
+      }
+    }
+    &.jconfirm-type-blue{
+      border-top-color: $info !important;
+    }
+  }  
+}

@@ -1,0 +1,121 @@
+.chatbox-wrapper {
+    position: fixed;
+    right: 24px;
+    bottom: 10px;
+    width: 300px;
+    background-color: $card-bg;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    z-index: 99;
+
+    .chat-input {
+        .form-control {
+            padding-right: 60px;
+        }
+    }
+
+    .chat-link {
+        @include position(absolute, 0, 5px, 0, null);
+        display: flex;
+        align-items: center;
+        line-height: 1;
+    }
+
+    &.minimize {
+        @include transform(translateY(330px))
+    }
+}
+
+/* Chat widget */
+.chat-conversation-list {
+    list-style: none;
+    height: 250px;
+    padding: 0 7px;
+
+    li {
+        margin-bottom: 24px;
+    }
+
+    .chat-avatar {
+        float: left;
+        text-align: center;
+        width: 34px;
+
+        img {
+            border-radius: 100%;
+            width: 100%;
+        }
+
+        i {
+            font-size: 12px;
+            font-style: normal;
+        }
+    }
+
+    .ctext-wrap {
+        background: rgba($primary, 0.15);
+        border-radius: $border-radius;
+        display: inline-block;
+        padding: 4px 12px;
+        position: relative;
+        min-width: 160px;
+        border-top-left-radius: 0;
+        color: $secondary;
+        i {
+            display: block;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            position: relative;
+        }
+
+        p {
+            margin: 0;
+            padding-top: 3px;
+        }
+
+        &:after {
+            @include position(absolute, 0, 100%, null, null);
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            pointer-events: none;
+            border-top-color: rgba($primary, 0.15);
+            border-width: 6px;
+            border-right-color: rgba($primary, 0.15);
+        }
+    }
+
+    .conversation-text {
+        float: left;
+        font-size: 12px;
+        margin-left: 12px;
+        width: 70%;
+    }
+
+    .odd {
+        .chat-avatar {
+            float: right !important;
+        }
+
+        .conversation-text {
+            float: right !important;
+            margin-right: 12px;
+            text-align: right;
+            width: 70% !important;
+        }
+
+        .ctext-wrap {
+            background-color: rgba($secondary, 0.15);
+            color: $secondary;
+            border-top-right-radius: 0;
+            &:after {
+                border-color: transparent;
+                border-left-color: rgba($secondary, 0.15);
+                border-top-color: rgba($secondary, 0.15);
+                left: 100%;
+            }
+        }
+    }
+}

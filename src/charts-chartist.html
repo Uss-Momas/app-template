@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("partials/title.html", {"title": "Chartist"})
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/chartist/chartist.min.css">
+  <!-- ================== Plugins CSS end ================== -->
+  @@include("partials/head.html")
+</head>
+
+<body>
+  <!-- Begin Page -->
+  <div class="page-wrapper">
+    <!-- Begin Header -->
+    @@include('partials/topbar.html')
+    <!-- Header End -->
+    <!-- Begin Left Navigation -->
+    @@include('partials/left-sidebar.html')
+    <!-- Left Navigation End -->
+    <!-- Begin main content -->
+    <div class="main-content">
+      <!-- content -->
+      <div class="page-content">
+        <!-- page header -->
+        <div class="page-title-box">
+          <div class="container-fluid">
+            <div class="page-title dflex-between-center">
+              <h3 class="mb-1 fw-bold">Chartist</h3>
+              <ol class="breadcrumb mb-0 mt-1">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="bx bx-home fs-xs"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="charts-apex.html">
+                    Charts
+                  </a>
+                </li>
+                <li class="breadcrumb-item active">Chartist</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- page content -->
+        <div class="page-content-wrapper mt--45">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Advanced Smil Animations</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="smil-animations" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Simple line chart</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="simple-line-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line Scatter Diagram</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="scatter-diagram" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line chart with tooltips</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="line-chart-tooltips" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line chart with area</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="chart-with-area" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bi-polar Line chart with area only</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="bi-polar-line" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">SVG Path Animation</h5>
+                    <h6 class="card-subtitle"> Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="svg-animation" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Line Interpolation / Smoothing</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="line-smoothing" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Different configuration for different series</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="different-series" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">SVG Animations Chart</h5>
+                    <h6 class="card-subtitle">Example of Label placement chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="svg-dot-animation" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Bi-polar Bar Chart</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="bi-polar-bar" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Overlapping Bars on Mobile</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="overlapping-bars" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Multi-line labels</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="multi-line-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Stacked bar chart</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="stacked-bar-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Horizontal bar chart</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="horizontal-bar-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Extreme responsive configuration</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="extreme-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Distributed Series</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="distributed-series" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Label Placement</h5>
+                    <h6 class="card-subtitle">Example of Label placement chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="label-placement-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Animating a Donut with Svg.animate</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="animating-donut" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Simple pie chart</h5>
+                    <h6 class="card-subtitle">Example of Label placement chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="simple-pie" class="ct-chart ct-golden-section simple-pie-chart-chartist"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Pie chart with custom labels</h5>
+                    <h6 class="card-subtitle">Example of Horizontal bar chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="pie-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Gauge chart</h5>
+                    <h6 class="card-subtitle">Example of Label placement chart.</h6>
+                  </div>
+                  <div class="card-body">
+                    <div id="gauge-chart" class="ct-chart ct-golden-section"></div>
+                  </div>
+                </div> <!-- end card-box -->
+              </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+          </div>
+        </div>
+      </div>
+      <!-- main content End -->
+    </div>
+    <!-- footer -->
+    @@include('partials/footer.html')
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/libs/chartist/chartist.min.js"></script>
+  <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/pages/chartist.init.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

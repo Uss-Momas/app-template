@@ -1,0 +1,356 @@
+
+.product-timeline {
+  display: flex;
+  padding-bottom: 20px;
+  .checkpoint {
+    width: calc(33.33% - 7px);
+    height: 2px;
+    background-color: rgba(($primary), 0.2);
+    position: relative;
+    &:before {
+      @include position(absolute, -8px, null, null, 0, 1);
+      background: $primary;
+      width: 18px;
+      height: 18px;
+      border: 4px solid $white;
+      content: "";
+      border-radius: 100%;
+    }
+    &:after {
+      @include position(absolute, -8px, null, null, 0, 1);
+      width: 18px;
+      height: 18px;
+      border: 2px solid $white;
+      content: "";
+      border-radius: 100%;
+    }
+    &:last-child {
+      width: 12px;
+    }
+    span {
+      @include position(absolute, -6px, null, null, 0);
+      width: 100px;
+      display: none;
+      margin-top: 20px;
+      font-size: px-rem-converter(11);
+      &.active {
+        display: block;
+      }
+    }
+    &.active {
+      &:after{
+        border-color: $success;
+      }
+      & + .active{
+        &:after{
+          animation: scaling 1s linear .3s infinite;
+        }
+      }
+    }
+  }
+}
+
+
+.contact-status {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  @include border(null, 2px, solid, $white);
+  border-radius: 50%;
+
+  &.online {
+    background-color: $success;
+  }
+
+  &.busy {
+    background-color: $danger;
+  }
+
+  &.away {
+    background-color: $warning;
+  }
+
+  &.offline {
+    background-color: $gray-600;
+  }
+}
+
+@keyframes scaling {
+  0% {
+      opacity: 0;
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
+  }
+
+  15% {
+      opacity: 0.7;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+  }
+
+  100% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      transform: scale(1.5);
+  }
+}
+
+
+.search-box{
+  input{
+    border-radius: 30px;
+    padding-left: 40px;
+    min-width: 200px;
+    &.border-radius-3{
+      border-radius: 0.3rem;
+    }
+  }
+  .form-control-sm{
+    padding-left: 30px;
+  }
+ .icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    @include transform(translateY(-50%));
+    color: $primary;
+  }
+  
+  &.right-icon{
+    input{
+      padding-left: 1rem;
+      padding-right: 40px;
+    }
+    .icon {  
+      left: auto;
+      right: 12px;
+    }
+  }
+  &.border-square{
+    input {
+      border-radius: $border-radius;
+    }
+    .icon{
+      left: 10px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+  }
+}
+
+.edit-field-half-left{
+  position: absolute;
+  right: 0.5rem;
+  top: 1rem;
+  .edit-field-icon{
+    @include transition(all 0.3s);
+    color: $primary;
+    cursor: pointer;
+  }
+  .dropdown-menu{
+    right: 8px !important;
+  }
+}
+
+.edit-field-right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  .edit-field-icon{
+    @include transition(all 0.3s);
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+@mixin edit-field-soft-variant($bg) {
+  background-color: rgba($bg, 0.1);
+  .edit-field-icon{
+    color: rgba($bg, 0.7);
+  }
+  &:hover{
+    background: rgba($bg, 0.2);
+    color: $bg;
+    .edit-field-icon{
+      color: $bg;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .edit-field-soft-#{$color} {
+    &:hover {
+      @include edit-field-soft-variant($value);
+    }
+  }
+}
+
+.edit-field-right-xs {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.edit-field-right-sm {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.edit-field-right-md {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.edit-field-right-lg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.edit-field-right-xl {
+  height: 4rem;
+  width: 4rem;
+}
+
+.edit-field-right-xxl {
+  height: 5rem;
+  width: 5rem;
+}
+
+.circle-condense-profiles{
+  .condense-profile{
+    // border: 2px solid $white;
+    display: inline-block;
+    border-radius: 100%;
+    & + .condense-profile{
+      margin-left: -12px;
+    }
+  }
+  .condense-count{
+    margin-left: -12px;
+  }
+}
+
+.inner-header-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  a{
+      display: inline-block;
+  }
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  & > .chart {
+    height: 250px;
+    &.h-150{
+      height: 150px;
+    }
+    &.h-300{
+      height: 300px;
+    }
+    &.h-350{
+      height: 350px;
+    }
+    width: 100%;
+  }
+  &[echarts] > *{
+   height: auto;
+   width: auto; 
+  }
+  .center-text{
+    width: auto;
+    height: auto;
+  }
+}
+
+.todo-list{
+  .todo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+    &:before{
+      background-color: $primary;
+      content: "";
+      width: 4px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      border-radius: 10px;
+    }
+  }
+  @each $color, $value in $theme-colors {
+    .todo-#{$color} {
+      &:before{
+        background-color: $value;
+      }
+    }
+  }  
+}
+
+.validation-error{
+  display: block;
+  color: $danger;
+  width: 100%;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.waves-float:active, .waves-float {
+  box-shadow: none;
+}
+
+.waves-effect.waves-float .waves-ripple{
+  background:rgba($black, 0.1);
+  background:-webkit-radial-gradient(rgba($black, 0.06) 0,rgba($black, 0.07) 40%,rgba($black, 0.1) 50%,rgba($black, 0.08) 60%,rgba($black, 0) 70%);background:-o-radial-gradient(rgba($black, 0.06) 0,rgba($black, 0.07) 40%,rgba($black, 0.1) 50%,rgba($black, 0.08) 60%,rgba($black, 0) 70%);
+  background:-moz-radial-gradient(rgba($black, 0.06) 0,rgba($black, 0.07) 40%,rgba($black, 0.1) 50%,rgba($black, 0.08) 60%,rgba($black, 0) 70%);
+  background:radial-gradient(rgba($black, 0.06) 0,rgba($black, 0.07) 40%,rgba($black, 0.1) 50%,rgba($black, 0.08) 60%,rgba($black, 0) 70%)
+}
+
+[data-icon="cart"]{
+  .bx-check{
+    animation: scaleup 0.25s ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes scaleup {
+  0% {
+    @include transform(scale(0));
+    transform-origin: center center;
+  }
+  100% {
+    @include transform(scale(1));
+    transform-origin: center center;
+  }
+}
+
+.extra-btn-table{
+  position: absolute;
+  z-index: 2;
+  @media (max-width: 767px) {
+    position: static;
+    margin-bottom: 15px;
+  } 
+}

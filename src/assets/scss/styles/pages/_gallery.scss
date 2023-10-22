@@ -1,0 +1,78 @@
+.pswp-caption {
+  display: none;
+}
+
+.pswp__caption__center {
+  padding: 0;
+  max-width: 1140px;
+  text-align: center;
+
+  h5 {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  h4,
+  p {
+    color: $white;
+  }
+}
+
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  li {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .control.filtr-active {
+    background: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  .gallery-demo-img {
+    border-radius: 7px;
+  }
+
+  .gallery-overlay {
+    opacity: 0;
+    background: rgba($primary, 0.9);
+    border-radius: 7px;
+    @include transition(all 0.5s);
+  }
+
+  .overlay-content {
+    @include position(absolute, null, 0, -60px, 0);
+    @include transition(all 0.5s);
+    padding: 1rem;
+    text-align: center;
+    color: rgba($white, .8);
+
+    h5,
+    h6 {
+      color: rgba($white, .8);
+    }
+  }
+
+  &:hover {
+    .gallery-overlay {
+      opacity: 1;
+    }
+
+    .overlay-content {
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="assets/vendors/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" />
+  @@include("../partials/head.html", {"title": "Range Sliders"})
+
+</head>
+
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- Topbar Start -->
+    @@include("../partials/header.html")
+    <!-- end Topbar -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+      @@include("../partials/sidebar.html")
+      <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="main-content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <div class="row page-title-box">
+              <div class="col-md-12">
+                <h4 class="mb-1 mt-0">Range Sliders
+                </h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Demo</h5>
+                    <input type="text" id="range_01">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Code</h5>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4">
+&lt;input type="text" id="range_01"&gt;
+                    </code>
+                  </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-0 header-title mb-3">Required Files</h5>
+                    <pre class="highlight typescript">
+                    <code class="shadow-sm px-4">
+&lt;link href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" /&gt;
+
+&lt;script src="assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/pages/range-sliders.init.js"&gt;&lt;/script&gt;
+                    </code>
+                  </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- container-fluid -->
+        </div>
+      </div> <!-- content -->
+
+
+    </div>
+
+    @@include("../partials/footer.html")
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+
+  <!-- Vendor js -->
+  @@include("../partials/scripts.html")
+  <script src="assets/vendors/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+  <script src="assets/js/pages/range-sliders.init.js"></script>
+</body>
+
+</html>

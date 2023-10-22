@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("partials/title.html", {"title": "C3"})
+	<!-- ================== Plugins CSS  ================== -->
+	<link href="assets/libs/c3/c3.min.css" rel="stylesheet" />
+	<!-- ================== Plugins CSS end ================== -->
+	@@include("partials/head.html")
+</head>
+
+<body>
+	<!-- Begin Page -->
+	<div class="page-wrapper">
+		<!-- Begin Header -->
+		@@include('partials/topbar.html')
+		<!-- Header End -->
+		<!-- Begin Left Navigation -->
+		@@include('partials/left-sidebar.html')
+		<!-- Left Navigation End -->
+		<!-- Begin main content -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="page-content">
+				<!-- page header -->
+				<div class="page-title-box">
+					<div class="container-fluid">
+						<div class="page-title dflex-between-center">
+							<h3 class="mb-1 fw-bold">C3</h3>
+							<ol class="breadcrumb mb-0 mt-1">
+								<li class="breadcrumb-item">
+									<a href="../index.html">
+										<i class="bx bx-home fs-xs"></i>
+									</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="charts-apex.html">
+										Charts
+									</a>
+								</li>
+								<li class="breadcrumb-item active">C3</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- page content -->
+				<div class="page-content-wrapper mt--45">
+					<div class="container-fluid">
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Bar Chart</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="chart" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Stacked Area Chart</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="chart-stacked" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+						</div>
+						<!-- End row -->
+
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Roated Chart</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="roated-chart" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Combine Chart</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="combine-chart" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+						</div>
+						<!-- End row -->
+
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Donut Chart</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="donut-chart" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Pie Chart</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="pie-chart" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+						</div>
+						<!-- End row -->
+
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Scatter Plot</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="scatter-plot" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Line Chart with Regions</h5>
+									</div>
+									<div class="card-body chart-container">
+										<div id="line-regions" class="chart"></div>
+									</div>
+								</div> <!-- end card-->
+							</div> <!-- end col-->
+						</div>
+						<!-- End row -->
+					</div>
+				</div>
+			</div>
+			<!-- main content End -->
+		</div>
+		<!-- footer -->
+		@@include('partials/footer.html')
+	</div>
+	<!-- Page End -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/libs/d3/d3.min.js"></script>
+	<script src="assets/libs/c3/c3.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- ================== BEGIN PAGE JS ================== -->
+	<script src="assets/js/utils/colors.js"></script>
+	<script src="assets/js/pages/c3.init.js"></script>
+	<script src="assets/js/app.js"></script>
+	<!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>
