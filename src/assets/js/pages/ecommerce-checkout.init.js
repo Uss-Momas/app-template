@@ -16,8 +16,8 @@
     }
   }
   //Select 2
-  
-	$('[data-select = "select2"]').select2().on('change', function () {
+
+  $('[data-select = "select2"]').select2().on('change', function () {
     if ($(this).val() !== '') {
       $(this).siblings(".validation-error").addClass("d-none")
     }
@@ -41,23 +41,23 @@
   $("[name= 'validation-pin']").mask("000000");
   $('#cardnumberInput').mask('0000 0000 0000 0000');
   $('#expirydateInput').mask('00/00', {
-    onChange: function(val){
-      var id= $('#expirydateInput').attr("data-id");
-      $('[data-id*="'+ id +'"]').text(val)
+    onChange: function (val) {
+      var id = $('#expirydateInput').attr("data-id");
+      $('[data-id*="' + id + '"]').text(val)
     }
   });
   $('#cvvcodeInput').mask('000');
   $('#savedcvv').mask('000');
-  $('#cardnumberInput').on("focusout", function(){
+  $('#cardnumberInput').on("focusout", function () {
     var str = $(this).val();
     var arr = str.split(" ");
-    $(arr).each(function(index, item){
-      $("#card-number [data-id='num"+(index+1)+"']").text(item)
+    $(arr).each(function (index, item) {
+      $("#card-number [data-id='num" + (index + 1) + "']").text(item)
     })
   })
-  $("#cardnameInput").on("change", function(){
-    var id= $(this).attr("data-id");
-    $('[data-id*="'+ id +'"]').text($(this).val())
+  $("#cardnameInput").on("change", function () {
+    var id = $(this).attr("data-id");
+    $('[data-id*="' + id + '"]').text($(this).val())
   });
 }(jQuery))
 
@@ -80,7 +80,7 @@ function initiliazeSmartWizard(obj) {
         $('<button></button>').text('Confirm Order')
           .addClass('btn btn-primary d-none').attr("id", "submit-form")
           .on('click', function () {
-            alert('Data Submitted... See Console log');
+            // alert(`Da Submitted... See Console log, ID: ${id}`);
           })
       ]
     }
@@ -109,7 +109,7 @@ function initiliazeSmartWizard(obj) {
     }
   });
   $("#smartwizard-default").on("showStep", function (e, anchorObject, stepNumber, stepDirection) {
-    
+
     $("#order-summery").removeClass("d-none");
     setTimeout(function () {
       $(".sw-container").css({
@@ -124,19 +124,19 @@ function initiliazeSmartWizard(obj) {
       $(".sw-btn-next").parents(".btn-toolbar").removeClass("justify-content-end").addClass("justify-content-between");
       $("#submit-form").removeClass("d-none");
       $("#smartwizard-default").removeClass("col-md-8 col-xl-9").addClass("col-12")
-      if(obj['step1'].valid){
-        var addressHTML = '', nameHTML="", phoneHTML="";
+      if (obj['step1'].valid) {
+        var addressHTML = '', nameHTML = "", phoneHTML = "";
         var shippingDetails = '<h5 class="fw-semibold mb-3">Shipping Details</h5>';
         var data = obj['step1']['data'];
         for (var key in data) {
-          if(key === 'validation-fullname'){
-            nameHTML += '<h6 class="fs-15 fw-semibold">'+ data[key] +'</h6>';
+          if (key === 'validation-fullname') {
+            nameHTML += '<h6 class="fs-15 fw-semibold">' + data[key] + '</h6>';
           }
-          if(key === 'validation-address'){
-            addressHTML += '<address class="d-flex"> <i class="bx bxs-map align-middle fs-sm text-primary"></i><span class="align-middle">'+ data[key]+' '+data['validation-state']+' '+data['validation-country'] +'</span></address>';
+          if (key === 'validation-address') {
+            addressHTML += '<address class="d-flex"> <i class="bx bxs-map align-middle fs-sm text-primary"></i><span class="align-middle">' + data[key] + ' ' + data['validation-state'] + ' ' + data['validation-country'] + '</span></address>';
           }
-          if(key === 'validation-phone'){
-            phoneHTML += '<p> <i class="bx bx-mobile-alt align-middle fs-sm text-primary"></i><span class="align-middle">'+ data[key] +'</span></p>';
+          if (key === 'validation-phone') {
+            phoneHTML += '<p> <i class="bx bx-mobile-alt align-middle fs-sm text-primary"></i><span class="align-middle">' + data[key] + '</span></p>';
           }
         }
         shippingDetails += nameHTML + addressHTML + phoneHTML;
@@ -197,7 +197,7 @@ function validateStep1(obj) {
       var $el = $(element);
       var $parent = $el.parents('.form-group');
       $parent.addClass("invalid-field")
-      obj['step1'].valid = false;
+      obj['step1'].valid = true;
     },
     unhighlight: function (element) {
       var $el = $(element);
@@ -223,7 +223,7 @@ function validateStep1(obj) {
 * ----------------------------------------------
 */
 function validateStep2(obj) {
-  
+
   $('#card-details').validate({
     focusInvalid: false,
     rules: {

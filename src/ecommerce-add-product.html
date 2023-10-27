@@ -58,21 +58,26 @@
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="form-group floating-label enable-floating-label show-label">
+                                    <!-- <input id="productname" name="validation-productname" type="text"
+                                       placeholder="Enter Product Name" class="form-control"> -->
                                     <input id="productname" name="validation-productname" type="text"
-                                       placeholder="Enter Product Name" class="form-control">
+                                       placeholder="Enter Product Name" class="form-control" required>
                                     <label for="productname">Product Name <span class="text-danger">*</span></label>
-                                    <div class="validation-error d-none fs-13">This field is required</div>
+                                    <!-- <div class="validation-error d-none fs-13">This field is required</div> -->
                                  </div>
                               </div>
                               <div class="col-lg-6">
                                  <div class="form-group floating-label enable-floating-label show-label">
                                     <input id="brandname" name="validation-brandname" type="text"
-                                       placeholder="Enter Brand Name" class="form-control">
-                                    <label for="brandname">Brand Name <span class="text-danger">*</span></label>
+                                       placeholder="Enter Product Description" class="form-control" required>
+                                    <!-- <input id="brandname" name="validation-brandname" type="text"
+                                       placeholder="Enter Product Description" class="form-control" required> -->
+                                    <label for="brandname">Product brand <span
+                                          class="text-danger">*</span></label>
                                     <div class="validation-error d-none fs-13">This field is required</div>
                                  </div>
                               </div>
-                              <div class="col-lg-6">
+                              <!-- <div class="col-lg-6">
                                  <div class="form-group floating-label enable-floating-label show-label">
                                     <input class="form-control" id="colors" name="validation-colors" placeholder="Please enter colors" />
                                     <label for="colors">Colors<span class="text-danger">*</span></label>
@@ -80,8 +85,8 @@
                                        Please enter atleast one color
                                     </div>
                                  </div>
-                              </div>
-                              <div class="col-lg-6">
+                              </div> -->
+                              <!-- <div class="col-lg-6">
                                  <div class="form-group floating-label enable-floating-label show-label">
                                     <select class="form-control select2" name="validation-productcat">
                                        <option value="">Select Category</option>
@@ -95,8 +100,8 @@
                                     <label>Category <span class="text-danger">*</span></label>
                                     <div class="validation-error d-none fs-13">This field is required</div>
                                  </div>
-                              </div>
-                              <div class="col-md-4">
+                              </div> -->
+                              <!-- <div class="col-md-4">
                                  <div class="form-group floating-label enable-floating-label show-label">
                                     <select class="form-control select2" name="validation-currency">
                                        <option value="">Select Category</option>
@@ -106,31 +111,41 @@
                                     <label>Currency <span class="text-danger">*</span></label>
                                     <div class="validation-error d-none fs-13">This field is required</div>
                                  </div>
-                              </div>
-                              <div class="col-md-4">
+                              </div> -->
+                              <div class="col-lg-6">
                                  <div class="form-group floating-label enable-floating-label show-label">
-                                    <input id="projectbudget" name="validation-budget" type="text"
-                                       placeholder="Enter Project Budget..." class="form-control">
+                                    <!-- <input id="projectbudget" name="validation-budget" type="text"
+                                       placeholder="Enter Project Budget..." class="form-control"> -->
+                                    <input id="projectbudget" name="validation-budget" type="number"
+                                       placeholder="Enter Project Budget..." class="form-control" required>
                                     <label for="projectbudget">Price <span class="text-danger">*</span></label>
                                     <div class="validation-error d-none fs-13">This field is required</div>
                                  </div>
                               </div>
-                              <div class="col-md-4">
+                              <!--mid size is class ="col-md-4"-->
+                              <div class="col-lg-6">
                                  <div class="form-group floating-label enable-floating-label show-label">
+                                    <!-- <input id="productqty" name="validation-qty" type="text"
+                                       placeholder="Enter Product Quantity" class="form-control"> -->
                                     <input id="productqty" name="validation-qty" type="text"
-                                       placeholder="Enter Product Quantity" class="form-control">
+                                       placeholder="Enter Product Quantity" class="form-control" required>
                                     <label for="productqty">Quantity <span class="text-danger">*</span></label>
                                     <div class="validation-error d-none fs-13">This field is required</div>
                                  </div>
                               </div>
                               <div class="col-12">
-                                 <div class="form-group floating-label enable-floating-label show-label">
+                                 <!-- <div class="form-group floating-label enable-floating-label show-label">
                                     <textarea name="validation-editor" id="product-desc"></textarea>
                                     <label>Product Description<span
                                           class="text-danger">*</span></label>
                                     <div class="validation-error d-none fs-13">
                                        Item description can not be blank
                                     </div>
+                                 </div> -->
+                                 <div class="form-group floating-label enable-floating-label show-label">
+                                    <textarea class="form-control" name="validation-note" id="note" rows="3"
+                                       placeholder="Description of the new product..." required></textarea>
+                                    <label for="note">Product Description <span class="text-danger">*</span></label>
                                  </div>
                               </div>
                               <div class="col-12">
@@ -147,25 +162,29 @@
                                     <div class="dropzone-previews mt-3" id="file-previews"></div>
                                     <!-- file preview template -->
                                     <div class="d-none" id="uploadPreviewTemplate">
-                                      <div class="card mb-0 shadow-none border">
-                                        <div class="p-2">
-                                          <div class="row align-items-center">
-                                            <div class="col-auto">
-                                              <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light" alt="Lettstart Admin">
-                                            </div>
-                                            <div class="col pl-0">
-                                              <a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
-                                              <p class="mb-0" data-dz-size></p>
-                                            </div>
-                                            <div class="col-auto">
-                                             <a href="javascript:void(0)" class="avatar avatar-xs bg-soft-danger text-danger me-0" data-effect="wave" data-dz-remove>
-                                                <i class="bx bx-x fs-sm"></i>
-                                              </a>
-                                              <!-- Button -->
-                                            </div>
+                                       <div class="card mb-0 shadow-none border">
+                                          <div class="p-2">
+                                             <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                   <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light"
+                                                      alt="Lettstart Admin">
+                                                </div>
+                                                <div class="col pl-0">
+                                                   <a href="javascript:void(0);" class="text-muted fw-bold"
+                                                      data-dz-name></a>
+                                                   <p class="mb-0" data-dz-size></p>
+                                                </div>
+                                                <div class="col-auto">
+                                                   <a href="javascript:void(0)"
+                                                      class="avatar avatar-xs bg-soft-danger text-danger me-0"
+                                                      data-effect="wave" data-dz-remove>
+                                                      <i class="bx bx-x fs-sm"></i>
+                                                   </a>
+                                                   <!-- Button -->
+                                                </div>
+                                             </div>
                                           </div>
-                                        </div>
-                                      </div>
+                                       </div>
                                     </div>
                                     <div class="validation-error d-none fs-13">
                                        Upload atleast one image
@@ -175,7 +194,8 @@
                            </div>
                            <!-- This button link with id-sw-default-step-1 if you change it change in serial number like below -->
                            <div class="clearfix">
-                              <button type="submit" class="btn btn-primary">Add Product</button>
+                              <button type="submit" class="btn btn-primary add-product" id="add-product-btn">Add
+                                 Product</button>
                            </div>
                         </form>
                      </div>
@@ -201,12 +221,14 @@
    <script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
    <script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
 
-   <!-- ================== END PAGE LEVEL JS ================== -->	
+   <!-- ================== END PAGE LEVEL JS ================== -->
    <!-- ================== BEGIN PAGE JS ================== -->
    <script src="assets/js/pages/ecommerce-add-product.init.js"></script>
    <script src="assets/js/app.js"></script>
    <!-- ================== END PAGE JS ================== -->
 
+   <!--===USSUMANE JS===-->
+   <script src="assets/js/products/add-product.js" type="javascript"></script>
 </body>
 
 </html>

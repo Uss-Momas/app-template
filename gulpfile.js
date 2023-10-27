@@ -220,6 +220,23 @@ function copyJStoDistOnChange(done) {
         ]
     };
 
+    var js_products = {
+        js: [
+            folder_from.js + "products/app.js",
+            folder_from.js + "products/cart.js",
+            folder_from.js + "products/add-product.js",
+            folder_from.js + "products/product-details.js",
+            folder_from.js + "products/cart-checkout.js",
+        ]
+    }
+
+    var js_auth = {
+        js: [
+            folder_from.js + "Auth/create-user.js",
+            folder_from.js + "Auth/login.js",
+        ]
+    }
+
     lodash(app_pages_assets).forEach(function (assets, type) {
         gulp.src(assets)
             .pipe(uglify())
@@ -245,6 +262,25 @@ function copyJStoDistOnChange(done) {
             })
             .pipe(gulp.dest(out + "../pdf"));
     });
+
+    lodash(js_products).forEach(function (assets, type) {
+        gulp.src(assets)
+            .pipe(uglify())
+            .on("error", function (err) {
+                console.log(err.toString());
+            })
+            .pipe(gulp.dest(out + "products"));
+    });
+
+    lodash(js_auth).forEach(function (assets, type) {
+        gulp.src(assets)
+            .pipe(uglify())
+            .on("error", function (err) {
+                console.log(err.toString());
+            })
+            .pipe(gulp.dest(out + "Auth"));
+    });
+
     gulp
         .src([
             folder_from.js + "app.js"

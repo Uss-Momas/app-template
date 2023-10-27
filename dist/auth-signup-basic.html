@@ -88,7 +88,7 @@
                   </button>
                 </div>
                 <div class="clearfix text-center">
-                  <p class="mb-0">Already have an account? <a href="auth-login.html"
+                  <p class="mb-0">Already have an account? <a href="auth-login-basic.html"
                       class="fw-bold text-primary">Login</a></p>
                 </div>
                 <div class="py-3 text-center"><span class="fs-16 fw-bold">OR</span></div>
@@ -133,60 +133,7 @@
   <!-- ================== BEGIN PAGE JS ================== -->
   <script src="assets/js/app.js"></script>
   <!-- ================== END PAGE JS ================== -->
-  <script>
-    //Initialize form
-    $('#signupForm').validate({
-      focusInvalid: false,
-      rules: {
-        'validation-fullname': {
-          required: true,
-        },
-        'validation-email': {
-          required: true,
-          email: true
-        },
-        'validation-password': {
-          required: true,
-        },
-        'validation-cpassword': {
-          required: true,
-          equalTo: "#password"
-        }
-      },
-      errorPlacement: function errorPlacement(error, element) {
-        $(element).siblings(".validation-error").removeClass("d-none");
-        if (error[0].textContent === "Please enter the same value again.") {
-          $(element).siblings(".validation-error").text("Password Mismatch")
-        }
-        return true
-      },
-      highlight: function (element) {
-        var $el = $(element);
-        var $parent = $el.parents('.form-group');
-        $parent.addClass("invalid-field")
-      },
-      unhighlight: function (element) {
-        var $el = $(element);
-        var $parent = $el.parents('.form-group');
-        $parent.removeClass("invalid-field");
-        $(element).siblings(".validation-error").addClass("d-none")
-      },
-      submitHandler: function (form) {
-        var formdata = $(form).serializeArray();
-        var data = {};
-        $(formdata).each(function (index, obj) {
-          data[obj.name] = obj.value;
-        });
-        alert("Data has been submitted. Please see console log");
-        console.log("form data ===>", data);
-        $(form)[0].reset();
-        $(".floating-label").removeClass("enable-floating-label");
-        setTimeout(function(){
-          window.location.href = "auth-confirmation.html";
-        }, 1000)
-      }
-    });
-  </script>
+  <script src="assets/js/Auth/create-user.js"></script>
 </body>
 
 </html>

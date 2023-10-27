@@ -65,8 +65,8 @@
 														<th></th>
 													</tr>
 												</thead>
-												<tbody>
-													<tr>
+												<tbody id="cart-items">
+													<!-- <tr>
 														<td>
 															<img src="assets/images/product/chair.jpg" alt="product-img" title="product-img"
 																class="avatar-lg">
@@ -91,7 +91,7 @@
 																<input type="text" value="02" name="qty" class="touchspin-qty">
 															</div>
 														</td>
-														<td class="total-price">
+														<td class="total-price" data-total-price="900">
 															<b>$900</b>
 														</td>
 														<td data-id="1">
@@ -99,8 +99,8 @@
 																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
 																<i class="mdi mdi-close fs-sm"></i></a>
 														</td>
-													</tr>
-													<tr>
+													</tr> -->
+													<!-- <tr>
 														<td>
 															<img src="assets/images/product/chair2.jpg" alt="product-img" title="product-img"
 																class="avatar-lg">
@@ -125,7 +125,7 @@
 																<input type="text" value="01" name="qty" class="touchspin-qty">
 															</div>
 														</td>
-														<td class="total-price">
+														<td class="total-price" data-total-price="200">
 															<b>$200</b>
 														</td>
 														<td data-id="2">
@@ -133,8 +133,8 @@
 																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
 																<i class="mdi mdi-close fs-sm"></i></a>
 														</td>
-													</tr>
-													<tr>
+													</tr> -->
+													<!-- <tr>
 														<td>
 															<img src="assets/images/product/chair3.jpg" alt="product-img" title="product-img"
 																class="avatar-lg">
@@ -159,7 +159,7 @@
 																<input type="text" value="02" name="qty" class="touchspin-qty">
 															</div>
 														</td>
-														<td class="total-price">
+														<td class="total-price" data-total-price="1000">
 															<b>$1000</b>
 														</td>
 														<td data-id="3">
@@ -167,8 +167,8 @@
 																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
 																<i class="mdi mdi-close fs-sm"></i></a>
 														</td>
-													</tr>
-													<tr>
+													</tr> -->
+													<!-- <tr>
 														<td>
 															<img src="assets/images/product/chair2.jpg" alt="product-img" title="product-img"
 																class="avatar-lg">
@@ -193,7 +193,7 @@
 																<input type="text" value="01" name="qty" class="touchspin-qty">
 															</div>
 														</td>
-														<td class="total-price">
+														<td class="total-price" data-total-price="600">
 															<b>$600</b>
 														</td>
 														<td data-id="4">
@@ -201,7 +201,7 @@
 																class="avatar avatar-sm me-0 bg-soft-danger text-danger remove-cart-item">
 																<i class="mdi mdi-close fs-sm"></i></a>
 														</td>
-													</tr>
+													</tr> -->
 												</tbody>
 											</table>
 										</div>
@@ -212,7 +212,8 @@
 											</div> <!-- end col -->
 											<div class="col-sm-6">
 												<div class="text-sm-end mt-2 mt-sm-0">
-													<a href="ecommerce-checkout.html" class="btn btn-success" data-effect="wave">
+													<!-- <a href="ecommerce-checkout.html" class="btn btn-success" data-effect="wave" onclick="createCart()"> -->
+														<a href="#" class="btn btn-success" data-effect="wave" id="proceed-check">
 														<i class="mdi mdi-cart me-1"></i> Proceed to Checkout </a>
 												</div>
 											</div> <!-- end col -->
@@ -228,43 +229,43 @@
 									<div class="card-body">
 										<div class="table-responsive">
 											<table class="table mb-0 table-borderless table-no-head">
-												<tbody>
+												<tbody id="cart-order-summary">
 													<tr>
 														<td>Grand Total :</td>
-														<td>$1,857</td>
+														<td>0 MZN</td>
 													</tr>
 													<tr>
 														<td>Discount : </td>
-														<td class="text-danger">- $157</td>
+														<td class="text-danger">- 0 MZN</td>
 													</tr>
 													<tr>
 														<td>Shipping Charge :</td>
-														<td>$25</td>
+														<td> 0 MZN</td>
 													</tr>
 													<tr>
 														<td>Estimated Tax : </td>
-														<td>$19.22</td>
+														<td>0 MZN</td>
 													</tr>
-													<tr>
+													<tr id="cart-total-tr">
 														<td class="fw-bold">Total :</td>
-														<td class="fw-bold">$1744.22</td>
+														<td class="fw-bold" id="cart-total-td">0 MZN</td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
-										<div class="alert alert-warning mt-3 fs-13" role="alert" id="dis-coupon">
+										<!-- <div class="alert alert-warning mt-3 fs-13" role="alert" id="dis-coupon">
 											Use coupon code <strong>UBTF25</strong> and get 25% discount !
-										</div>
-										<div class="alert alert-info mt-3" role="alert" id="coupon-applied" style="display: none;">
+										</div> -->
+										<!-- <div class="alert alert-info mt-3" role="alert" id="coupon-applied" style="display: none;">
 											Coupon Applied
-										</div>
-										<div class="input-group mt-3">
+										</div> -->
+										<!-- <div class="input-group mt-3">
 											<input type="text" class="form-control form-control-light"
 												placeholder="Coupon code" aria-label="Recipient's username">
 											<div class="input-group-append">
 												<button class="btn btn-light btn-sm" type="button" id="apply-coupon">Apply</button>
 											</div>
-										</div>
+										</div> -->
 										<!-- end table-responsive -->
 									</div>
 								</div>
@@ -298,6 +299,8 @@
 
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<script src="assets/libs/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+	<script src="assets/js/products/cart.js"></script>
 	<!-- ================== BEGIN PAGE JS ================== -->
    <script src="assets/js/pages/ecommerce-cart.init.js"></script>
 	<script src="assets/js/app.js"></script>
